@@ -14,6 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _cofferOrder:
     _coffeeBean: {fileID: 11400000, guid: eec2d2a88e993f043bca06a88cfa8756, type: 2}
-    _milk: {fileID: 11400000, guid: c2d1304a818b60d4db020a22515ca150, type: 2}
-    _miscIngredients:
-    - {fileID: 11400000, guid: c3dd57dab85ff2c4981292a8052c148d, type: 2}
+    _milk: {fileID: 0}
+    _miscIngredients: []

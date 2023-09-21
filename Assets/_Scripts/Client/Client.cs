@@ -1,14 +1,70 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
-public class Client : MonoBehaviour
+public class Client : ReceiveIngredient<CoffeeCup>
 {
     [Header("Coffee")]
-    [SerializeField] private string _name;
     [SerializeField, TextArea] private string _dialogue;
     [SerializeField] private CoffeeOrder _coffeeOrder;
 
-    public string Name => _name;
-    public string Dialogue => _dialogue;
-    public CoffeeOrder CoffeOrder => _coffeeOrder;
-}
+    [Header("Patience")]
+    [SerializeField] private float _patience = 120f;
+    private float _maxPatience;
 
+    [Header("Pop Animation")]
+    [SerializeField] private float _timeToPop;
+    [SerializeField] private AnimationCurve _popCurve;
+
+    public System.Action<CoffeeComparisonResults, float> OnCoffeeDelivered { get; set; }
+
+    public string Dialogue => _dialogue;
+    public Coffee Coffee => _coffeeOrder.CofferOrder;
+
+    private void Awake()
+    {
+        _maxPatience = _patience * .85f;
+    }
+
+    private void Update()
+    {
+        _patience -= Time.deltaTime;
+    }
+
+    protected override void TakeIngredient()
+    {
+        CoffeeComparisonResults result = new(_coffeeOrder.CofferOrder, _t.DeliverCoffee);
+        float t = Mathf.Clamp(_patience / _maxPatience, .33f, 1f);
+        result.Money *= t;
+        _draggable.ForceRelease();
+        _t.TeleportToKitchen();
+        OnCoffeeDelivered?.Invoke(result, t * 100f);
+        base.TakeIngredient();
+        StartCoroutine(Dissapear());
+    }
+
+    private IEnumerator Dissapear()
+    {
+        yield return ScaleAnim(Vector3.one, Vector3.zero);
+        gameObject.SetActive(false);
+    }
+
+    private IEnumerator ScaleAnim(Vector3 from, Vector3 to)
+    {
+        transform.localScale = from;
+        float eTime = 0f;
+        while (eTime < _timeToPop)
+        {
+            float t = _popCurve.Evaluate(eTime / _timeToPop);
+            transform.localScale = Vector3.LerpUnclamped(from, to, t);
+            eTime += Time.deltaTime;
+            yield return null;
+        }
+
+        transform.localScale = to;
+    }
+
+    public IEnumerator PopAnimation() => ScaleAnim(Vector3.zero, Vector3.one);
+
+    [ContextMenu("Test")]
+    private void Test() => StartCoroutine(PopAnimation());
+}

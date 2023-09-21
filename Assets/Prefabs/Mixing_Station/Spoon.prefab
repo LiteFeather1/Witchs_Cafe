@@ -78,7 +78,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0f453a05c01e7e49a4e6d74d6764b70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _distanceToTeleport: 2
+  _distanceToTeleport: 2.5
   _timerToTeleportBack: {fileID: 3804165430119972968}
 --- !u!114 &3804165430119972968
 MonoBehaviour:

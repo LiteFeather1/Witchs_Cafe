@@ -34,6 +34,7 @@ public class Cauldron : ReceiveIngredient<IMixable>
     {
         UnSubToCoffee();
         _mixingCoffee = new();
+        SetSpriteColour(Color.white);
         SubToCoffee();
     }
 
@@ -46,9 +47,14 @@ public class Cauldron : ReceiveIngredient<IMixable>
 
     public void OnCoffeeBeanSet(IngredientSO ingredient)
     {
+        SetSpriteColour(ingredient.Colour);
+    }
+
+    private void SetSpriteColour(Color colour)
+    {
         for (int i = 0; i < _waterSprites.Length; i++)
         {
-            _waterSprites[i].color = ingredient.Colour;
+            _waterSprites[i].color = colour;
         }
     }
 }

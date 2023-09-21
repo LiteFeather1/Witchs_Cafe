@@ -61,6 +61,7 @@ public class DragManager : MonoBehaviour
         if (draggable.Hold) 
             return;
 
+        draggable.OnForceReleased += OnForceRelease;
         draggable.StartDragging();
         _draggable = draggable;
     }
@@ -70,6 +71,12 @@ public class DragManager : MonoBehaviour
         if (_draggable == null)
             return;
 
+        OnForceRelease();
+    }
+
+    private void OnForceRelease()
+    {
+        _draggable.OnForceReleased -= OnForceRelease;
         _draggable.StopDragging();
         _draggable = null;
     }

@@ -26,8 +26,17 @@ public class GameManager : MonoBehaviour
 
     private void OnEnable()
     {
+        _clientManager.OnNewClient += AppearDialogue;
+        _clientManager.OnClientServed += _uiManager.CoffeeDelivered;
+
         InputManager.PlayerInputs.LeftClick.performed += StartGame;
         InputManager.PlayerInputs.RightClick.performed += StartGame;
+    }
+
+    private void OnDisable()
+    {
+        _clientManager.OnNewClient -= AppearDialogue;
+        _clientManager.OnClientServed -= _uiManager.CoffeeDelivered;
     }
 
     public IEnumerator StartGameCO()
@@ -38,9 +47,14 @@ public class GameManager : MonoBehaviour
         _clientManager.AppearClient();
     }
 
-    public void StartGame(InputAction.CallbackContext ctx) => StartCoroutine(StartGameCO());
+    private void StartGame(InputAction.CallbackContext ctx) => StartCoroutine(StartGameCO());
 
     public static Vector2 MousePosition() => Camera.ScreenToWorldPoint(Input.mousePosition);
+
+    private void AppearDialogue(Client client)
+    {
+        _uiManager.PopUpDialogue(client.Dialogue);
+    }
 
     public class ManagerInput
     {

@@ -1,27 +1,62 @@
-﻿using UnityEngine;
+﻿using System;
+using System.Collections;
+using UnityEngine;
 
 public class ClientManager : MonoBehaviour
 {
     [SerializeField] private Client[] _clients;
-    private int _currentClient;
+    private int _currentClientIndex;
+
+    private readonly static YieldInstruction _delayBeforeShowDialogue = new WaitForSeconds(.5f);
+
+    public Action<Client> OnNewClient { get; set; }
+    public Action<CoffeeComparisonResults, float> OnClientServed { get; set; }
+    public Action OnAllClientsServed { get; set; }
+
+    private void OnEnable()
+    {
+        for (int i = 0; i < _clients.Length; i++)
+        {
+            _clients[i].OnCoffeeDelivered += ClientServed;
+        }
+    }
+
+    private void OnDisable()
+    {
+        for (int i = 0; i < _clients.Length; i++)
+        {
+            _clients[i].OnCoffeeDelivered -= ClientServed;
+        }
+    }
 
     public void AppearClient()
     {
-        _clients[_currentClient].gameObject.SetActive(true);
+        StartCoroutine(AppearClientCO());
+    }
+
+    public IEnumerator AppearClientCO()
+    {
+        var client = _clients[_currentClientIndex];
+        client.gameObject.SetActive(true);
+        yield return client.PopAnimation();
+        yield return _delayBeforeShowDialogue;
+        OnNewClient?.Invoke(client);
     }
 
     public void DisappearCurrentClient()
     {
-        _clients[_currentClient].gameObject.SetActive(false);
+        _currentClientIndex++;
+        if (_currentClientIndex < _clients.Length)
+            return;
 
-        _currentClient++;
-        if (_currentClient >= _clients.Length)
-            print("All Clients Served");
+        print("All Clients Served");
+        OnAllClientsServed?.Invoke();
     }
 
-    public void NextClient()
+    public void ClientServed(CoffeeComparisonResults results, float patience)
     {
-        _clients[_currentClient].gameObject.SetActive(true);
+        OnClientServed?.Invoke(results, patience);
+        DisappearCurrentClient();
     }
 }
 

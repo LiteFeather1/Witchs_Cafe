@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Grinded Dark Coffee Bean
   _colour: {r: 0.28235295, g: 0.10980393, b: 0.08235294, a: 1}
-  _money: 50
+  _money: 4

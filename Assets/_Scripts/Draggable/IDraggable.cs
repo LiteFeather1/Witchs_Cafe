@@ -4,6 +4,7 @@ public interface IDraggable
 {
     public System.Action Grabbed { get; set; }
     public System.Action Released { get; set; }
+    public System.Action OnForceReleased { get; set; }
     public Rigidbody2D RB { get; }
     public Collider2D Collider { get; }
     public bool Hold { get; set; }
@@ -31,4 +32,6 @@ public interface IDraggable
         Collider.enabled = true;
         Released?.Invoke();
     }
+
+    public void ForceRelease() => OnForceReleased?.Invoke();
 }

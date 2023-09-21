@@ -7,6 +7,7 @@ public class Draggable : MonoBehaviour, IDraggable
 
     public System.Action Grabbed { get; set; }
     public System.Action Released { get; set; }
+    public System.Action OnForceReleased { get; set; }
     public Rigidbody2D RB => _rb;
     public Collider2D Collider => _collider;
     public bool Hold { get; set; }
