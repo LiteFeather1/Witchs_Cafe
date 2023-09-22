@@ -2,6 +2,7 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 
 public class UIManager : MonoBehaviour
 {
@@ -54,6 +55,16 @@ public class UIManager : MonoBehaviour
         _downPosPatience = _patienceRoot.localPosition;
         _patienceRoot.localPosition += new Vector3(0f, _patienceRoot.sizeDelta.y * 2f);
         _upPosPatience = _patienceRoot.localPosition;
+    }
+
+    private void OnEnable()
+    {
+        GameManager.InputManager.PlayerInputs.MuteUnmute.performed += SwapMuteSprite;
+    }
+
+    private void OnDisable()
+    {
+        GameManager.InputManager.PlayerInputs.MuteUnmute.performed -= SwapMuteSprite;
     }
 
     private void Update()
@@ -173,6 +184,8 @@ public class UIManager : MonoBehaviour
     {
         i_mute.sprite = i_mute.sprite == _mutedSprite ? _unMutedSprite : _mutedSprite;
     }
+
+    private void SwapMuteSprite(InputAction.CallbackContext ctx) => SwapMuteSprite();
 
     [ContextMenu("Appear")]
     public void Appear() => StartCoroutine(Move(_patienceRoot, _upPosPatience, _downPosPatience, _timeToAppearPatience, _curveAppearPatience));

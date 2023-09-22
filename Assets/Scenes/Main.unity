@@ -7288,7 +7288,7 @@ MonoBehaviour:
   _startGroup: {fileID: 1651719477}
   _fadeTimeStartGroup: 1.5
   _gameGroup: {fileID: 1238139924}
-  _fadeTimeGameGroup: 0.5
+  _fadeTimeGameGroup: 0.35
   _clientDialogueRoot: {fileID: 732198172}
   t_clientDialogue: {fileID: 1700512679}
   _deliverFeedbackRoot: {fileID: 648830786}
