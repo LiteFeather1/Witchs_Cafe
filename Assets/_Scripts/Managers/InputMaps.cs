@@ -44,6 +44,33 @@ public partial class @InputMaps: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""IncreaseVolume"",
+                    ""type"": ""Button"",
+                    ""id"": ""56d10a55-fd90-437a-a6f4-b103ca8064a5"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""DecreaseVolume"",
+                    ""type"": ""Button"",
+                    ""id"": ""135f1953-3bd5-4ed1-ab69-c323deeea832"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""MuteUnmute"",
+                    ""type"": ""Button"",
+                    ""id"": ""fd7c150e-ae9b-4904-bdb6-bc2baa58c51c"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -68,6 +95,83 @@ public partial class @InputMaps: IInputActionCollection2, IDisposable
                     ""action"": ""RightClick"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5e0f4b20-3ae7-4515-99b4-86aa73a38d22"",
+                    ""path"": ""<Keyboard>/numpadPlus"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""IncreaseVolume"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""One Modifier"",
+                    ""id"": ""84429e7c-2ec4-4eec-9b31-c741a9746451"",
+                    ""path"": ""OneModifier"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""IncreaseVolume"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""modifier"",
+                    ""id"": ""0974de23-fc0d-4943-9af1-3307cf4f2cb9"",
+                    ""path"": ""<Keyboard>/shift"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""IncreaseVolume"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""binding"",
+                    ""id"": ""fd82a2f9-20ae-4c7a-8d3b-d24ba1502fbc"",
+                    ""path"": ""<Keyboard>/equals"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""IncreaseVolume"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c34223bc-1242-4170-a450-aa6ddadd2217"",
+                    ""path"": ""<Keyboard>/numpadMinus"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""DecreaseVolume"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7b9059f7-1950-4365-9c6f-006cc754648f"",
+                    ""path"": ""<Keyboard>/minus"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""DecreaseVolume"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""06cd5369-d881-4fe4-b6cb-33330c31b5ca"",
+                    ""path"": ""<Keyboard>/m"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MuteUnmute"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -78,6 +182,9 @@ public partial class @InputMaps: IInputActionCollection2, IDisposable
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_LeftClick = m_Player.FindAction("LeftClick", throwIfNotFound: true);
         m_Player_RightClick = m_Player.FindAction("RightClick", throwIfNotFound: true);
+        m_Player_IncreaseVolume = m_Player.FindAction("IncreaseVolume", throwIfNotFound: true);
+        m_Player_DecreaseVolume = m_Player.FindAction("DecreaseVolume", throwIfNotFound: true);
+        m_Player_MuteUnmute = m_Player.FindAction("MuteUnmute", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -141,12 +248,18 @@ public partial class @InputMaps: IInputActionCollection2, IDisposable
     private List<IPlayerActions> m_PlayerActionsCallbackInterfaces = new List<IPlayerActions>();
     private readonly InputAction m_Player_LeftClick;
     private readonly InputAction m_Player_RightClick;
+    private readonly InputAction m_Player_IncreaseVolume;
+    private readonly InputAction m_Player_DecreaseVolume;
+    private readonly InputAction m_Player_MuteUnmute;
     public struct PlayerActions
     {
         private @InputMaps m_Wrapper;
         public PlayerActions(@InputMaps wrapper) { m_Wrapper = wrapper; }
         public InputAction @LeftClick => m_Wrapper.m_Player_LeftClick;
         public InputAction @RightClick => m_Wrapper.m_Player_RightClick;
+        public InputAction @IncreaseVolume => m_Wrapper.m_Player_IncreaseVolume;
+        public InputAction @DecreaseVolume => m_Wrapper.m_Player_DecreaseVolume;
+        public InputAction @MuteUnmute => m_Wrapper.m_Player_MuteUnmute;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -162,6 +275,15 @@ public partial class @InputMaps: IInputActionCollection2, IDisposable
             @RightClick.started += instance.OnRightClick;
             @RightClick.performed += instance.OnRightClick;
             @RightClick.canceled += instance.OnRightClick;
+            @IncreaseVolume.started += instance.OnIncreaseVolume;
+            @IncreaseVolume.performed += instance.OnIncreaseVolume;
+            @IncreaseVolume.canceled += instance.OnIncreaseVolume;
+            @DecreaseVolume.started += instance.OnDecreaseVolume;
+            @DecreaseVolume.performed += instance.OnDecreaseVolume;
+            @DecreaseVolume.canceled += instance.OnDecreaseVolume;
+            @MuteUnmute.started += instance.OnMuteUnmute;
+            @MuteUnmute.performed += instance.OnMuteUnmute;
+            @MuteUnmute.canceled += instance.OnMuteUnmute;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -172,6 +294,15 @@ public partial class @InputMaps: IInputActionCollection2, IDisposable
             @RightClick.started -= instance.OnRightClick;
             @RightClick.performed -= instance.OnRightClick;
             @RightClick.canceled -= instance.OnRightClick;
+            @IncreaseVolume.started -= instance.OnIncreaseVolume;
+            @IncreaseVolume.performed -= instance.OnIncreaseVolume;
+            @IncreaseVolume.canceled -= instance.OnIncreaseVolume;
+            @DecreaseVolume.started -= instance.OnDecreaseVolume;
+            @DecreaseVolume.performed -= instance.OnDecreaseVolume;
+            @DecreaseVolume.canceled -= instance.OnDecreaseVolume;
+            @MuteUnmute.started -= instance.OnMuteUnmute;
+            @MuteUnmute.performed -= instance.OnMuteUnmute;
+            @MuteUnmute.canceled -= instance.OnMuteUnmute;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -193,5 +324,8 @@ public partial class @InputMaps: IInputActionCollection2, IDisposable
     {
         void OnLeftClick(InputAction.CallbackContext context);
         void OnRightClick(InputAction.CallbackContext context);
+        void OnIncreaseVolume(InputAction.CallbackContext context);
+        void OnDecreaseVolume(InputAction.CallbackContext context);
+        void OnMuteUnmute(InputAction.CallbackContext context);
     }
 }

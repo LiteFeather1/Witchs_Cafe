@@ -42,6 +42,11 @@ public class UIManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI t_totalMoney;
     [SerializeField] private float _moneyStepTime = 1.5f;
 
+    [Header("Mute Sprites")]
+    [SerializeField] private Image i_mute;
+    [SerializeField] private Sprite _mutedSprite;
+    [SerializeField] private Sprite _unMutedSprite;
+
     private void Awake()
     {
         _gameGroup.alpha = 0f;
@@ -162,6 +167,11 @@ public class UIManager : MonoBehaviour
             yield return null;
         }
         t_totalMoney.text = (currentMoney + moneyAdded).ToString("00.00");
+    }
+
+    public void SwapMuteSprite()
+    {
+        i_mute.sprite = i_mute.sprite == _mutedSprite ? _unMutedSprite : _mutedSprite;
     }
 
     [ContextMenu("Appear")]
