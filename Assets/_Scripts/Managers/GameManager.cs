@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     public static Camera Camera { get; private set; }
 
     [Header("Money")]
-    [SerializeField] private float _money = 0f;
+    private float _money = 0f;
 
     [Header("Time")]
     [SerializeField] private float _startTime;
@@ -36,12 +36,16 @@ public class GameManager : MonoBehaviour
 
         InputManager.PlayerInputs.LeftClick.performed += StartGame;
         InputManager.PlayerInputs.RightClick.performed += StartGame;
+
+        InputManager.PlayerInputs.PauseUnPause.performed += PauseUnpause;
     }
 
     private void OnDisable()
     {
         _clientManager.OnNewClient -= AppearDialogue;
         _clientManager.OnClientServed -= OnClieantServed;
+
+        InputManager.PlayerInputs.PauseUnPause.performed -= PauseUnpause;
     }
 
     public IEnumerator StartGameCO()
@@ -76,6 +80,16 @@ public class GameManager : MonoBehaviour
 
         _money += results.Money;
     }
+
+    // Also called by a button
+    public void PauseUnpause()
+    {
+        bool paused = Time.timeScale == 0f;
+        Time.timeScale = paused ? 1f : 0f;
+        _uiManager.PauseOverlay(!paused);
+    }
+
+    private void PauseUnpause(InputAction.CallbackContext ctx) => PauseUnpause();
 
     public class ManagerInput
     {

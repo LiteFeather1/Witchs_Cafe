@@ -48,6 +48,8 @@ public class UIManager : MonoBehaviour
     [SerializeField] private Sprite _mutedSprite;
     [SerializeField] private Sprite _unMutedSprite;
 
+    [Header("Pause Overlay")]
+    [SerializeField] private GameObject _pauseOverlay;
     private void Awake()
     {
         _gameGroup.alpha = 0f;
@@ -186,6 +188,8 @@ public class UIManager : MonoBehaviour
     }
 
     private void SwapMuteSprite(InputAction.CallbackContext ctx) => SwapMuteSprite();
+
+    public void PauseOverlay(bool state) => _pauseOverlay.SetActive(state);
 
     [ContextMenu("Appear")]
     public void Appear() => StartCoroutine(Move(_patienceRoot, _upPosPatience, _downPosPatience, _timeToAppearPatience, _curveAppearPatience));

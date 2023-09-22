@@ -71,6 +71,15 @@ public partial class @InputMaps: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""PauseUnPause"",
+                    ""type"": ""Button"",
+                    ""id"": ""f6137ffe-5fff-4628-af46-8d2d565a7bdc"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -172,6 +181,28 @@ public partial class @InputMaps: IInputActionCollection2, IDisposable
                     ""action"": ""MuteUnmute"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""de9f6e41-ce63-4ae4-a72c-543f89492ea8"",
+                    ""path"": ""<Keyboard>/p"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PauseUnPause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ff083485-d28f-4fda-8a06-c45d7dab6098"",
+                    ""path"": ""<Keyboard>/enter"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PauseUnPause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -185,6 +216,7 @@ public partial class @InputMaps: IInputActionCollection2, IDisposable
         m_Player_IncreaseVolume = m_Player.FindAction("IncreaseVolume", throwIfNotFound: true);
         m_Player_DecreaseVolume = m_Player.FindAction("DecreaseVolume", throwIfNotFound: true);
         m_Player_MuteUnmute = m_Player.FindAction("MuteUnmute", throwIfNotFound: true);
+        m_Player_PauseUnPause = m_Player.FindAction("PauseUnPause", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -251,6 +283,7 @@ public partial class @InputMaps: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_IncreaseVolume;
     private readonly InputAction m_Player_DecreaseVolume;
     private readonly InputAction m_Player_MuteUnmute;
+    private readonly InputAction m_Player_PauseUnPause;
     public struct PlayerActions
     {
         private @InputMaps m_Wrapper;
@@ -260,6 +293,7 @@ public partial class @InputMaps: IInputActionCollection2, IDisposable
         public InputAction @IncreaseVolume => m_Wrapper.m_Player_IncreaseVolume;
         public InputAction @DecreaseVolume => m_Wrapper.m_Player_DecreaseVolume;
         public InputAction @MuteUnmute => m_Wrapper.m_Player_MuteUnmute;
+        public InputAction @PauseUnPause => m_Wrapper.m_Player_PauseUnPause;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -284,6 +318,9 @@ public partial class @InputMaps: IInputActionCollection2, IDisposable
             @MuteUnmute.started += instance.OnMuteUnmute;
             @MuteUnmute.performed += instance.OnMuteUnmute;
             @MuteUnmute.canceled += instance.OnMuteUnmute;
+            @PauseUnPause.started += instance.OnPauseUnPause;
+            @PauseUnPause.performed += instance.OnPauseUnPause;
+            @PauseUnPause.canceled += instance.OnPauseUnPause;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -303,6 +340,9 @@ public partial class @InputMaps: IInputActionCollection2, IDisposable
             @MuteUnmute.started -= instance.OnMuteUnmute;
             @MuteUnmute.performed -= instance.OnMuteUnmute;
             @MuteUnmute.canceled -= instance.OnMuteUnmute;
+            @PauseUnPause.started -= instance.OnPauseUnPause;
+            @PauseUnPause.performed -= instance.OnPauseUnPause;
+            @PauseUnPause.canceled -= instance.OnPauseUnPause;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -327,5 +367,6 @@ public partial class @InputMaps: IInputActionCollection2, IDisposable
         void OnIncreaseVolume(InputAction.CallbackContext context);
         void OnDecreaseVolume(InputAction.CallbackContext context);
         void OnMuteUnmute(InputAction.CallbackContext context);
+        void OnPauseUnPause(InputAction.CallbackContext context);
     }
 }

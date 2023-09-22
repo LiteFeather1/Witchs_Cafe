@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class StartClickAnimator : MonoBehaviour
 {
+    [Header("Time")]
+    [SerializeField] private bool _unscaledTime;
+
     [Header("Movement")]
     [SerializeField] private Vector2 _amplitude;
     [SerializeField] private float _speed;
@@ -14,6 +17,9 @@ public class StartClickAnimator : MonoBehaviour
     private float _elapsedRotationTime;
     private float _direction = 1f;
 
+    public float TimeTime => _unscaledTime ? Time.unscaledTime : Time.time;
+    public float DeltaTime => _unscaledTime ? Time.unscaledDeltaTime : Time.deltaTime;
+
     private void Awake()
     {
         _startPos = transform.position;
@@ -23,13 +29,13 @@ public class StartClickAnimator : MonoBehaviour
     private void Update()
     {
         // Sin Movment
-        var sin = Mathf.Sin(Time.time * _speed) * _amplitude;
+        var sin = Mathf.Sin(TimeTime * _speed) * _amplitude;
         transform.position = _startPos + sin;
 
         // Rotation
-        _elapsedRotationTime += Time.deltaTime * _direction;
+        _elapsedRotationTime += DeltaTime * _direction;
         float t = _rotationCurve.Evaluate(_elapsedRotationTime / _timeRotation);
-        float z = Mathf.Lerp(-_angle, _angle, t);
+        float z = Mathf.LerpAngle(-_angle, _angle, t);
         transform.rotation = Quaternion.Euler(new(0f, 0f, z));
         if (_elapsedRotationTime > _timeRotation || _elapsedRotationTime < 0f)
             _direction *= -1f;

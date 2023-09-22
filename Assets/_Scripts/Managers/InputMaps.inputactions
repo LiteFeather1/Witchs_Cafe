@@ -49,6 +49,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "PauseUnPause",
+                    "type": "Button",
+                    "id": "f6137ffe-5fff-4628-af46-8d2d565a7bdc",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -148,6 +157,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "MuteUnmute",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "de9f6e41-ce63-4ae4-a72c-543f89492ea8",
+                    "path": "<Keyboard>/p",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PauseUnPause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ff083485-d28f-4fda-8a06-c45d7dab6098",
+                    "path": "<Keyboard>/enter",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PauseUnPause",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
