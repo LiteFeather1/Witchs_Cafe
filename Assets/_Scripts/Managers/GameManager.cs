@@ -20,6 +20,8 @@ public class GameManager : MonoBehaviour
 
     public static ManagerInput InputManager { get; private set; }
 
+    public float Money => _money;
+
     private void Awake()
     {
         Instance = this;
@@ -63,7 +65,7 @@ public class GameManager : MonoBehaviour
     private void OnClieantServed(CoffeeComparisonResults results, float clientPatience)
     {
         _uiManager.CoffeeDelivered(results, clientPatience);
-
+        StartCoroutine(_uiManager.StepMoney(_money, results.Money));
         if (_clientManager.CurrentClientIndex == _clientManager.ClientLength)
             return;
 
@@ -71,6 +73,8 @@ public class GameManager : MonoBehaviour
         float increment = (_endTime + 24f - _startTime) % 24f / index;
         float time = _startTime + (increment * _clientManager.CurrentClientIndex);
         _uiManager.SetTime(time);
+
+        _money += results.Money;
     }
 
     public class ManagerInput

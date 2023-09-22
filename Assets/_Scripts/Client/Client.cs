@@ -35,7 +35,7 @@ public class Client : ReceiveIngredient<CoffeeCup>
     protected override void TakeIngredient()
     {
         CoffeeComparisonResults result = new(_coffeeOrder.CofferOrder, _t.DeliverCoffee);
-        float t = Mathf.Clamp(_patience / (_maxPatience * .85f), .33f, 1f);
+        float t = Mathf.Clamp(_patience / (_maxPatience * .7f), .33f, 1f);
         result.Money *= t;
         _draggable.ForceRelease();
         _t.TeleportToKitchen();

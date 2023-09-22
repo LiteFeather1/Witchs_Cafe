@@ -40,10 +40,12 @@ public class UIManager : MonoBehaviour
 
     [Header("Money")]
     [SerializeField] private TextMeshProUGUI t_totalMoney;
-    [SerializeField] private float _lerpTotalMoneyTime = 1f;
+    [SerializeField] private float _moneyStepTime = 1.5f;
 
     private void Awake()
     {
+        _gameGroup.alpha = 0f;
+
         _downPosPatience = _patienceRoot.localPosition;
         _patienceRoot.localPosition += new Vector3(0f, _patienceRoot.sizeDelta.y * 2f);
         _upPosPatience = _patienceRoot.localPosition;
@@ -89,11 +91,11 @@ public class UIManager : MonoBehaviour
         _clientDialogueRoot.SetActive(false);
         t_clientPatience.text = $"Client: {clientPatience:00}%";
         t_orderEquality.text = $"Order: {results.Equality:00}%";
-        t_moneyGained.text = $"+++{results.Money:0.##}$";
+        t_moneyGained.text = $"+++${results.Money:0.##}";
 
         // Calculate grade
         float percentile = (results.Equality + clientPatience) * .5f;
-        char grade = 'F';
+        char grade;
         if (percentile >= 90f)
             grade = 'A';
         else if (percentile >= 80f)
@@ -102,6 +104,8 @@ public class UIManager : MonoBehaviour
             grade = 'C';
         else if (percentile >= 60f)
             grade = 'D';
+        else
+            grade = 'F';
 
         t_grade.text = grade.ToString();
         _deliverFeedbackRoot.gameObject.SetActive(true);
@@ -113,6 +117,7 @@ public class UIManager : MonoBehaviour
         int minutes = Mathf.RoundToInt((time * 60f) % 60);
         t_time.text = $"{hour:00}:{minutes:00}{(hour >= 6 ? "PM" : "AM")}";
     }
+
 
     private IEnumerator Move(Transform trasnform, Vector2 from, Vector2 to, float time, AnimationCurve curve)
     {
@@ -144,6 +149,19 @@ public class UIManager : MonoBehaviour
     {
         i_patienceFill.fillAmount = t;
         i_patienceFill.color = g_patienceGradient.Evaluate(t);
+    }
+
+    public IEnumerator StepMoney(float currentMoney, float moneyAdded)
+    {
+        float eTime = 0f;
+        while (eTime < _moneyStepTime)
+        {
+            eTime += Time.deltaTime;
+            float m = Mathf.Lerp(currentMoney, currentMoney + moneyAdded, eTime / _moneyStepTime);
+            t_totalMoney.text = m.ToString("00.00");
+            yield return null;
+        }
+        t_totalMoney.text = (currentMoney + moneyAdded).ToString("00.00");
     }
 
     [ContextMenu("Appear")]
