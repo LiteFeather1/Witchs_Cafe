@@ -11,7 +11,9 @@ public class ClientManager : MonoBehaviour
 
     public Action<Client> OnNewClient { get; set; }
     public Action<CoffeeComparisonResults, float> OnClientServed { get; set; }
-    public Action OnAllClientsServed { get; set; }
+
+    public int ClientLength => _clients.Length;
+    public int CurrentClientIndex => _currentClientIndex;
 
     private void OnEnable()
     {
@@ -43,20 +45,10 @@ public class ClientManager : MonoBehaviour
         OnNewClient?.Invoke(client);
     }
 
-    public void DisappearCurrentClient()
-    {
-        _currentClientIndex++;
-        if (_currentClientIndex < _clients.Length)
-            return;
-
-        print("All Clients Served");
-        OnAllClientsServed?.Invoke();
-    }
-
     public void ClientServed(CoffeeComparisonResults results, float patience)
     {
+        _currentClientIndex++;
         OnClientServed?.Invoke(results, patience);
-        DisappearCurrentClient();
     }
 }
 

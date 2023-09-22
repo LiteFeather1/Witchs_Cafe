@@ -25,6 +25,36 @@ public class UIManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI t_grade;
     [SerializeField] private Button b_NextClient;
 
+    [Header("Time")]
+    [SerializeField] private TextMeshProUGUI t_time;
+
+    [Header("Client Patience")]
+    [SerializeField] private RectTransform _patienceRoot;
+    private Vector2 _downPosPatience;
+    private Vector2 _upPosPatience;
+    [SerializeField] private Image i_patienceFill;
+    [SerializeField] private Gradient g_patienceGradient;
+    [SerializeField] private float _timeToAppearPatience = .5f;
+    [SerializeField] private AnimationCurve _curveAppearPatience;
+    private Client _currentClient;
+
+    [Header("Money")]
+    [SerializeField] private TextMeshProUGUI t_totalMoney;
+    [SerializeField] private float _lerpTotalMoneyTime = 1f;
+
+    private void Awake()
+    {
+        _downPosPatience = _patienceRoot.localPosition;
+        _patienceRoot.localPosition += new Vector3(0f, _patienceRoot.sizeDelta.y * 2f);
+        _upPosPatience = _patienceRoot.localPosition;
+    }
+
+    private void Update()
+    {
+        if (_currentClient != null)
+            SetPatience(_currentClient.PatienceT);
+    }
+
     private IEnumerator FadeCanvasGroup(CanvasGroup group, float toAlpha, float time)
     {
         float eTime = 0f;
@@ -63,7 +93,6 @@ public class UIManager : MonoBehaviour
 
         // Calculate grade
         float percentile = (results.Equality + clientPatience) * .5f;
-        print(percentile);
         char grade = 'F';
         if (percentile >= 90f)
             grade = 'A';
@@ -77,5 +106,49 @@ public class UIManager : MonoBehaviour
         t_grade.text = grade.ToString();
         _deliverFeedbackRoot.gameObject.SetActive(true);
     }
+
+    public void SetTime(float time)
+    {
+        int hour = Mathf.FloorToInt(time % 12);
+        int minutes = Mathf.RoundToInt((time * 60f) % 60);
+        t_time.text = $"{hour:00}:{minutes:00}{(hour >= 6 ? "PM" : "AM")}";
+    }
+
+    private IEnumerator Move(Transform trasnform, Vector2 from, Vector2 to, float time, AnimationCurve curve)
+    {
+        trasnform.localPosition = from;
+        float eTime = 0f;
+        while (eTime < time) 
+        {
+            float t = curve.Evaluate(eTime/ time);
+            trasnform.localPosition = Vector2.LerpUnclamped(from, to, t);
+            eTime += Time.fixedDeltaTime;
+            yield return null;
+        }
+        trasnform.localPosition = to;
+    }
+
+    public void SetCurrentClient(Client currentClient)
+    {
+        _currentClient = currentClient;
+        StartCoroutine(Move(_patienceRoot, _upPosPatience, _downPosPatience, _timeToAppearPatience, _curveAppearPatience));
+    }
+
+    public void ClientServed()
+    {
+        _currentClient = null;
+        StartCoroutine(Move(_patienceRoot, _downPosPatience, _upPosPatience, _timeToAppearPatience, _curveAppearPatience));
+    }
+
+    private void SetPatience(float t)
+    {
+        i_patienceFill.fillAmount = t;
+        i_patienceFill.color = g_patienceGradient.Evaluate(t);
+    }
+
+    [ContextMenu("Appear")]
+    public void Appear() => StartCoroutine(Move(_patienceRoot, _upPosPatience, _downPosPatience, _timeToAppearPatience, _curveAppearPatience));
+    [ContextMenu("Disappear")]
+    public void DisAppear() => StartCoroutine(Move(_patienceRoot, _downPosPatience, _upPosPatience, _timeToAppearPatience, _curveAppearPatience));
 }
 

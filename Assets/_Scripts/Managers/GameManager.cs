@@ -1,5 +1,4 @@
 using System.Collections;
-using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -8,14 +7,18 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
     public static Camera Camera { get; private set; }
 
+    [Header("Money")]
+    [SerializeField] private float _money = 0f;
+
+    [Header("Time")]
+    [SerializeField] private float _startTime;
+    [SerializeField] private float _endTime;
 
     [Header("Managers")]
     [SerializeField] private ClientManager _clientManager;
     [SerializeField] private UIManager _uiManager;
+
     public static ManagerInput InputManager { get; private set; }
-
-
-    public static Client ClientManager;
 
     private void Awake()
     {
@@ -27,7 +30,7 @@ public class GameManager : MonoBehaviour
     private void OnEnable()
     {
         _clientManager.OnNewClient += AppearDialogue;
-        _clientManager.OnClientServed += _uiManager.CoffeeDelivered;
+        _clientManager.OnClientServed += OnClieantServed;
 
         InputManager.PlayerInputs.LeftClick.performed += StartGame;
         InputManager.PlayerInputs.RightClick.performed += StartGame;
@@ -36,7 +39,7 @@ public class GameManager : MonoBehaviour
     private void OnDisable()
     {
         _clientManager.OnNewClient -= AppearDialogue;
-        _clientManager.OnClientServed -= _uiManager.CoffeeDelivered;
+        _clientManager.OnClientServed -= OnClieantServed;
     }
 
     public IEnumerator StartGameCO()
@@ -54,6 +57,20 @@ public class GameManager : MonoBehaviour
     private void AppearDialogue(Client client)
     {
         _uiManager.PopUpDialogue(client.Dialogue);
+        _uiManager.SetCurrentClient(client);
+    }
+
+    private void OnClieantServed(CoffeeComparisonResults results, float clientPatience)
+    {
+        _uiManager.CoffeeDelivered(results, clientPatience);
+
+        if (_clientManager.CurrentClientIndex == _clientManager.ClientLength)
+            return;
+
+        int index = Mathf.Max(1, _clientManager.CurrentClientIndex - 1);
+        float increment = (_endTime + 24f - _startTime) % 24f / index;
+        float time = _startTime + (increment * _clientManager.CurrentClientIndex);
+        _uiManager.SetTime(time);
     }
 
     public class ManagerInput

@@ -9,7 +9,7 @@ public class Client : ReceiveIngredient<CoffeeCup>
 
     [Header("Patience")]
     [SerializeField] private float _patience = 120f;
-    private float _maxPatience;
+    private float _maxPatience = 1f;
 
     [Header("Pop Animation")]
     [SerializeField] private float _timeToPop;
@@ -20,9 +20,11 @@ public class Client : ReceiveIngredient<CoffeeCup>
     public string Dialogue => _dialogue;
     public Coffee Coffee => _coffeeOrder.CofferOrder;
 
+    public float PatienceT => _patience / _maxPatience;
+
     private void Awake()
     {
-        _maxPatience = _patience * .85f;
+        _maxPatience = _patience;
     }
 
     private void Update()
@@ -33,7 +35,7 @@ public class Client : ReceiveIngredient<CoffeeCup>
     protected override void TakeIngredient()
     {
         CoffeeComparisonResults result = new(_coffeeOrder.CofferOrder, _t.DeliverCoffee);
-        float t = Mathf.Clamp(_patience / _maxPatience, .33f, 1f);
+        float t = Mathf.Clamp(_patience / (_maxPatience * .85f), .33f, 1f);
         result.Money *= t;
         _draggable.ForceRelease();
         _t.TeleportToKitchen();

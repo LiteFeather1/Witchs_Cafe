@@ -1,14 +1,12 @@
 ﻿public class CoffeeComparisonResults
 {
-    public Coffee Deliver { get; private set; }
     public float Money { get; set; }
     public float Equality { get; private set; }
 
-    public CoffeeComparisonResults(float money, float equality, Coffee deliver)
+    public CoffeeComparisonResults(float money, float equality)
     {
         Money = money;
         Equality = equality;
-        Deliver = deliver;
     }
 
     public CoffeeComparisonResults(Coffee order, Coffee deliver)
@@ -42,13 +40,11 @@
 
         Money = money;
         Equality = equality;
-        Deliver = deliver;
     }
 
     public override string ToString()
     {
         var sb = new System.Text.StringBuilder();
-        sb.Append(Deliver).AppendLine();
         sb.Append("Money: ").Append(Money).AppendLine();
         sb.Append("Equality: ").Append(Equality).AppendLine();
         return sb.ToString();
