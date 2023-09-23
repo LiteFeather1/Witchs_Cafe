@@ -59,7 +59,7 @@ public class HoverInfoManager : MonoBehaviour
         for (int i = 0; i < coffee.MiscIngredients.Count; i++)
             sb.Append(BULLET_POINT).Append(coffee.MiscIngredients[i].Name).AppendLine();
 
-        SetText(tittle, sb.ToString());
+        SetText($"{tittle} Ingredients:", sb.ToString());
     }
 
     public void DeactiveHover()

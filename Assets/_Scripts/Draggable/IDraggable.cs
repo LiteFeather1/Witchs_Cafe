@@ -11,7 +11,7 @@ public interface IDraggable
     public bool IsHold { get; set; }
     public bool IsDragging { get; set; }
 
-    public void StartDragging()
+    public virtual void StartDragging()
     {
         IsDragging = true;
         RB.velocity = Vector2.zero;

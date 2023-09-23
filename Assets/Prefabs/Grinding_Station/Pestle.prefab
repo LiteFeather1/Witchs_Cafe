@@ -137,6 +137,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rb: {fileID: 6112503119310426064}
   _collider: {fileID: 1791997124258837275}
+  _sr: {fileID: 2251278774989597474}
+  _outLineMaterial: {fileID: 2100000, guid: 7e2b0f802a1ce7e4ca9f286a42060f49, type: 2}
+  _unLineMaterial: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
 --- !u!114 &8560934602512906307
 MonoBehaviour:
   m_ObjectHideFlags: 0

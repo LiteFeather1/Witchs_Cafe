@@ -54,7 +54,7 @@ public class CoffeeCup : ReceiveIngredient<ITopping>
     public void TrashCoffee()
     {
         _deliverCoffee = new();
-        _liquidRenderer.color = Color.clear;
+        _liquidRenderer.color = Color.white;
     }
 
     // Also Called by a unity event

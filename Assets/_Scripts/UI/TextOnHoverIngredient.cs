@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class TextOnHoverIngredient : TextOnHover
+public class TextOnHoverIngredient : TextOnHoverCollider
 {
     [SerializeField] private IngredientBehaviour _ingredientBehaviour;
 

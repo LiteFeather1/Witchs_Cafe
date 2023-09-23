@@ -529,6 +529,7 @@ GameObject:
   - component: {fileID: 183423837}
   - component: {fileID: 183423836}
   - component: {fileID: 183423835}
+  - component: {fileID: 183423838}
   m_Layer: 5
   m_Name: Trash_Coffee_Button
   m_TagString: Untagged
@@ -649,6 +650,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 183423833}
   m_CullTransparentMesh: 1
+--- !u!114 &183423838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 183423833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c586c0411e5188548bc82ca678d58c6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _info: Throw Coffee away?
 --- !u!1 &193596362
 GameObject:
   m_ObjectHideFlags: 0
@@ -1345,6 +1359,7 @@ GameObject:
   - component: {fileID: 331679679}
   - component: {fileID: 331679678}
   - component: {fileID: 331679677}
+  - component: {fileID: 331679680}
   m_Layer: 5
   m_Name: Button_Trash_Coffee_Cauldron
   m_TagString: Untagged
@@ -1465,6 +1480,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 331679675}
   m_CullTransparentMesh: 1
+--- !u!114 &331679680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 331679675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c586c0411e5188548bc82ca678d58c6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _info: Throw Coffee away?
 --- !u!1 &336166182
 GameObject:
   m_ObjectHideFlags: 0
@@ -4643,6 +4671,7 @@ GameObject:
   - component: {fileID: 1283780318}
   - component: {fileID: 1283780317}
   - component: {fileID: 1283780316}
+  - component: {fileID: 1283780319}
   m_Layer: 5
   m_Name: Deliver_Coffee_Button
   m_TagString: Untagged
@@ -4775,6 +4804,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1283780314}
   m_CullTransparentMesh: 1
+--- !u!114 &1283780319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1283780314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c586c0411e5188548bc82ca678d58c6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _info: Deliver Coffee?
 --- !u!4 &1293342555 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3034966341916779252, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}

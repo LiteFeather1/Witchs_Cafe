@@ -51,6 +51,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rb: {fileID: 180728942008503190}
   _collider: {fileID: 249421126814785432}
+  _sr: {fileID: 5527237864055351071}
+  _outLineMaterial: {fileID: 2100000, guid: 7e2b0f802a1ce7e4ca9f286a42060f49, type: 2}
+  _unLineMaterial: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
 --- !u!114 &-7394905386297835353
 MonoBehaviour:
   m_ObjectHideFlags: 0
