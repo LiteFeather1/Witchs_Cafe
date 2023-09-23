@@ -21,13 +21,23 @@ public class UIManager : MonoBehaviour
     [SerializeField] private AnimationCurve _dialoguePopCurve;
     [SerializeField] private AnimationCurve _dialogueHideCurve;
 
-    [Header("Client Feed Back")]
+    [Header("Client Feedback")]
     [SerializeField] private Transform _deliverFeedbackRoot;
     [SerializeField] private TextMeshProUGUI t_clientPatience;
     [SerializeField] private TextMeshProUGUI t_orderEquality;
     [SerializeField] private TextMeshProUGUI t_moneyGained;
     [SerializeField] private TextMeshProUGUI t_grade;
-    [SerializeField] private Button b_NextClient;
+    [SerializeField] private RectTransform rt_grade;
+    [SerializeField] private Button b_nextClient;
+
+    [Header("Client Feedback Anim")]
+    [SerializeField] private CanvasGroup _deliverGroup;
+    [SerializeField] private float _deliverTimeRoot;
+    [SerializeField] private AnimationCurve _deliverCurveRoot;
+    [SerializeField] private float _gradeTime;
+    [SerializeField] private AnimationCurve _gradeCurve;
+    [SerializeField] private CanvasGroup _gradeGroup;
+    private static readonly WaitForSeconds _waitBeforeGrade = new(.3f);
 
     [Header("Time")]
     [SerializeField] private TextMeshProUGUI t_time;
@@ -53,6 +63,7 @@ public class UIManager : MonoBehaviour
 
     [Header("Pause Overlay")]
     [SerializeField] private GameObject _pauseOverlay;
+
     private void Awake()
     {
         _gameGroup.alpha = 0f;
@@ -114,18 +125,6 @@ public class UIManager : MonoBehaviour
         _clientDialogueRoot.sizeDelta = to;
     }
 
-    [ContextMenu("Test")]
-    private void Test()
-    {
-        StartCoroutine(PopUpDialogueCO());
-    }
-
-    [ContextMenu("Test2")]
-    private void Test2()
-    {
-        StartCoroutine(HideDialogueCO());
-    }
-
     private IEnumerator PopUpDialogueCO()
     {
         _clientDialogueRoot.gameObject.SetActive(true);
@@ -169,7 +168,39 @@ public class UIManager : MonoBehaviour
             grade = 'F';
 
         t_grade.text = grade.ToString();
-        _deliverFeedbackRoot.gameObject.SetActive(true);
+        StartCoroutine(DeliverFeedBackTween());
+    }
+
+    private IEnumerator GradeTween(Transform transform, CanvasGroup group, float time, AnimationCurve curve)
+    {
+        transform.gameObject.SetActive(true);
+        group.alpha = 0f;
+        Vector2 from = new(5f, 5f);
+        transform.localScale = from;
+        float eTime = 0f;
+        while (eTime < time)
+        {
+            eTime += Time.smoothDeltaTime;
+            float t = curve.Evaluate(eTime / _deliverTimeRoot);
+            transform.localScale = Vector2.LerpUnclamped(from, Vector2.one, t);
+            group.alpha = t;
+            yield return new WaitForEndOfFrame();
+        }
+        group.alpha = 1f;
+        transform.localScale = Vector3.one;
+    }
+
+    [ContextMenu("Lol")]
+    private void Test() => StartCoroutine(DeliverFeedBackTween());
+
+    private IEnumerator DeliverFeedBackTween()
+    {
+        b_nextClient.gameObject.SetActive(false);
+        rt_grade.gameObject.SetActive(false);
+        yield return GradeTween(_deliverFeedbackRoot, _deliverGroup, _deliverTimeRoot, _deliverCurveRoot);
+        yield return _waitBeforeGrade;
+        yield return GradeTween(rt_grade, _gradeGroup, _gradeTime, _deliverCurveRoot);
+        b_nextClient.gameObject.SetActive(true);
     }
 
     public void SetTime(float time)
