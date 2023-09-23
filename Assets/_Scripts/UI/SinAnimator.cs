@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class StartClickAnimator : MonoBehaviour
+public class SinAnimator : MonoBehaviour
 {
     [Header("Time")]
     [SerializeField] private bool _unscaledTime;

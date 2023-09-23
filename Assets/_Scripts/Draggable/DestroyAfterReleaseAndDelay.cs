@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class DeleteAfterReleaseAndDelay : MonoBehaviour
+public class DestroyAfterReleaseAndDelay : MonoBehaviour
 {
     [SerializeField] private LTFUtils.FixedTimerBehaviour _timerToDelete;
     private IDraggable _draggable;
@@ -14,6 +14,7 @@ public class DeleteAfterReleaseAndDelay : MonoBehaviour
     {
         _draggable.Grabbed += OnGrabbed;
         _draggable.Released += OnReleased;
+        _draggable.OnHold += OnGrabbed;
         _timerToDelete.Timer.TimeEvent += Destroy;
     }
 
@@ -21,6 +22,7 @@ public class DeleteAfterReleaseAndDelay : MonoBehaviour
     {
         _draggable.Grabbed -= OnGrabbed;
         _draggable.Released -= OnReleased;
+        _draggable.OnHold -= OnGrabbed;
         _timerToDelete.Timer.TimeEvent -= Destroy;
     }
 

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6892894968974998385}
   - component: {fileID: 2251278774989597474}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,7 +100,7 @@ GameObject:
   - component: {fileID: 6112503119310426064}
   - component: {fileID: 1791997124258837275}
   - component: {fileID: -3153089613744187470}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Pestle
   m_TagString: Untagged
   m_Icon: {fileID: 0}

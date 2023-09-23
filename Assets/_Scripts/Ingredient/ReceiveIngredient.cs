@@ -3,15 +3,15 @@
 public abstract class ReceiveIngredient<T> : MonoBehaviour where T : class
 {
     protected T _t;
-    protected IDraggable _draggable;
+    protected IDraggable _draggable = null;
         
     protected virtual void TakeIngredient()
     {
-        _draggable.Hold = true;
+        _draggable.Hold();
         ClearReferences();
     }
 
-    private void ClearReferences()
+    protected virtual void ClearReferences()
     {
         _draggable.Released -= TakeIngredient;
         _draggable = null;
@@ -40,8 +40,10 @@ public abstract class ReceiveIngredient<T> : MonoBehaviour where T : class
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (!collision.TryGetComponent(out IPestleable _))
+#pragma warning disable UNT0014 // T is not a unity componet but kinda is xd
+        if (!collision.TryGetComponent(out T _))
             return;
+#pragma warning restore UNT0014
 
         if (_draggable == null)
             return;

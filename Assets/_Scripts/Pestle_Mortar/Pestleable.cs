@@ -2,14 +2,20 @@
 
 public class Pestleable : MonoBehaviour, IPestleable
 {
-    [Header("Pestleable")]
     [SerializeField] private GameObject _objectToGive;
     [SerializeField] private float _resistance = 100f;
     [SerializeField] private Rigidbody2D _rb;
     [SerializeField] private Collider2D _collider;
     private bool _canBeHit;
-
     public bool CanBeHit => _canBeHit;
+
+    private IName _name;
+    public IName Name => _name;
+
+    private void Awake()
+    {
+        _name = GetComponent<IName>();
+    }
 
     public void SetPosition(Vector2 position)
     {

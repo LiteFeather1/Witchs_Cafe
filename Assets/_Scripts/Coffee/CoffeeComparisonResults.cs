@@ -21,10 +21,9 @@
             equality += percentPerEqual;
         }
 
-        if (order.Milk == deliver.Milk)
+        if (order.Milk == deliver.Milk && deliver.Milk != null)
         {
-            if (deliver.Milk != null)
-                money += order.Milk.Money;
+            money += order.Milk.Money;
             equality += percentPerEqual;
         }
 

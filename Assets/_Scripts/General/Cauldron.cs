@@ -7,27 +7,44 @@ public class Cauldron : ReceiveIngredient<IMixable>
     [Header("Visual")]
     [SerializeField] private SpriteRenderer[] _waterSprites;
 
+    [Header("Hover")]
+    [SerializeField] private string _title = "Cauldron";
+
     public Coffee MixingCoffee => _mixingCoffee;
 
-    private void OnEnable()
+    private void OnEnable() => SubToCoffee();
+
+    private void OnDisable() => UnSubToCoffee();
+
+    private void OnMouseEnter()
     {
-        SubToCoffee();
+        if (_t != null)
+            GameManager.Instance.HoverInfoManager.SetSimpleText($"Add {_t.Name} to {_title}?");
+        else
+        {
+            var mouseDraggable = GameManager.Instance.MouseManager.Draggable;
+            if (mouseDraggable != null)
+            {
+                if (mouseDraggable.RB.TryGetComponent(out IName nameable))
+                    GameManager.Instance.HoverInfoManager.SetSimpleText($"Can't add {nameable.Name} to {_title}!!!");
+            }
+            else if (_mixingCoffee.CoffeeBean == null
+                && _mixingCoffee.Milk == null
+                && _mixingCoffee.MiscIngredients.Count == 0)
+                GameManager.Instance.HoverInfoManager.SetSimpleText($"{_title} is empty!"); 
+            else
+                GameManager.Instance.HoverInfoManager.SetCoffeeText(_title, _mixingCoffee);
+        }
     }
 
-    private void OnDisable()
-    {
-        UnSubToCoffee();
-    }
+    private void OnMouseExit() => GameManager.Instance.HoverInfoManager.DeactiveHover();
 
-    public void SubToCoffee()
-    {
-        _mixingCoffee.OnCoffeeBeanSet += OnCoffeeBeanSet;
-    }
+    public void SubToCoffee() => _mixingCoffee.OnCoffeeBeanSet += OnCoffeeBeanSet;
 
-    public void UnSubToCoffee()
-    {
-        _mixingCoffee.OnCoffeeBeanSet -= OnCoffeeBeanSet;
-    }
+    public void UnSubToCoffee() => _mixingCoffee.OnCoffeeBeanSet -= OnCoffeeBeanSet;
+
+    public void OnCoffeeBeanSet(IngredientSO ingredient) => SetSpriteColour(ingredient.Colour);
+
 
     // Also Called by a unity event
     public void TrashCoffee()
@@ -41,20 +58,14 @@ public class Cauldron : ReceiveIngredient<IMixable>
     protected override void TakeIngredient()
     {
         _t.AddIngredient(_mixingCoffee);
-        _t.Destroy();
+        var t = _t;
         base.TakeIngredient();
-    }
-
-    public void OnCoffeeBeanSet(IngredientSO ingredient)
-    {
-        SetSpriteColour(ingredient.Colour);
+        t.Destroy();
     }
 
     private void SetSpriteColour(Color colour)
     {
         for (int i = 0; i < _waterSprites.Length; i++)
-        {
             _waterSprites[i].color = colour;
-        }
     }
 }

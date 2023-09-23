@@ -15,12 +15,17 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float _endTime;
 
     [Header("Managers")]
+    [SerializeField] private MouseManager _mouseManager;
     [SerializeField] private ClientManager _clientManager;
     [SerializeField] private UIManager _uiManager;
+    [SerializeField] private HoverInfoManager _hoverInfoManager;
 
     public static ManagerInput InputManager { get; private set; }
 
     public float Money => _money;
+    
+    public MouseManager MouseManager => _mouseManager;
+    public HoverInfoManager HoverInfoManager => _hoverInfoManager;
 
     private void Awake()
     {

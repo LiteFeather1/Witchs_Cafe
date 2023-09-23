@@ -22,6 +22,14 @@ public class Client : ReceiveIngredient<CoffeeCup>
 
     public float PatienceT => _patience / _maxPatience;
 
+    private void OnMouseEnter()
+    {
+        if (_t != null)
+            GameManager.Instance.HoverInfoManager.SetSimpleText("Deliver Coffee?");
+    }
+
+    private void OnMouseExit() => GameManager.Instance.HoverInfoManager.DeactiveHover();
+
     private void Awake()
     {
         _maxPatience = _patience;

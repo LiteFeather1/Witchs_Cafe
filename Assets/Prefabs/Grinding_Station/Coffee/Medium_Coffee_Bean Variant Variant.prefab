@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: _objectToGive
       value: 
       objectReference: {fileID: 7140350756496578881, guid: 3404225997215ea4d83359614d1ebee3, type: 3}
+    - target: {fileID: 786847980957896692, guid: c0354e3fdc758614989a0b3c776042e5, type: 3}
+      propertyPath: _info
+      value: Medium Coffee Bean
+      objectReference: {fileID: 0}
     - target: {fileID: 2276263752243178595, guid: c0354e3fdc758614989a0b3c776042e5, type: 3}
       propertyPath: m_Name
       value: Medium_Coffee_Bean Variant Variant

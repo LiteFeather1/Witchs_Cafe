@@ -92,6 +92,7 @@ public class UIManager : MonoBehaviour
     {
         yield return FadeCanvasGroup(_startGroup, 0f, _fadeTimeStartGroup);
         yield return FadeCanvasGroup(_gameGroup, 1f, _fadeTimeGameGroup);
+        _gameGroup.interactable = true;
         yield return new WaitForSeconds(.5f);
         _startGroup.gameObject.SetActive(false);
     }

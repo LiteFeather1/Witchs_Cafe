@@ -1,5 +1,6 @@
 ﻿public interface IIngredient : IDestroyable
 {
+    public string Name { get; }
     public void AddIngredient(Coffee coffee);
 }
 
