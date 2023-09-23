@@ -19,12 +19,13 @@
         {
             money += order.CoffeeBean.Money;
             equality += percentPerEqual;
-        }
 
-        if (order.Milk == deliver.Milk && deliver.Milk != null)
-        {
-            money += order.Milk.Money;
-            equality += percentPerEqual;
+            if (order.Milk == deliver.Milk)
+            {
+                if (deliver.Milk != null)
+                    money += order.Milk.Money;
+                equality += percentPerEqual;
+            }
         }
 
         for (int i = 0; i < deliver.MiscIngredients.Count; i++)

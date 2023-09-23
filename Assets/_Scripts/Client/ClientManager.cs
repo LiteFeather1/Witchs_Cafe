@@ -10,6 +10,7 @@ public class ClientManager : MonoBehaviour
     private readonly static YieldInstruction _delayBeforeShowDialogue = new WaitForSeconds(.5f);
 
     public Action<Client> OnNewClient { get; set; }
+    public Action OnAllClientsServed { get; set; }
     public Action<CoffeeComparisonResults, float> OnClientServed { get; set; }
 
     public int ClientLength => _clients.Length;
@@ -38,6 +39,12 @@ public class ClientManager : MonoBehaviour
 
     public IEnumerator AppearClientCO()
     {
+        if (_currentClientIndex == _clients.Length)
+        {
+            OnAllClientsServed?.Invoke();
+            yield break;
+        }
+
         var client = _clients[_currentClientIndex];
         client.gameObject.SetActive(true);
         yield return client.PopAnimation();

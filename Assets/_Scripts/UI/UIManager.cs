@@ -15,10 +15,13 @@ public class UIManager : MonoBehaviour
     [SerializeField] private float _fadeTimeGameGroup;
 
     [Header("Client Dialogue")]
-    [SerializeField] private GameObject _clientDialogueRoot;
+    [SerializeField] private RectTransform _clientDialogueRoot;
     [SerializeField] private TextMeshProUGUI t_clientDialogue;
+    [SerializeField] private float _dialoguePopTime = 1f;
+    [SerializeField] private AnimationCurve _dialoguePopCurve;
+    [SerializeField] private AnimationCurve _dialogueHideCurve;
 
-    [Header("Client Dialogue")]
+    [Header("Client Feed Back")]
     [SerializeField] private Transform _deliverFeedbackRoot;
     [SerializeField] private TextMeshProUGUI t_clientPatience;
     [SerializeField] private TextMeshProUGUI t_orderEquality;
@@ -97,17 +100,56 @@ public class UIManager : MonoBehaviour
         _startGroup.gameObject.SetActive(false);
     }
 
+    private IEnumerator DialogueTween(Vector2 from, Vector2 to, AnimationCurve curve)
+    {
+        _clientDialogueRoot.sizeDelta = from;
+        float eTime = 0f;
+        while (eTime < _dialoguePopTime)
+        {
+            float t = curve.Evaluate(eTime / _dialoguePopTime);
+            _clientDialogueRoot.sizeDelta = Vector2.LerpUnclamped(from, to, t);
+            eTime += Time.deltaTime;
+            yield return null;
+        }
+        _clientDialogueRoot.sizeDelta = to;
+    }
+
+    [ContextMenu("Test")]
+    private void Test()
+    {
+        StartCoroutine(PopUpDialogueCO());
+    }
+
+    [ContextMenu("Test2")]
+    private void Test2()
+    {
+        StartCoroutine(HideDialogueCO());
+    }
+
+    private IEnumerator PopUpDialogueCO()
+    {
+        _clientDialogueRoot.gameObject.SetActive(true);
+        yield return DialogueTween(new(64f, _clientDialogueRoot.sizeDelta.y), _clientDialogueRoot.sizeDelta, _dialoguePopCurve);
+    }
+
     public void PopUpDialogue(string clientDialogue)
     {
         t_clientDialogue.text = clientDialogue;
-        _clientDialogueRoot.SetActive(true);
+        LayoutRebuilder.ForceRebuildLayoutImmediate(_clientDialogueRoot);
+        StartCoroutine(PopUpDialogueCO());
     }
 
-    public void HideDialogue() => _clientDialogueRoot.SetActive(false);
+    private IEnumerator HideDialogueCO()
+    {
+        var from = _clientDialogueRoot.sizeDelta;
+        yield return DialogueTween(from , new(64f, _clientDialogueRoot.sizeDelta.y), _dialogueHideCurve);
+        _clientDialogueRoot.gameObject.SetActive(false);
+        _clientDialogueRoot.sizeDelta = from;
+    }
 
     public void CoffeeDelivered(CoffeeComparisonResults results, float clientPatience)
     {
-        _clientDialogueRoot.SetActive(false);
+        StartCoroutine(HideDialogueCO());
         t_clientPatience.text = $"Client: {clientPatience:00}%";
         t_orderEquality.text = $"Order: {results.Equality:00}%";
         t_moneyGained.text = $"+++${results.Money:0.##}";
@@ -191,10 +233,4 @@ public class UIManager : MonoBehaviour
     private void SwapMuteSprite(InputAction.CallbackContext ctx) => SwapMuteSprite();
 
     public void PauseOverlay(bool state) => _pauseOverlay.SetActive(state);
-
-    [ContextMenu("Appear")]
-    public void Appear() => StartCoroutine(Move(_patienceRoot, _upPosPatience, _downPosPatience, _timeToAppearPatience, _curveAppearPatience));
-    [ContextMenu("Disappear")]
-    public void DisAppear() => StartCoroutine(Move(_patienceRoot, _downPosPatience, _upPosPatience, _timeToAppearPatience, _curveAppearPatience));
 }
-
