@@ -69,7 +69,7 @@ public class UIManager : MonoBehaviour
         _gameGroup.alpha = 0f;
 
         _downPosPatience = _patienceRoot.localPosition;
-        _patienceRoot.localPosition += new Vector3(0f, _patienceRoot.sizeDelta.y * 2f);
+        _patienceRoot.localPosition += new Vector3(0f, _patienceRoot.sizeDelta.y);
         _upPosPatience = _patienceRoot.localPosition;
     }
 

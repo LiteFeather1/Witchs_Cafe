@@ -9,6 +9,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -763523791896613193, guid: c0354e3fdc758614989a0b3c776042e5, type: 3}
+      propertyPath: _name
+      value: Dark Coffee Bean
+      objectReference: {fileID: 0}
+    - target: {fileID: -763523791896613193, guid: c0354e3fdc758614989a0b3c776042e5, type: 3}
       propertyPath: _collider
       value: 
       objectReference: {fileID: 3818844711533100090}
@@ -16,25 +20,21 @@ PrefabInstance:
       propertyPath: _objectToGive
       value: 
       objectReference: {fileID: 3769186500167455410, guid: 7ccd9fc1c6037fa44ac8d0470e8bb459, type: 3}
-    - target: {fileID: 786847980957896692, guid: c0354e3fdc758614989a0b3c776042e5, type: 3}
-      propertyPath: _info
-      value: Dark Coffee Bean
-      objectReference: {fileID: 0}
     - target: {fileID: 2276263752243178595, guid: c0354e3fdc758614989a0b3c776042e5, type: 3}
       propertyPath: m_Name
       value: Dark_Coffee_Bean Variant Variant
       objectReference: {fileID: 0}
     - target: {fileID: 8964385034582565347, guid: c0354e3fdc758614989a0b3c776042e5, type: 3}
-      propertyPath: m_Color.b
-      value: 0.08235294
-      objectReference: {fileID: 0}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 70237709, guid: 941ff9dc7ebb77742bd2e16257c82e47, type: 3}
     - target: {fileID: 8964385034582565347, guid: c0354e3fdc758614989a0b3c776042e5, type: 3}
       propertyPath: m_Color.g
-      value: 0.10980393
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8964385034582565347, guid: c0354e3fdc758614989a0b3c776042e5, type: 3}
       propertyPath: m_Color.r
-      value: 0.28235295
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9143586693651949775, guid: c0354e3fdc758614989a0b3c776042e5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -76,7 +76,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

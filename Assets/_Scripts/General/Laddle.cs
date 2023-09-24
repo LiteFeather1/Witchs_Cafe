@@ -1,8 +1,17 @@
 ﻿using UnityEngine;
 
-public class Ladle : MonoBehaviour
+public class Laddle : MonoBehaviour
 {
     [SerializeField] private Cauldron _cauldron;
+
+    [Header("Sprite")]
+    [SerializeField] private SpriteRenderer _waterSprite;
+
+    private void OnEnable() => _cauldron.OnCoffeChange += SetWaterColour;
+
+    private void OnDisable() => _cauldron.OnCoffeChange -= SetWaterColour;
+
+    private void SetWaterColour(Color colour) => _waterSprite.color = colour;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

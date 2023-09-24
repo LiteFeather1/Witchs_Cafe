@@ -12,6 +12,7 @@ public class Cauldron : ReceiveIngredient<IMixable>
     [SerializeField] private Collider2D _collider;
     [SerializeField] private SpriteRenderer[] _waterSprites;
 
+    public System.Action<Color> OnCoffeChange { get; set; }
 
     public Coffee MixingCoffee => _mixingCoffee;
 
@@ -27,7 +28,7 @@ public class Cauldron : ReceiveIngredient<IMixable>
 
     public void UnSubToCoffee() => _mixingCoffee.OnCoffeeBeanSet -= OnCoffeeBeanSet;
 
-    public void OnCoffeeBeanSet(IngredientSO ingredient) => SetSpriteColour(ingredient.Colour);
+    private void OnCoffeeBeanSet(IngredientSO ingredient) => SetSpriteColour(ingredient.Colour);
 
     private void SetHoverText()
     {
@@ -74,5 +75,7 @@ public class Cauldron : ReceiveIngredient<IMixable>
     {
         for (int i = 0; i < _waterSprites.Length; i++)
             _waterSprites[i].color = colour;
+
+        OnCoffeChange?.Invoke(colour);
     }
 }

@@ -42,6 +42,8 @@ public class ReturnToStartPosAfterRelease : MonoBehaviour
 
     private void Teleport()
     {
+        _draggable.RB.velocity = Vector2.zero;
+        _draggable.RB.angularVelocity = 0f;
         transform.SetPositionAndRotation(_startPos, _startRotation);
     }
 }

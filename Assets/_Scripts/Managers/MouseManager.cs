@@ -43,10 +43,10 @@ public class MouseManager : MonoBehaviour
             return;
 
         Vector2 mousePos = GameManager.MousePosition();
-        _draggable.RB.position = mousePos;
-        float distance = Vector2.Distance(_previousMousePos, mousePos);
-        if (distance < 0.1f)
+        float distance = Vector2.Distance(_draggable.RB.position, mousePos);
+        if (distance < _speedRange.x * .1f)
         {
+            _draggable.RB.position = mousePos;
             _releaseVelocity = Vector2.zero;
             return;
         }
@@ -55,7 +55,7 @@ public class MouseManager : MonoBehaviour
         float speed = Mathf.Lerp(_speedRange.x, _speedRange.y, t);
         Vector2 direction = (mousePos - _previousMousePos).normalized;
         _releaseVelocity = speed * direction;
-        _previousMousePos = mousePos;
+        _draggable.RB.velocity = _releaseVelocity;
     }
 
     private void OnClick(InputAction.CallbackContext ctx)

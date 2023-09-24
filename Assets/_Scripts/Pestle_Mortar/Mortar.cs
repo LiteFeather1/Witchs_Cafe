@@ -16,7 +16,7 @@ public class Mortar : ReceiveIngredient<IPestleable>
     private void SetHoverText()
     {
         if (_t != null)
-            GameManager.Instance.HoverInfoManager.SetSimpleText($"Drop {_t.Name.Name} to {_title}?");
+            GameManager.Instance.HoverInfoManager.SetSimpleText($"Drop {_t.Name} to {_title}?");
         else
         {
             var mouseDraggable = GameManager.Instance.MouseManager.Draggable;

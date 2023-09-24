@@ -32,7 +32,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.3000002, y: 2.15, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6852399793775321130}
@@ -52,9 +52,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rb: {fileID: 180728942008503190}
   _collider: {fileID: 249421126814785432}
-  _sr: {fileID: 5527237864055351071}
-  _outLineMaterial: {fileID: 2100000, guid: 7e2b0f802a1ce7e4ca9f286a42060f49, type: 2}
-  _unLineMaterial: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
 --- !u!114 &-6492626613191172191
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -98,7 +95,7 @@ MonoBehaviour:
   _timer:
     _canTick: 0
     _timeType: 0
-    _time: 5
+    _time: 0.1
 --- !u!50 &180728942008503190
 Rigidbody2D:
   serializedVersion: 4

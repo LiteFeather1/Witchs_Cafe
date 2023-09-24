@@ -14,15 +14,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5527237864055351071, guid: ca46741342676774e922dd543c7af86e, type: 3}
       propertyPath: m_Color.b
-      value: 0.62352943
+      value: 0.3137255
       objectReference: {fileID: 0}
     - target: {fileID: 5527237864055351071, guid: ca46741342676774e922dd543c7af86e, type: 3}
       propertyPath: m_Color.g
-      value: 0.72156864
+      value: 0.4039216
       objectReference: {fileID: 0}
     - target: {fileID: 5527237864055351071, guid: ca46741342676774e922dd543c7af86e, type: 3}
       propertyPath: m_Color.r
-      value: 0.8196079
+      value: 0.59607846
+      objectReference: {fileID: 0}
+    - target: {fileID: 5527237864055351071, guid: ca46741342676774e922dd543c7af86e, type: 3}
+      propertyPath: m_MaskInteraction
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5636218216584343091, guid: ca46741342676774e922dd543c7af86e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -71,9 +75,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3406336426173393567, guid: ca46741342676774e922dd543c7af86e, type: 3}
       insertIndex: 2
       addedObject: {fileID: 2483574751226996846}
-    - targetCorrespondingSourceObject: {fileID: 3406336426173393567, guid: ca46741342676774e922dd543c7af86e, type: 3}
-      insertIndex: 3
-      addedObject: {fileID: 5453266929959748263}
   m_SourcePrefab: {fileID: 100100000, guid: ca46741342676774e922dd543c7af86e, type: 3}
 --- !u!1 &3594779588320357457 stripped
 GameObject:
@@ -93,16 +94,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _ingredient: {fileID: 11400000, guid: 70073108bc017f54bab8ec0a3be41d44, type: 2}
---- !u!114 &5453266929959748263
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3594779588320357457}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c4c7c4e1f5854c41951f89e2d9bc2fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _ingredientBehaviour: {fileID: 2483574751226996846}

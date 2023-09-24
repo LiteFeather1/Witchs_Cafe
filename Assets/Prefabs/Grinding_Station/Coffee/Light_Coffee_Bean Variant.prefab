@@ -15,18 +15,30 @@ PrefabInstance:
     - target: {fileID: 5527237864055351071, guid: ca46741342676774e922dd543c7af86e, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
+      objectReference: {fileID: 359943492, guid: 941ff9dc7ebb77742bd2e16257c82e47, type: 3}
     - target: {fileID: 5527237864055351071, guid: ca46741342676774e922dd543c7af86e, type: 3}
       propertyPath: m_Color.b
-      value: 0.62352943
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5527237864055351071, guid: ca46741342676774e922dd543c7af86e, type: 3}
       propertyPath: m_Color.g
-      value: 0.72156864
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5527237864055351071, guid: ca46741342676774e922dd543c7af86e, type: 3}
       propertyPath: m_Color.r
-      value: 0.8196079
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5636218216584343091, guid: ca46741342676774e922dd543c7af86e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5636218216584343091, guid: ca46741342676774e922dd543c7af86e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5636218216584343091, guid: ca46741342676774e922dd543c7af86e, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5636218216584343091, guid: ca46741342676774e922dd543c7af86e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -75,9 +87,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3406336426173393567, guid: ca46741342676774e922dd543c7af86e, type: 3}
       insertIndex: 2
       addedObject: {fileID: -763523791896613193}
-    - targetCorrespondingSourceObject: {fileID: 3406336426173393567, guid: ca46741342676774e922dd543c7af86e, type: 3}
-      insertIndex: 3
-      addedObject: {fileID: 786847980957896692}
   m_SourcePrefab: {fileID: 100100000, guid: ca46741342676774e922dd543c7af86e, type: 3}
 --- !u!1 &2276263752243178595 stripped
 GameObject:
@@ -96,23 +105,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40b850be3b070d04d8e2ff881843adbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _name: Light Coffee Bean
   _objectToGive: {fileID: 3594779588320357457, guid: 709d2dc15c5159f489f217544d831204, type: 3}
   _resistance: 100
   _rb: {fileID: 3625750917892541802}
   _collider: {fileID: 3721462088586058084}
---- !u!114 &786847980957896692
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2276263752243178595}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6302090e42759dd4db2ffa6f7efc0e04, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _info: Light Coffee Bean
 --- !u!50 &3625750917892541802 stripped
 Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 180728942008503190, guid: ca46741342676774e922dd543c7af86e, type: 3}

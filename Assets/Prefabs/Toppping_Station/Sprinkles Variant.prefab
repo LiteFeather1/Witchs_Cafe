@@ -10,8 +10,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3406336426173393567, guid: ca46741342676774e922dd543c7af86e, type: 3}
       propertyPath: m_Name
-      value: Grains Variant
+      value: Sprinkles Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 5527237864055351071, guid: ca46741342676774e922dd543c7af86e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 272307238, guid: 941ff9dc7ebb77742bd2e16257c82e47, type: 3}
     - target: {fileID: 5636218216584343091, guid: ca46741342676774e922dd543c7af86e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.3000002

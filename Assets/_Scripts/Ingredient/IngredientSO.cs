@@ -7,9 +7,9 @@ public class IngredientSO : ScriptableObject
 
     [SerializeField] private string _name = NEW_INGREDIENT;
     [SerializeField] private Color _colour = Color.white;
-    [SerializeField] private int _money;
+    [SerializeField] private float _money;
 
     public string Name => _name;
     public Color Colour => _colour;
-    public int Money => _money;
+    public float Money => _money;
 }
