@@ -40,10 +40,11 @@ public class ReturnToStartPosAfterRelease : MonoBehaviour
             _timerToTeleportBack.Timer.Continue();
     }
 
-    private void Teleport()
+    public void Teleport()
     {
         _draggable.RB.velocity = Vector2.zero;
         _draggable.RB.angularVelocity = 0f;
         transform.SetPositionAndRotation(_startPos, _startRotation);
+        _timerToTeleportBack.Timer.StopAndReset();
     }
 }

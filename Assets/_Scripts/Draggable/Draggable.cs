@@ -1,10 +1,13 @@
 using UnityEngine;
+using static IDraggable;
 
 public class Draggable : MonoBehaviour, IDraggable
 {
+    [SerializeField] private DraggingMethod _method = DraggingMethod.Teleport;
     [SerializeField] private Rigidbody2D _rb;
     [SerializeField] private Collider2D _collider;
 
+    public DraggingMethod Method => _method;
     public System.Action Grabbed { get; set; }
     public System.Action Released { get; set; }
     public System.Action OnHold { get; set; }

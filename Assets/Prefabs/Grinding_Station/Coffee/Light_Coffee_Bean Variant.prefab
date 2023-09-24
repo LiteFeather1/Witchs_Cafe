@@ -28,13 +28,17 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5527237864055351071, guid: ca46741342676774e922dd543c7af86e, type: 3}
+      propertyPath: m_MaskInteraction
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5636218216584343091, guid: ca46741342676774e922dd543c7af86e, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5636218216584343091, guid: ca46741342676774e922dd543c7af86e, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5636218216584343091, guid: ca46741342676774e922dd543c7af86e, type: 3}
       propertyPath: m_LocalScale.z

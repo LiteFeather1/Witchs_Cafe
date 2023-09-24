@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using static IDraggable;
 
 public class MouseManager : MonoBehaviour
 {
@@ -11,8 +12,6 @@ public class MouseManager : MonoBehaviour
     [SerializeField] private AnimationCurve _speedCurve;
     [SerializeField] private float _distanceToMaxSpeed;
     private int _draggablePrevLayer;
-    private Vector2 _previousMousePos;
-    private Vector2 _releaseVelocity;
     private IDraggable _draggable;
 
     public IDraggable Draggable => _draggable;
@@ -43,19 +42,23 @@ public class MouseManager : MonoBehaviour
             return;
 
         Vector2 mousePos = GameManager.MousePosition();
-        float distance = Vector2.Distance(_draggable.RB.position, mousePos);
-        if (distance < _speedRange.x * .1f)
+        if (_draggable.Method == DraggingMethod.Move)
         {
-            _draggable.RB.position = mousePos;
-            _releaseVelocity = Vector2.zero;
-            return;
-        }
+            float distance = Vector2.Distance(_draggable.RB.position, mousePos);
+            if (distance < _speedRange.x * .1f)
+            {
+                _draggable.RB.position = mousePos;
+                _draggable.RB.velocity = Vector2.zero;
+                return;
+            }
 
-        float t = _speedCurve.Evaluate(distance / _distanceToMaxSpeed);
-        float speed = Mathf.Lerp(_speedRange.x, _speedRange.y, t);
-        Vector2 direction = (mousePos - _previousMousePos).normalized;
-        _releaseVelocity = speed * direction;
-        _draggable.RB.velocity = _releaseVelocity;
+            float t = _speedCurve.Evaluate(distance / _distanceToMaxSpeed);
+            float speed = Mathf.Lerp(_speedRange.x, _speedRange.y, t);
+            Vector2 direction = (mousePos - _draggable.RB.position).normalized;
+            _draggable.RB.velocity = speed * direction;
+        }
+        else
+            _draggable.RB.position = mousePos;
     }
 
     private void OnClick(InputAction.CallbackContext ctx)
@@ -88,7 +91,6 @@ public class MouseManager : MonoBehaviour
         if (_draggable == null)
             return;
 
-        _draggable.RB.velocity = _releaseVelocity;
         OnForceRelease();
     }
 

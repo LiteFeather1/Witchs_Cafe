@@ -37,6 +37,15 @@ public partial class @InputMaps: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
+                    ""name"": ""MiddleClick"",
+                    ""type"": ""Button"",
+                    ""id"": ""15c0cc32-eb9a-4f40-941b-d1e308dde4cb"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
                     ""name"": ""RightClick"",
                     ""type"": ""Button"",
                     ""id"": ""255189de-2e36-47e1-9515-5ba532901946"",
@@ -203,6 +212,17 @@ public partial class @InputMaps: IInputActionCollection2, IDisposable
                     ""action"": ""PauseUnPause"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7806e48f-45a1-4f6d-b823-863bf44b7691"",
+                    ""path"": ""<Mouse>/middleButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MiddleClick"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -212,6 +232,7 @@ public partial class @InputMaps: IInputActionCollection2, IDisposable
         // Player
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_LeftClick = m_Player.FindAction("LeftClick", throwIfNotFound: true);
+        m_Player_MiddleClick = m_Player.FindAction("MiddleClick", throwIfNotFound: true);
         m_Player_RightClick = m_Player.FindAction("RightClick", throwIfNotFound: true);
         m_Player_IncreaseVolume = m_Player.FindAction("IncreaseVolume", throwIfNotFound: true);
         m_Player_DecreaseVolume = m_Player.FindAction("DecreaseVolume", throwIfNotFound: true);
@@ -279,6 +300,7 @@ public partial class @InputMaps: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Player;
     private List<IPlayerActions> m_PlayerActionsCallbackInterfaces = new List<IPlayerActions>();
     private readonly InputAction m_Player_LeftClick;
+    private readonly InputAction m_Player_MiddleClick;
     private readonly InputAction m_Player_RightClick;
     private readonly InputAction m_Player_IncreaseVolume;
     private readonly InputAction m_Player_DecreaseVolume;
@@ -289,6 +311,7 @@ public partial class @InputMaps: IInputActionCollection2, IDisposable
         private @InputMaps m_Wrapper;
         public PlayerActions(@InputMaps wrapper) { m_Wrapper = wrapper; }
         public InputAction @LeftClick => m_Wrapper.m_Player_LeftClick;
+        public InputAction @MiddleClick => m_Wrapper.m_Player_MiddleClick;
         public InputAction @RightClick => m_Wrapper.m_Player_RightClick;
         public InputAction @IncreaseVolume => m_Wrapper.m_Player_IncreaseVolume;
         public InputAction @DecreaseVolume => m_Wrapper.m_Player_DecreaseVolume;
@@ -306,6 +329,9 @@ public partial class @InputMaps: IInputActionCollection2, IDisposable
             @LeftClick.started += instance.OnLeftClick;
             @LeftClick.performed += instance.OnLeftClick;
             @LeftClick.canceled += instance.OnLeftClick;
+            @MiddleClick.started += instance.OnMiddleClick;
+            @MiddleClick.performed += instance.OnMiddleClick;
+            @MiddleClick.canceled += instance.OnMiddleClick;
             @RightClick.started += instance.OnRightClick;
             @RightClick.performed += instance.OnRightClick;
             @RightClick.canceled += instance.OnRightClick;
@@ -328,6 +354,9 @@ public partial class @InputMaps: IInputActionCollection2, IDisposable
             @LeftClick.started -= instance.OnLeftClick;
             @LeftClick.performed -= instance.OnLeftClick;
             @LeftClick.canceled -= instance.OnLeftClick;
+            @MiddleClick.started -= instance.OnMiddleClick;
+            @MiddleClick.performed -= instance.OnMiddleClick;
+            @MiddleClick.canceled -= instance.OnMiddleClick;
             @RightClick.started -= instance.OnRightClick;
             @RightClick.performed -= instance.OnRightClick;
             @RightClick.canceled -= instance.OnRightClick;
@@ -363,6 +392,7 @@ public partial class @InputMaps: IInputActionCollection2, IDisposable
     public interface IPlayerActions
     {
         void OnLeftClick(InputAction.CallbackContext context);
+        void OnMiddleClick(InputAction.CallbackContext context);
         void OnRightClick(InputAction.CallbackContext context);
         void OnIncreaseVolume(InputAction.CallbackContext context);
         void OnDecreaseVolume(InputAction.CallbackContext context);

@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PanManager : MonoBehaviour
 {
@@ -15,15 +16,57 @@ public class PanManager : MonoBehaviour
     [SerializeField, Range(0f, 1f)] private float _percentToPanOnEdges = .975f;
     [SerializeField] private float _speed = 2f;
 
-    private void Awake()
+    [Header("Kitchen")]
+    [SerializeField] private float _distanceToMoveMiddleClick = 1f;
+    private float _mouseMiddleClickPos;
+
+    private void Awake() => _storePos = transform.position;
+
+    private void OnEnable()
     {
-        _storePos = transform.position;
+        InputAction middleClick = GameManager.InputManager.PlayerInputs.MiddleClick;
+        middleClick.performed += OnMiddleClick;
+        middleClick.canceled += OnMiddleRelease;
+    }
+
+    private void OnDisable()
+    {
+        InputAction middleClick = GameManager.InputManager.PlayerInputs.MiddleClick;
+        middleClick.performed -= OnMiddleClick;
+        middleClick.canceled -= OnMiddleRelease;
     }
 
     private void Update()
     {
         if (!_onStore)
+        {
             PanOnEdge();
+            PanMiddleClick();
+        }
+    }
+
+    private void OnMiddleClick(InputAction.CallbackContext ctx)
+    {
+        _mouseMiddleClickPos = Input.mousePosition.x;
+    }
+
+    private void OnMiddleRelease(InputAction.CallbackContext ctx)
+    {
+        _mouseMiddleClickPos = 0f;
+    }
+
+    private float ClampX(float x)
+    {
+        if (x <= _minXPoint.position.x)
+            x = _minXPoint.position.x;
+        else if (x >= _maxXPoint.position.x)
+            x = _maxXPoint.position.x;
+        return x;
+    }
+        private void MoveCam(Transform cam, Vector3 whereToMove)
+    {
+        print(whereToMove.x);
+        cam.position = Vector3.MoveTowards(cam.position, whereToMove, _speed * Time.deltaTime);
     }
 
     private void PanOnEdge()
@@ -34,14 +77,27 @@ public class PanManager : MonoBehaviour
             return;
 
         float x = GameManager.MousePosition().x;
-        if (x <= _minXPoint.position.x)
-            x = _minXPoint.position.x;
-        else if (x >= _maxXPoint.position.x)
-            x = _maxXPoint.position.x;
+        x = ClampX(x);
 
         var cam = GameManager.Camera.transform;
         Vector3 whereToMove = new(x, cam.position.y, cam.position.z);
-        cam.position = Vector3.MoveTowards(cam.position, whereToMove, _speed * Time.deltaTime);
+        MoveCam(cam, whereToMove);
+    }
+
+    private void PanMiddleClick()
+    {
+        if (_mouseMiddleClickPos == 0f)
+            return;
+
+        var direction = _mouseMiddleClickPos - Input.mousePosition.x;
+        if (Mathf.Abs(direction) < _distanceToMoveMiddleClick)
+            return;
+
+        var cam = GameManager.Camera.transform;
+
+        Vector3 whereToMove = direction < 0f ? _maxXPoint.position : _minXPoint.position;
+        whereToMove.z = cam.position.z;
+        MoveCam(cam, whereToMove);
     }
 
     private IEnumerator PanTo(Vector3 positionToGO)

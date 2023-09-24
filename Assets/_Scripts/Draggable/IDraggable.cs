@@ -2,6 +2,7 @@
 
 public interface IDraggable
 {
+    public DraggingMethod Method { get; }
     public System.Action Grabbed { get; set; }
     public System.Action Released { get; set; }
     public System.Action OnHold { get; set; }
@@ -38,4 +39,10 @@ public interface IDraggable
     }
 
     public void ForceRelease() => OnForceReleased?.Invoke();
+
+    public enum DraggingMethod
+    {
+        Teleport,
+        Move,
+    }
 }

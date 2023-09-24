@@ -14,6 +14,11 @@ public class UIManager : MonoBehaviour
     [SerializeField] private CanvasGroup _gameGroup;
     [SerializeField] private float _fadeTimeGameGroup;
 
+    [Header("Curso")]
+    [SerializeField] private Image i_cursor;
+    [SerializeField] private Sprite _openHand;
+    [SerializeField] private Sprite _closeHand;
+
     [Header("Client Dialogue")]
     [SerializeField] private RectTransform _clientDialogueRoot;
     [SerializeField] private TextMeshProUGUI t_clientDialogue;
@@ -71,22 +76,38 @@ public class UIManager : MonoBehaviour
         _downPosPatience = _patienceRoot.localPosition;
         _patienceRoot.localPosition += new Vector3(0f, _patienceRoot.sizeDelta.y);
         _upPosPatience = _patienceRoot.localPosition;
+        Cursor.visible = false;
+    }
+
+    private void OnApplicationFocus(bool focus)
+    {
+        Cursor.visible = false;
     }
 
     private void OnEnable()
     {
-        GameManager.InputManager.PlayerInputs.MuteUnmute.performed += SwapMuteSprite;
+        InputMaps.PlayerActions playerInputs = GameManager.InputManager.PlayerInputs;
+        playerInputs.MuteUnmute.performed += SwapMuteSprite;
+
+        playerInputs.LeftClick.performed += SetCloseHand;
+        playerInputs.LeftClick.canceled += SetOpenHand;
     }
 
     private void OnDisable()
     {
-        GameManager.InputManager.PlayerInputs.MuteUnmute.performed -= SwapMuteSprite;
+        InputMaps.PlayerActions playerInputs = GameManager.InputManager.PlayerInputs;
+        playerInputs.MuteUnmute.performed -= SwapMuteSprite;
+
+        playerInputs.LeftClick.performed -= SetCloseHand;
+        playerInputs.LeftClick.canceled -= SetOpenHand;
     }
 
     private void Update()
     {
         if (_currentClient != null)
             SetPatience(_currentClient.PatienceT);
+
+        i_cursor.transform.position = Input.mousePosition;
     }
 
     private IEnumerator FadeCanvasGroup(CanvasGroup group, float toAlpha, float time)
@@ -110,6 +131,10 @@ public class UIManager : MonoBehaviour
         yield return new WaitForSeconds(.5f);
         _startGroup.gameObject.SetActive(false);
     }
+
+    private void SetOpenHand(InputAction.CallbackContext ctx) => i_cursor.sprite = _openHand;
+
+    private void SetCloseHand(InputAction.CallbackContext ctx) => i_cursor.sprite = _closeHand;
 
     private IEnumerator DialogueTween(Vector2 from, Vector2 to, AnimationCurve curve)
     {

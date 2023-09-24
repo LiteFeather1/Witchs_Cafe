@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 249421126814785432, guid: ca46741342676774e922dd543c7af86e, type: 3}
+      propertyPath: m_Radius
+      value: 0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 3406336426173393567, guid: ca46741342676774e922dd543c7af86e, type: 3}
       propertyPath: m_Name
       value: Light_Grinded_Coffee Variant

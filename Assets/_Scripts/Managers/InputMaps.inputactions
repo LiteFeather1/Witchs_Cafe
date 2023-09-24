@@ -15,6 +15,15 @@
                     "initialStateCheck": false
                 },
                 {
+                    "name": "MiddleClick",
+                    "type": "Button",
+                    "id": "15c0cc32-eb9a-4f40-941b-d1e308dde4cb",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "RightClick",
                     "type": "Button",
                     "id": "255189de-2e36-47e1-9515-5ba532901946",
@@ -179,6 +188,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "PauseUnPause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7806e48f-45a1-4f6d-b823-863bf44b7691",
+                    "path": "<Mouse>/middleButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MiddleClick",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
