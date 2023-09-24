@@ -261,10 +261,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2c7ff617bb21b9438acdf502829b817, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _title: Cauldron
   _mixingCoffee:
     _coffeeBean: {fileID: 0}
     _milk: {fileID: 0}
     _miscIngredients: []
+  _collider: {fileID: 2102244031357697485}
   _waterSprites:
   - {fileID: 7512378263975122771}
   - {fileID: 4979221161634391023}

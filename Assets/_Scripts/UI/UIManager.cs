@@ -149,8 +149,8 @@ public class UIManager : MonoBehaviour
     public void CoffeeDelivered(CoffeeComparisonResults results, float clientPatience)
     {
         StartCoroutine(HideDialogueCO());
-        t_clientPatience.text = $"Client: {clientPatience:00}%";
-        t_orderEquality.text = $"Order: {results.Equality:00}%";
+        t_clientPatience.text = $"Client: {clientPatience:0}%";
+        t_orderEquality.text = $"Order: {results.Equality:0}%";
         t_moneyGained.text = $"+++${results.Money:0.##}";
 
         // Calculate grade

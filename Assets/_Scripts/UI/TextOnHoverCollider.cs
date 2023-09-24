@@ -2,7 +2,13 @@
 {
     public string Name => Text;
 
-    private void OnMouseEnter() => GameManager.Instance.HoverInfoManager.SetSimpleText(Text);
+    protected virtual void OnMouseEnter()
+    {
+        GameManager.Instance.HoverInfoManager.SetSimpleText(Text);
+    }
 
-    private void OnMouseExit() => GameManager.Instance.HoverInfoManager.DeactiveHover();
+    protected virtual void OnMouseExit()
+    {
+        GameManager.Instance.HoverInfoManager.DeactiveHover();
+    }
 }

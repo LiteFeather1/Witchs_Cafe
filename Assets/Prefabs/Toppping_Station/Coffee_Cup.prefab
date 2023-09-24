@@ -67,9 +67,11 @@ MonoBehaviour:
     _milk: {fileID: 0}
     _miscIngredients: []
   _coffeeCupDraggable: {fileID: 7799838651648047135}
+  _collider: {fileID: 3479802259059911855}
   _storePoint: {fileID: 0}
   _kitchenPoint: {fileID: 0}
   _liquidRenderer: {fileID: 548171016562149149}
+  _title: Coffee Cup
 --- !u!50 &1233809438304298029
 Rigidbody2D:
   serializedVersion: 4

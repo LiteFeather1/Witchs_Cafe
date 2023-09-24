@@ -57,7 +57,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8781396735590644405}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6302090e42759dd4db2ffa6f7efc0e04, type: 3}
+  m_Script: {fileID: 11500000, guid: 5ad5b808746e97e4180acd387b5c754c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _info: Grab Light Coffee Bean?

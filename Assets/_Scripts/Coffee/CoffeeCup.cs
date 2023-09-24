@@ -4,6 +4,7 @@ public class CoffeeCup : ReceiveIngredient<ITopping>
 {
     [SerializeField] private Coffee _deliverCoffee;
     [SerializeField] private Draggable _coffeeCupDraggable;
+    [SerializeField] private Collider2D _collider;
 
     [Header("Points")]
     [SerializeField] private Transform _storePoint;
@@ -17,7 +18,21 @@ public class CoffeeCup : ReceiveIngredient<ITopping>
 
     public Coffee DeliverCoffee => _deliverCoffee;
 
-    private void OnMouseEnter()
+    private void OnMouseEnter() => SetHoverText();
+
+    private void OnMouseExit() => GameManager.Instance.HoverInfoManager.DeactiveHover();
+
+    public bool ReceiveCoffee(Coffee from)
+    {
+        if (_deliverCoffee.CoffeeBean != null)
+            return false;
+
+        _liquidRenderer.color = from.CoffeeBean.Colour;
+        _deliverCoffee = from;
+        return true;
+    }
+
+    private void SetHoverText()
     {
         if (_t != null)
             GameManager.Instance.HoverInfoManager.SetSimpleText($"Add {_t.Name} to {_title}?");
@@ -36,18 +51,6 @@ public class CoffeeCup : ReceiveIngredient<ITopping>
             else
                 GameManager.Instance.HoverInfoManager.SetCoffeeText(_title, _deliverCoffee);
         }
-    }
-
-    private void OnMouseExit() => GameManager.Instance.HoverInfoManager.DeactiveHover();
-
-    public bool ReceiveCoffee(Coffee from)
-    {
-        if (_deliverCoffee.CoffeeBean != null)
-            return false;
-
-        _liquidRenderer.color = from.CoffeeBean.Colour;
-        _deliverCoffee = from;
-        return true;
     }
 
     // Also Called by a unity event
@@ -82,5 +85,8 @@ public class CoffeeCup : ReceiveIngredient<ITopping>
         var t = _t;
         base.TakeIngredient();
         t.Destroy();
+
+        if (_collider.bounds.Contains(GameManager.MousePosition()))
+            SetHoverText();
     }
 }

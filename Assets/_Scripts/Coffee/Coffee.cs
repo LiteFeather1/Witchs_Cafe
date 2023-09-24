@@ -21,16 +21,10 @@ public class Coffee
         OnCoffeeBeanSet?.Invoke(coffeeBean);
     }
 
-    public void SetMilk(IngredientSO milk)
-    {
-        _milk = milk;
-    }
+    public void SetMilk(IngredientSO milk) => _milk = milk;
 
     public void AddIngredient(IngredientSO ingredient)
     {
-        if (_coffeeBean == null)
-            return;
-
         if (_miscIngredients.Contains(ingredient))
             return;
 

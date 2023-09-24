@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5636218216584343091}
   - component: {fileID: 2753956199164665816}
+  - component: {fileID: -6492626613191172191}
   - component: {fileID: -7394905386297835353}
   - component: {fileID: 3013773698462472278}
   - component: {fileID: 180728942008503190}
@@ -51,6 +52,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rb: {fileID: 180728942008503190}
   _collider: {fileID: 249421126814785432}
+  _sr: {fileID: 5527237864055351071}
+  _outLineMaterial: {fileID: 2100000, guid: 7e2b0f802a1ce7e4ca9f286a42060f49, type: 2}
+  _unLineMaterial: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+--- !u!114 &-6492626613191172191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3406336426173393567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68366bdcc0407dd4b9c46c8794f624f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   _sr: {fileID: 5527237864055351071}
   _outLineMaterial: {fileID: 2100000, guid: 7e2b0f802a1ce7e4ca9f286a42060f49, type: 2}
   _unLineMaterial: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}

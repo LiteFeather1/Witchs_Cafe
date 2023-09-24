@@ -2,13 +2,16 @@ using UnityEngine;
 
 public class Cauldron : ReceiveIngredient<IMixable>
 {
-    [SerializeField] private Coffee _mixingCoffee;
-
-    [Header("Visual")]
-    [SerializeField] private SpriteRenderer[] _waterSprites;
-
     [Header("Hover")]
     [SerializeField] private string _title = "Cauldron";
+
+    [Header("Coffee")]
+    [SerializeField] private Coffee _mixingCoffee;
+
+    [Header("Components")]
+    [SerializeField] private Collider2D _collider;
+    [SerializeField] private SpriteRenderer[] _waterSprites;
+
 
     public Coffee MixingCoffee => _mixingCoffee;
 
@@ -16,7 +19,17 @@ public class Cauldron : ReceiveIngredient<IMixable>
 
     private void OnDisable() => UnSubToCoffee();
 
-    private void OnMouseEnter()
+    private void OnMouseEnter() => SetHoverText();
+
+    private void OnMouseExit() => GameManager.Instance.HoverInfoManager.DeactiveHover();
+
+    public void SubToCoffee() => _mixingCoffee.OnCoffeeBeanSet += OnCoffeeBeanSet;
+
+    public void UnSubToCoffee() => _mixingCoffee.OnCoffeeBeanSet -= OnCoffeeBeanSet;
+
+    public void OnCoffeeBeanSet(IngredientSO ingredient) => SetSpriteColour(ingredient.Colour);
+
+    private void SetHoverText()
     {
         if (_t != null)
             GameManager.Instance.HoverInfoManager.SetSimpleText($"Add {_t.Name} to {_title}?");
@@ -31,20 +44,11 @@ public class Cauldron : ReceiveIngredient<IMixable>
             else if (_mixingCoffee.CoffeeBean == null
                 && _mixingCoffee.Milk == null
                 && _mixingCoffee.MiscIngredients.Count == 0)
-                GameManager.Instance.HoverInfoManager.SetSimpleText($"{_title} is empty!"); 
+                GameManager.Instance.HoverInfoManager.SetSimpleText($"{_title} is empty!");
             else
                 GameManager.Instance.HoverInfoManager.SetCoffeeText(_title, _mixingCoffee);
         }
     }
-
-    private void OnMouseExit() => GameManager.Instance.HoverInfoManager.DeactiveHover();
-
-    public void SubToCoffee() => _mixingCoffee.OnCoffeeBeanSet += OnCoffeeBeanSet;
-
-    public void UnSubToCoffee() => _mixingCoffee.OnCoffeeBeanSet -= OnCoffeeBeanSet;
-
-    public void OnCoffeeBeanSet(IngredientSO ingredient) => SetSpriteColour(ingredient.Colour);
-
 
     // Also Called by a unity event
     public void TrashCoffee()
@@ -61,6 +65,9 @@ public class Cauldron : ReceiveIngredient<IMixable>
         var t = _t;
         base.TakeIngredient();
         t.Destroy();
+
+        if (_collider.bounds.Contains(GameManager.MousePosition()))
+            SetHoverText();
     }
 
     private void SetSpriteColour(Color colour)

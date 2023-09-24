@@ -3,12 +3,17 @@
 public class Mortar : ReceiveIngredient<IPestleable>
 {
     [SerializeField] private Transform _pointToHold;
+    [SerializeField] private Collider2D _collider;
 
     [Header("Hover")]
     [SerializeField] private string _title = "Mortar";
     private IPestleable _pestleable;
 
-    private void OnMouseEnter()
+    private void OnMouseEnter() => SetHoverText();
+
+    private void OnMouseExit() => GameManager.Instance.HoverInfoManager.DeactiveHover();
+
+    private void SetHoverText()
     {
         if (_t != null)
             GameManager.Instance.HoverInfoManager.SetSimpleText($"Drop {_t.Name.Name} to {_title}?");
@@ -25,13 +30,14 @@ public class Mortar : ReceiveIngredient<IPestleable>
         }
     }
 
-    private void OnMouseExit() => GameManager.Instance.HoverInfoManager.DeactiveHover();
-
     protected override void TakeIngredient()
     {
         _t.SetPosition(_pointToHold.position);
         _pestleable = _t;
         base.TakeIngredient();
+
+        if (_collider.bounds.Contains(GameManager.MousePosition()))
+            SetHoverText();
     }
 
     protected override void OnFound(IPestleable pestleable)

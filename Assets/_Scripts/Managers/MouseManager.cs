@@ -96,8 +96,9 @@ public class MouseManager : MonoBehaviour
     {
         _draggable.OnForceReleased -= OnForceRelease;
         _draggable.RB.gameObject.layer = _draggablePrevLayer;
-        _draggable.StopDragging();
+        var draggable = _draggable;
         _draggable = null;
+        draggable.StopDragging();
     }
 
     private void DeleteIngredient(InputAction.CallbackContext ctx)

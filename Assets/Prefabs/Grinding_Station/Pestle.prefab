@@ -99,7 +99,6 @@ GameObject:
   - component: {fileID: 654151543428269809}
   - component: {fileID: 6112503119310426064}
   - component: {fileID: 1791997124258837275}
-  - component: {fileID: -3153089613744187470}
   m_Layer: 2
   m_Name: Pestle
   m_TagString: Untagged
@@ -137,9 +136,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rb: {fileID: 6112503119310426064}
   _collider: {fileID: 1791997124258837275}
-  _sr: {fileID: 2251278774989597474}
-  _outLineMaterial: {fileID: 2100000, guid: 7e2b0f802a1ce7e4ca9f286a42060f49, type: 2}
-  _unLineMaterial: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
 --- !u!114 &8560934602512906307
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -213,41 +209,6 @@ Rigidbody2D:
   m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!70 &1791997124258837275
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8956745084425870076}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.25}
-  m_Size: {x: 1, y: 2}
-  m_Direction: 0
---- !u!70 &-3153089613744187470
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
