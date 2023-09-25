@@ -88,7 +88,6 @@ public class PanManager : MonoBehaviour
 
         var direction = _mouseMiddleClickPos - Input.mousePosition.x;
         float distance = Mathf.Abs(direction);
-        print(distance);
         if (distance < _distanceToMinSpeed)
             return;
 

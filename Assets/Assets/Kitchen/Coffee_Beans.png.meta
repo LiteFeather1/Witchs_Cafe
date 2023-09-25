@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c7eacccbb5a094e4f8342167411bc09e
+guid: 2dcbb256a0690944b8432a44625b2b6f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Item_Coffee_Grinded_White
+      name: Coffee_Sack_White
       rect:
         serializedVersion: 2
-        x: 35
-        y: 258
-        width: 148
-        height: 79
+        x: 48
+        y: 168
+        width: 147
+        height: 154
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 701c8662b5f049044b96ab6400a9cafa
-      internalID: 474063268
+      spriteID: ceb268ce9a3647144b441a624115d791
+      internalID: -184191051
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cocoa
+      name: Coffee_Sack_Red
       rect:
         serializedVersion: 2
-        x: 224
-        y: 154
-        width: 131
-        height: 181
+        x: 229
+        y: 167
+        width: 147
+        height: 155
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4985dfe84d27d754d8876a74f0d665fc
-      internalID: 1211695990
+      spriteID: 2dc83777a17beac41be7655575bdea77
+      internalID: 788164506
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Deliver_Button
+      name: Coffee_Sack_Black
       rect:
         serializedVersion: 2
-        x: 448
-        y: 203
-        width: 133
-        height: 134
+        x: 415
+        y: 167
+        width: 147
+        height: 155
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d935f95c674ed4c4b818d3365d636838
-      internalID: 1380410621
+      spriteID: c883f38bca431244783103478173bc7a
+      internalID: 362161555
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Item_Coffee_Grinded_Red
+      name: Coffee_Beans_White
       rect:
         serializedVersion: 2
-        x: 35
-        y: 155
-        width: 150
-        height: 79
+        x: 10
+        y: 45
+        width: 188
+        height: 89
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,20 +187,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 340845568e7ee374aafdfc233bf8ac39
-      internalID: 1542201062
+      spriteID: 2800fba972c688a4ebb5d94d6941ddc8
+      internalID: 64434029
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Item_Coffee_Grinded_Black
+      name: Coffee_Beans_Red
       rect:
         serializedVersion: 2
-        x: 33
-        y: 38
-        width: 149
-        height: 78
+        x: 213
+        y: 41
+        width: 193
+        height: 98
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,20 +208,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ace8dd1b21a39d44f981589ab824f622
-      internalID: -428741560
+      spriteID: a5ac1a50cf002794d85513bb98896b13
+      internalID: 951889750
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Button_Trash
+      name: Coffee_Beans_Dark
       rect:
         serializedVersion: 2
-        x: 372
-        y: 49
-        width: 72
-        height: 59
+        x: 422
+        y: 45
+        width: 192
+        height: 89
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,29 +229,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6233ef0f54fcda546b54de1ebfd694c0
-      internalID: 34849470
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Button_Delvier
-      rect:
-        serializedVersion: 2
-        x: 499
-        y: 33
-        width: 104
-        height: 122
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e274560b880e56a4c9d248aade1b4949
-      internalID: 1937216767
+      spriteID: 5e5bc758e2a610e438ef8ca368651c0b
+      internalID: 432735814
       vertices: []
       indices: 
       edges: []
@@ -267,13 +246,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Button_Delvier: 1937216767
-      Button_Trash: 34849470
-      Cocoa: 1211695990
-      Deliver_Button: 1380410621
-      Item_Coffee_Grinded_Black: -428741560
-      Item_Coffee_Grinded_Red: 1542201062
-      Item_Coffee_Grinded_White: 474063268
+      Coffee_Beans_3: 119936341
+      Coffee_Beans_4: -1927701426
+      Coffee_Beans_5: -1271720996
+      Coffee_Beans_Dark: 432735814
+      Coffee_Beans_Red: 951889750
+      Coffee_Beans_White: 64434029
+      Coffee_Sack_Black: 362161555
+      Coffee_Sack_Red: 788164506
+      Coffee_Sack_White: -184191051
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
