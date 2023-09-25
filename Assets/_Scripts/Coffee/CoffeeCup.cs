@@ -3,8 +3,13 @@
 public class CoffeeCup : ReceiveIngredient<ITopping>
 {
     [SerializeField] private Coffee _deliverCoffee;
-    [SerializeField] private Draggable _coffeeCupDraggable;
     [SerializeField] private Collider2D _collider;
+    [SerializeField] private Draggable _coffeeCupDraggable;
+
+    [Header("Visual")]
+    [SerializeField] private SpriteRenderer[] _srs;
+    [SerializeField] private Material _outlineMat;
+    [SerializeField] private Material _unoutlineMat;
 
     [Header("Points")]
     [SerializeField] private Transform _storePoint;
@@ -20,8 +25,6 @@ public class CoffeeCup : ReceiveIngredient<ITopping>
     private void OnMouseEnter() => SetHoverText();
 
     private void OnMouseExit() => GameManager.Instance.HoverInfoManager.HideHover();
-
-    public void ReceiveCoffee(Coffee from) => _deliverCoffee = from;
 
     private void SetHoverText()
     {
@@ -44,11 +47,10 @@ public class CoffeeCup : ReceiveIngredient<ITopping>
         }
     }
 
+    public void ReceiveCoffee(Coffee from) => _deliverCoffee = from;
+
     // Also Called by a unity event
-    public void TrashCoffee()
-    {
-        _deliverCoffee = new();
-    }
+    public void TrashCoffee() => _deliverCoffee = new();
 
     // Also Called by a unity event
     public void TeleportToStore()
@@ -58,6 +60,9 @@ public class CoffeeCup : ReceiveIngredient<ITopping>
         _coffeeCupDraggable.enabled = true;
         _coffeeCupDraggable.RB.bodyType = RigidbodyType2D.Dynamic;
         _coffeeCupDraggable.Collider.isTrigger = false;
+        _coffeeCupDraggable.IsHold = false;
+        for (int i = 0; i < _srs.Length; i++)
+            _srs[i].material = _outlineMat;
     }
 
     // Also Called by a unity event
@@ -67,7 +72,10 @@ public class CoffeeCup : ReceiveIngredient<ITopping>
         transform.localScale = Vector3.one;
         _coffeeCupDraggable.enabled = false;
         _coffeeCupDraggable.RB.bodyType = RigidbodyType2D.Static;
-        _coffeeCupDraggable.Collider.isTrigger = false;
+        _coffeeCupDraggable.Collider.isTrigger = true;
+        _coffeeCupDraggable.IsHold = false;
+        for (int i = 0; i < _srs.Length; i++)
+            _srs[i].material = _unoutlineMat;
         TrashCoffee();
     }
 

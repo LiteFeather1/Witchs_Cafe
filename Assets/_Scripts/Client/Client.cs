@@ -30,15 +30,9 @@ public class Client : ReceiveIngredient<CoffeeCup>
 
     private void OnMouseExit() => GameManager.Instance.HoverInfoManager.HideHover();
 
-    private void Awake()
-    {
-        _maxPatience = _patience;
-    }
+    private void Awake() => _maxPatience = _patience;
 
-    private void Update()
-    {
-        _patience -= Time.deltaTime;
-    }
+    private void Update() => _patience -= Time.deltaTime;
 
     protected override void TakeIngredient()
     {

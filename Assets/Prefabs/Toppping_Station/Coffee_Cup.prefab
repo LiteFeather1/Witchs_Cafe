@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8498152078752504870}
   - component: {fileID: 8552630332513316430}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sprite_Cap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingOrder: -1
   m_Sprite: {fileID: 1124970015, guid: 160a194a877a57448b4f8f3bef8f479e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -93,7 +93,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5226217276458034265}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Offset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 1622138025658789239}
   - component: {fileID: 1233809438304298029}
   - component: {fileID: 3479802259059911855}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Coffee_Cup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -165,6 +165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe84a8afc1c981948b65528894f4c759, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _method: 0
   _rb: {fileID: 1233809438304298029}
   _collider: {fileID: 3479802259059911855}
 --- !u!114 &1622138025658789239
@@ -183,8 +184,13 @@ MonoBehaviour:
     _coffeeBean: {fileID: 0}
     _milk: {fileID: 0}
     _miscIngredients: []
-  _coffeeCupDraggable: {fileID: 7799838651648047135}
   _collider: {fileID: 3479802259059911855}
+  _coffeeCupDraggable: {fileID: 7799838651648047135}
+  _srs:
+  - {fileID: 548171016562149149}
+  - {fileID: 8552630332513316430}
+  _outlineMat: {fileID: 2100000, guid: 7e2b0f802a1ce7e4ca9f286a42060f49, type: 2}
+  _unoutlineMat: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   _storePoint: {fileID: 0}
   _kitchenPoint: {fileID: 0}
   _title: Coffee Cup
@@ -270,7 +276,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7408962060397578396}
   - component: {fileID: 548171016562149149}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -332,7 +338,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: -2
   m_Sprite: {fileID: -423720470, guid: 160a194a877a57448b4f8f3bef8f479e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

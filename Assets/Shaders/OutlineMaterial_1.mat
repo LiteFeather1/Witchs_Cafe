@@ -63,7 +63,7 @@ Material:
     m_Floats:
     - CORNERS: 0
     - CORNERS_ON: 1
-    - OutlineThinckess: 2
+    - OutlineThinckess: 4
     - Vector1_c46e4a45d5134dbaa8e60c610bf566f6: 1.15
     - _EnableExternalAlpha: 0
     m_Colors:

@@ -31,6 +31,7 @@ public class Laddle : MonoBehaviour
         if (_coffeeCup == null || !_coffeeCup.CanReceiveCoffee)
             return;
 
+        _coffeeCup.ReceiveCoffee(_cauldron.MixingCoffee);
         _cauldron.TrashCoffee();
         _draggable.ForceRelease();
         _returnToStartPosAfterRelease.Teleport();

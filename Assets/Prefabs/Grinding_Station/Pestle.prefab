@@ -52,7 +52,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 7e2b0f802a1ce7e4ca9f286a42060f49, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rb: {fileID: 6112503119310426064}
-  _damageRange: {x: 25, y: 50}
+  _damageRange: {x: 12.5, y: 25}
   _velocityForMaxDamage: 25
 --- !u!114 &4013295588886662238
 MonoBehaviour:
@@ -165,7 +165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0f453a05c01e7e49a4e6d74d6764b70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _distanceToTeleport: 2
+  _distanceToTeleport: 1
   _timerToTeleportBack: {fileID: 654151543428269809}
 --- !u!114 &654151543428269809
 MonoBehaviour:

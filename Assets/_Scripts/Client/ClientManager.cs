@@ -39,11 +39,8 @@ public class ClientManager : MonoBehaviour
 
     public IEnumerator AppearClientCO()
     {
-        if (_currentClientIndex == _clients.Length)
-        {
+        if (_currentClientIndex == _clients.Length - 1)
             OnAllClientsServed?.Invoke();
-            yield break;
-        }
 
         var client = _clients[_currentClientIndex];
         client.gameObject.SetActive(true);

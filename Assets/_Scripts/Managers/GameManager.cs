@@ -38,6 +38,7 @@ public class GameManager : MonoBehaviour
     {
         _clientManager.OnNewClient += AppearDialogue;
         _clientManager.OnClientServed += OnClieantServed;
+        _clientManager.OnAllClientsServed += _uiManager.OnAllClientsServed;
 
         InputManager.PlayerInputs.LeftClick.performed += StartGame;
         InputManager.PlayerInputs.RightClick.performed += StartGame;
@@ -49,6 +50,7 @@ public class GameManager : MonoBehaviour
     {
         _clientManager.OnNewClient -= AppearDialogue;
         _clientManager.OnClientServed -= OnClieantServed;
+        _clientManager.OnAllClientsServed -= _uiManager.OnAllClientsServed;
 
         InputManager.PlayerInputs.PauseUnPause.performed -= PauseUnpause;
     }

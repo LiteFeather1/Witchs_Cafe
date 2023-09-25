@@ -33,7 +33,10 @@ public class UIManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI t_moneyGained;
     [SerializeField] private TextMeshProUGUI t_grade;
     [SerializeField] private RectTransform rt_grade;
+    [SerializeField] private Image i_grade;
+    [SerializeField] private DataGrade[] _dataGrade;
     [SerializeField] private Button b_nextClient;
+    [SerializeField] private TextMeshProUGUI t_nextClient;
 
     [Header("Client Feedback Anim")]
     [SerializeField] private CanvasGroup _deliverGroup;
@@ -68,6 +71,9 @@ public class UIManager : MonoBehaviour
 
     [Header("Pause Overlay")]
     [SerializeField] private GameObject _pauseOverlay;
+
+    [Header("Pause Overlay")]
+    [SerializeField] private GameObject _thanksForPlaying;
 
     private void Awake()
     {
@@ -180,19 +186,19 @@ public class UIManager : MonoBehaviour
 
         // Calculate grade
         float percentile = (results.Equality + clientPatience) * .5f;
-        char grade;
-        if (percentile >= 90f)
-            grade = 'A';
-        else if (percentile >= 80f)
-            grade = 'B';
-        else if (percentile >= 70f)
-            grade = 'C';
-        else if (percentile >= 60f)
-            grade = 'D';
-        else
-            grade = 'F';
 
-        t_grade.text = grade.ToString();
+        DataGrade grade = _dataGrade[^1];
+        for (int i = 0; i < _dataGrade.Length - 1; i++)
+        {
+            if (percentile > _dataGrade[i].Value)
+            {
+                grade = _dataGrade[i];
+                break;
+            }
+        }
+
+        t_grade.text = new(grade.Grade, 1);
+        i_grade.color = grade.Colour;
         StartCoroutine(DeliverFeedBackTween());
     }
 
@@ -215,9 +221,6 @@ public class UIManager : MonoBehaviour
         transform.localScale = Vector3.one;
     }
 
-    [ContextMenu("Lol")]
-    private void Test() => StartCoroutine(DeliverFeedBackTween());
-
     private IEnumerator DeliverFeedBackTween()
     {
         b_nextClient.gameObject.SetActive(false);
@@ -228,13 +231,23 @@ public class UIManager : MonoBehaviour
         b_nextClient.gameObject.SetActive(true);
     }
 
+    public void OnAllClientsServed()
+    {
+        t_nextClient.text = "Close Store";
+        b_nextClient.onClick = new();
+        b_nextClient.onClick.AddListener(() =>
+        {
+            _thanksForPlaying.SetActive(true);
+            _gameGroup.gameObject.SetActive(false);
+        });
+    }
+
     public void SetTime(float time)
     {
         int hour = Mathf.FloorToInt(time % 12);
         int minutes = Mathf.RoundToInt((time * 60f) % 60);
-        t_time.text = $"{hour:00}:{minutes:00}{(hour >= 6 ? "PM" : "AM")}";
+        t_time.text = $"{hour:0}:{minutes:00}{(hour >= 6 ? "PM" : "AM")}";
     }
-
 
     private IEnumerator Move(Transform trasnform, Vector2 from, Vector2 to, float time, AnimationCurve curve)
     {
@@ -289,4 +302,12 @@ public class UIManager : MonoBehaviour
     private void SwapMuteSprite(InputAction.CallbackContext ctx) => SwapMuteSprite();
 
     public void PauseOverlay(bool state) => _pauseOverlay.SetActive(state);
+
+    [System.Serializable]
+    private struct DataGrade
+    {
+        [field: SerializeField] public float Value { get;private set; }
+        [field: SerializeField] public char Grade { get;private set; }
+        [field: SerializeField] public Color Colour { get;private set; }
+    }
 }

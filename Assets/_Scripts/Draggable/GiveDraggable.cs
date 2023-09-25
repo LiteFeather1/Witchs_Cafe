@@ -8,6 +8,7 @@ public class GiveDraggable : MonoBehaviour, IGiveDraggable
 
     public IDraggable GetDraggable(Vector2 posToSpawn)
     {
+        OnGrabbed?.Invoke();
         return Instantiate(_draggableToSpawn, posToSpawn, Quaternion.identity);
     }
 }
