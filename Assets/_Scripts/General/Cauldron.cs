@@ -11,6 +11,7 @@ public class Cauldron : ReceiveIngredient<IMixable>
     [Header("Components")]
     [SerializeField] private Collider2D _collider;
     [SerializeField] private SpriteRenderer[] _waterSprites;
+    [SerializeField] private ParticleSystem _particleSystem;
 
     public System.Action<Color> OnCoffeChange { get; set; }
 
@@ -75,6 +76,9 @@ public class Cauldron : ReceiveIngredient<IMixable>
     {
         for (int i = 0; i < _waterSprites.Length; i++)
             _waterSprites[i].color = colour;
+
+        var particleMain = _particleSystem.main;
+        particleMain.startColor = colour;
 
         OnCoffeChange?.Invoke(colour);
     }
