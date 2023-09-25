@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public interface IPestleable : IDestroyable
+public interface IPestleable : IDestroyable, IName
 {
     public string Name { get; }
     public bool CanBeHit { get; }

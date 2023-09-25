@@ -45,7 +45,7 @@ public class MouseManager : MonoBehaviour
         if (_draggable.Method == DraggingMethod.Move)
         {
             float distance = Vector2.Distance(_draggable.RB.position, mousePos);
-            if (distance < _speedRange.x * .1f)
+            if (distance < _speedRange.x * .01f)
             {
                 _draggable.RB.position = mousePos;
                 _draggable.RB.velocity = Vector2.zero;

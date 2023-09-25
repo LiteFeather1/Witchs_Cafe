@@ -55,17 +55,8 @@ public class PanManager : MonoBehaviour
         _mouseMiddleClickPos = 0f;
     }
 
-    private float ClampX(float x)
+    private void MoveCam(Transform cam, Vector3 whereToMove)
     {
-        if (x <= _minXPoint.position.x)
-            x = _minXPoint.position.x;
-        else if (x >= _maxXPoint.position.x)
-            x = _maxXPoint.position.x;
-        return x;
-    }
-        private void MoveCam(Transform cam, Vector3 whereToMove)
-    {
-        print(whereToMove.x);
         cam.position = Vector3.MoveTowards(cam.position, whereToMove, _speed * Time.deltaTime);
     }
 
@@ -77,7 +68,10 @@ public class PanManager : MonoBehaviour
             return;
 
         float x = GameManager.MousePosition().x;
-        x = ClampX(x);
+        if (x <= _minXPoint.position.x)
+            x = _minXPoint.position.x;
+        else if (x >= _maxXPoint.position.x)
+            x = _maxXPoint.position.x;
 
         var cam = GameManager.Camera.transform;
         Vector3 whereToMove = new(x, cam.position.y, cam.position.z);
