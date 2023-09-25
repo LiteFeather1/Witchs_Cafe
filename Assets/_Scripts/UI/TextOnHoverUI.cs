@@ -9,6 +9,6 @@ public abstract class TextOnHoverUI : TextOnHover, IPointerEnterHandler, IPointe
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        GameManager.Instance.HoverInfoManager.DeactiveHover();
+        GameManager.Instance.HoverInfoManager.HideHover();
     }
 }

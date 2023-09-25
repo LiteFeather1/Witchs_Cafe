@@ -13,7 +13,7 @@ public abstract class ReceiveIngredient<T> : MonoBehaviour where T : class
 
     protected virtual void ClearReferences()
     {
-        _draggable.Released -= TakeIngredient;
+        _draggable.OnReleased -= TakeIngredient;
         _draggable = null;
         _t = null;
     }
@@ -22,7 +22,7 @@ public abstract class ReceiveIngredient<T> : MonoBehaviour where T : class
     {
         _t = t;
         if (_draggable.IsDragging)
-            _draggable.Released += TakeIngredient;
+            _draggable.OnReleased += TakeIngredient;
         else
             TakeIngredient();
     }

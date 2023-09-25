@@ -13,13 +13,13 @@ public class OutlineOnGrab : MonoBehaviour
     private void OnEnable()
     {
         _draggable.Grabbed += Outline;
-        _draggable.Released += UnOutline;
+        _draggable.OnReleased += UnOutline;
     }
 
     private void OnDisable()
     {
         _draggable.Grabbed -= Outline;
-        _draggable.Released -= UnOutline;
+        _draggable.OnReleased -= UnOutline;
     }
 
     private void Outline() => _sr.material = _outLineMaterial;

@@ -62,7 +62,7 @@ public class HoverInfoManager : MonoBehaviour
         SetText($"{tittle} Ingredients:", sb.ToString());
     }
 
-    public void DeactiveHover()
+    public void HideHover()
     {
         _active = false;
         rt_hover.gameObject.SetActive(false);

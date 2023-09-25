@@ -15,18 +15,13 @@ public class CoffeeCup : ReceiveIngredient<ITopping>
 
     public Coffee DeliverCoffee => _deliverCoffee;
 
+    public bool CanReceiveCoffee => _deliverCoffee.CoffeeBean == null;
+
     private void OnMouseEnter() => SetHoverText();
 
-    private void OnMouseExit() => GameManager.Instance.HoverInfoManager.DeactiveHover();
+    private void OnMouseExit() => GameManager.Instance.HoverInfoManager.HideHover();
 
-    public bool ReceiveCoffee(Coffee from)
-    {
-        if (_deliverCoffee.CoffeeBean != null)
-            return false;
-
-        _deliverCoffee = from;
-        return true;
-    }
+    public void ReceiveCoffee(Coffee from) => _deliverCoffee = from;
 
     private void SetHoverText()
     {

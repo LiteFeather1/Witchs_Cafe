@@ -13,16 +13,20 @@ PrefabInstance:
       value: Dark_Grinded_Coffee Variant
       objectReference: {fileID: 0}
     - target: {fileID: 5527237864055351071, guid: ca46741342676774e922dd543c7af86e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -428741560, guid: c7eacccbb5a094e4f8342167411bc09e, type: 3}
+    - target: {fileID: 5527237864055351071, guid: ca46741342676774e922dd543c7af86e, type: 3}
       propertyPath: m_Color.b
-      value: 0.14117648
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5527237864055351071, guid: ca46741342676774e922dd543c7af86e, type: 3}
       propertyPath: m_Color.g
-      value: 0.16862746
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5527237864055351071, guid: ca46741342676774e922dd543c7af86e, type: 3}
       propertyPath: m_Color.r
-      value: 0.24313727
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5527237864055351071, guid: ca46741342676774e922dd543c7af86e, type: 3}
       propertyPath: m_MaskInteraction

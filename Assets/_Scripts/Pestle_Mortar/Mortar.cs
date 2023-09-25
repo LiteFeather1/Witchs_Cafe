@@ -11,7 +11,7 @@ public class Mortar : ReceiveIngredient<IPestleable>
 
     private void OnMouseEnter() => SetHoverText();
 
-    private void OnMouseExit() => GameManager.Instance.HoverInfoManager.DeactiveHover();
+    private void OnMouseExit() => GameManager.Instance.HoverInfoManager.HideHover();
 
     private void SetHoverText()
     {

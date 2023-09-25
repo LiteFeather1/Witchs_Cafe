@@ -9,7 +9,7 @@ public class Draggable : MonoBehaviour, IDraggable
 
     public DraggingMethod Method => _method;
     public System.Action Grabbed { get; set; }
-    public System.Action Released { get; set; }
+    public System.Action OnReleased { get; set; }
     public System.Action OnHold { get; set; }
     public System.Action OnForceReleased { get; set; }
     public Rigidbody2D RB => _rb;

@@ -17,7 +17,10 @@ public class PanManager : MonoBehaviour
     [SerializeField] private float _speed = 2f;
 
     [Header("Kitchen")]
-    [SerializeField] private float _distanceToMoveMiddleClick = 1f;
+    // Screen pos
+    [SerializeField] private float _distanceToMinSpeed = .5f;
+    [SerializeField] private float _distanceToMaxSpeed = 2f;
+    [SerializeField] private float _minSpeed = 1f;
     private float _mouseMiddleClickPos;
 
     private void Awake() => _storePos = transform.position;
@@ -55,9 +58,9 @@ public class PanManager : MonoBehaviour
         _mouseMiddleClickPos = 0f;
     }
 
-    private void MoveCam(Transform cam, Vector3 whereToMove)
+    private void MoveCam(Transform cam, Vector3 whereToMove, float speed)
     {
-        cam.position = Vector3.MoveTowards(cam.position, whereToMove, _speed * Time.deltaTime);
+        cam.position = Vector3.MoveTowards(cam.position, whereToMove, speed * Time.deltaTime);
     }
 
     private void PanOnEdge()
@@ -75,7 +78,7 @@ public class PanManager : MonoBehaviour
 
         var cam = GameManager.Camera.transform;
         Vector3 whereToMove = new(x, cam.position.y, cam.position.z);
-        MoveCam(cam, whereToMove);
+        MoveCam(cam, whereToMove, _speed);
     }
 
     private void PanMiddleClick()
@@ -84,14 +87,17 @@ public class PanManager : MonoBehaviour
             return;
 
         var direction = _mouseMiddleClickPos - Input.mousePosition.x;
-        if (Mathf.Abs(direction) < _distanceToMoveMiddleClick)
+        float distance = Mathf.Abs(direction);
+        print(distance);
+        if (distance < _distanceToMinSpeed)
             return;
 
         var cam = GameManager.Camera.transform;
 
         Vector3 whereToMove = direction < 0f ? _maxXPoint.position : _minXPoint.position;
         whereToMove.z = cam.position.z;
-        MoveCam(cam, whereToMove);
+        float speed = Mathf.Lerp(_minSpeed, _speed, distance / _distanceToMaxSpeed);
+        MoveCam(cam, whereToMove, speed);
     }
 
     private IEnumerator PanTo(Vector3 positionToGO)

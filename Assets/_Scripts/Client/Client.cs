@@ -28,7 +28,7 @@ public class Client : ReceiveIngredient<CoffeeCup>
             GameManager.Instance.HoverInfoManager.SetSimpleText("Deliver Coffee?");
     }
 
-    private void OnMouseExit() => GameManager.Instance.HoverInfoManager.DeactiveHover();
+    private void OnMouseExit() => GameManager.Instance.HoverInfoManager.HideHover();
 
     private void Awake()
     {

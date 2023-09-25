@@ -22,7 +22,7 @@ public class Cauldron : ReceiveIngredient<IMixable>
 
     private void OnMouseEnter() => SetHoverText();
 
-    private void OnMouseExit() => GameManager.Instance.HoverInfoManager.DeactiveHover();
+    private void OnMouseExit() => GameManager.Instance.HoverInfoManager.HideHover();
 
     public void SubToCoffee() => _mixingCoffee.OnCoffeeBeanSet += OnCoffeeBeanSet;
 

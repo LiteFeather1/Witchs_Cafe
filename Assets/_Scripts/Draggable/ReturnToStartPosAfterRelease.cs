@@ -16,14 +16,14 @@ public class ReturnToStartPosAfterRelease : MonoBehaviour
     private void OnEnable()
     {
         _draggable.Grabbed += OnGrabbed;
-        _draggable.Released += OnReleased;
+        _draggable.OnReleased += OnReleased;
         _timerToTeleportBack.Timer.TimeEvent += Teleport;
     }
 
     private void OnDisable()
     {
         _draggable.Grabbed -= OnGrabbed;
-        _draggable.Released -= OnReleased;
+        _draggable.OnReleased -= OnReleased;
         _timerToTeleportBack.Timer.TimeEvent -= Teleport;
     }
 

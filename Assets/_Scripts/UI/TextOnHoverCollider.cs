@@ -9,6 +9,6 @@
 
     protected virtual void OnMouseExit()
     {
-        GameManager.Instance.HoverInfoManager.DeactiveHover();
+        GameManager.Instance.HoverInfoManager.HideHover();
     }
 }

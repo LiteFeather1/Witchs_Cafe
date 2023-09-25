@@ -4,7 +4,7 @@ public interface IDraggable
 {
     public DraggingMethod Method { get; }
     public System.Action Grabbed { get; set; }
-    public System.Action Released { get; set; }
+    public System.Action OnReleased { get; set; }
     public System.Action OnHold { get; set; }
     public System.Action OnForceReleased { get; set; }
     public Rigidbody2D RB { get; }
@@ -29,7 +29,7 @@ public interface IDraggable
         RB.gravityScale = 1f;
         RB.freezeRotation = false;
         Collider.isTrigger = false;
-        Released?.Invoke();
+        OnReleased?.Invoke();
     }
 
     public void Hold()
