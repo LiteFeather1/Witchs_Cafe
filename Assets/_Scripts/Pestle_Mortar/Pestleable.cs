@@ -34,6 +34,7 @@ public class Pestleable : MonoBehaviour, IPestleable
         if (_resistance >= 0f)
             return;
 
+        _canBeHit = false;
         Instantiate(_objectToGive, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }

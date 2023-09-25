@@ -14,6 +14,7 @@ public class Pestle : MonoBehaviour
         float t = _rb.velocity.magnitude / _velocityForMaxDamage;
         if (t > 1f)
             t = 1f;
+
         float damage = _damageRange.x + (_damageRange.y - _damageRange.x) * t;
         pestleable.Hit(damage);
     }
