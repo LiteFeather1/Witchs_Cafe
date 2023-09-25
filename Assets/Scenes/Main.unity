@@ -319,7 +319,7 @@ PrefabInstance:
     - target: {fileID: 681430083347684884, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -668181479, guid: 941ff9dc7ebb77742bd2e16257c82e47, type: 3}
+      objectReference: {fileID: 1211695990, guid: c7eacccbb5a094e4f8342167411bc09e, type: 3}
     - target: {fileID: 681430083347684884, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -346,11 +346,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1117242647160171012, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 1.3505129
+      value: 1.31
       objectReference: {fileID: 0}
     - target: {fileID: 1117242647160171012, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 1.84
+      value: 1.81
       objectReference: {fileID: 0}
     - target: {fileID: 1310961768459847481, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
       propertyPath: _info
@@ -5169,8 +5169,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _dialogue: '<size="72"><b>Manager: </size></b>Alright rookie, this is the hardest
-    day of the on year here, it''s halloween and everyone wants coffee!!! Give me
-    a strong coffee, milk, no sugar! Pronto!'
+    day of the on year here, it''s halloween and everyone wants coffee!!! Alright
+    first grind some Strong Coffee Beans then added it to the Cauldron. Mix in some
+    milk then use the Laddle to add the coffee to the cup. Finally deliver it to
+    me. I want this for yesteray rookie!'
   _coffeeOrder: {fileID: 11400000, guid: 97496dee3728cb648876fb07d44ab75a, type: 2}
   _patience: 60
   _timeToPop: 0.75
@@ -6358,6 +6360,7 @@ RectTransform:
   m_Children:
   - {fileID: 762205762}
   - {fileID: 838310402}
+  - {fileID: 1301867452}
   - {fileID: 648830786}
   - {fileID: 1719812959}
   - {fileID: 919519586}
@@ -6787,6 +6790,81 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3034966341916779252, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
   m_PrefabInstance: {fileID: 1841219257}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1301867451
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1301867452}
+  - component: {fileID: 1301867454}
+  - component: {fileID: 1301867453}
+  m_Layer: 5
+  m_Name: Block
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1301867452
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1301867451}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1238139923}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1301867453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1301867451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1301867454
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1301867451}
+  m_CullTransparentMesh: 1
 --- !u!1 &1308629637
 GameObject:
   m_ObjectHideFlags: 0
@@ -7738,7 +7816,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 493, y: 448}
-  m_SizeDelta: {x: 1048, y: 295.05}
+  m_SizeDelta: {x: 1048, y: 472.52}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1501004390
 MonoBehaviour:
@@ -9103,6 +9181,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1301867451}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1696261149
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9269,8 +9359,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 540, y: -115.525}
-  m_SizeDelta: {x: 952, y: 207.05}
+  m_AnchoredPosition: {x: 540, y: -204.26}
+  m_SizeDelta: {x: 952, y: 384.52}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1700512679
 MonoBehaviour:
@@ -9293,8 +9383,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: '<size="72"><b>Boss: </size></b>Alright rookie, this is the hardest day
-    of the on year here, it''s halloween and everyone wants coffee!!! Give me a strong
-    coffee, milk, no sugar! Pronto!'
+    of the on year here, it''s halloween and everyone wants coffee!!! Alright first
+    grind some Strong Coffee Beans then added it to the Cauldron. Mix in some milk
+    then use the Laddle to add the coffee to the cup. Finally deliver it to me. I
+    want this for yesteray'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c6979d9b29d49454d865312777b02c45, type: 2}
   m_sharedMaterial: {fileID: 2901803876700776305, guid: c6979d9b29d49454d865312777b02c45, type: 2}
@@ -11746,6 +11838,7 @@ MonoBehaviour:
   _unMutedSprite: {fileID: 21300000, guid: a5c143ff1f30c32479b7ec4f81fc55c0, type: 3}
   _pauseOverlay: {fileID: 1719812958}
   _thanksForPlaying: {fileID: 1928747917}
+  _block: {fileID: 1301867451}
 --- !u!4 &2044836650
 Transform:
   m_ObjectHideFlags: 0

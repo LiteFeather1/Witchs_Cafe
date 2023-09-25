@@ -72,8 +72,11 @@ public class UIManager : MonoBehaviour
     [Header("Pause Overlay")]
     [SerializeField] private GameObject _pauseOverlay;
 
-    [Header("Pause Overlay")]
+    [Header("Thanks Overlay")]
     [SerializeField] private GameObject _thanksForPlaying;
+
+    [Header("Block Overlay")]
+    [SerializeField] private GameObject _block;
 
     private void Awake()
     {
@@ -180,6 +183,7 @@ public class UIManager : MonoBehaviour
     public void CoffeeDelivered(CoffeeComparisonResults results, float clientPatience)
     {
         StartCoroutine(HideDialogueCO());
+        _block.SetActive(true);
         t_clientPatience.text = $"Client: {clientPatience:0}%";
         t_orderEquality.text = $"Order: {results.Equality:0}%";
         t_moneyGained.text = $"+++${results.Money:0.##}";
