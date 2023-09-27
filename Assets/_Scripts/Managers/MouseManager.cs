@@ -14,6 +14,10 @@ public class MouseManager : MonoBehaviour
     private int _draggablePrevLayer;
     private IDraggable _draggable;
 
+    [Header("Audio")]
+    [SerializeField] private AudioClip _audioObjectGrabbed;
+    [SerializeField] private AudioClip _audioObjectReleased;
+
     public IDraggable Draggable => _draggable;
 
     private void OnEnable()
@@ -84,6 +88,7 @@ public class MouseManager : MonoBehaviour
         _draggable = draggable;
         _draggablePrevLayer = draggable.RB.gameObject.layer;
         draggable.RB.gameObject.layer = (int)Mathf.Log(_draggingLayer.value, 2f);
+        GameManager.Instance.AudioManager.PlaySFX(_audioObjectGrabbed);
     }
 
     private void OnReleaseClick(InputAction.CallbackContext ctx)
@@ -92,6 +97,7 @@ public class MouseManager : MonoBehaviour
             return;
 
         OnForceRelease();
+        GameManager.Instance.AudioManager.PlaySFX(_audioObjectReleased);
     }
 
     private void OnForceRelease()

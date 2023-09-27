@@ -226,6 +226,7 @@ MonoBehaviour:
   - {fileID: 7512378263975122771}
   - {fileID: 4979221161634391023}
   _particleSystem: {fileID: 5353509836456817438}
+  _audioIngredientDropped: {fileID: 8300000, guid: fa579d4ad566e2441a49b0739bf2898f, type: 3}
 --- !u!61 &2102244031357697485
 BoxCollider2D:
   m_ObjectHideFlags: 0

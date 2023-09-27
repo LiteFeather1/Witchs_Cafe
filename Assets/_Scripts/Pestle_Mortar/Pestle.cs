@@ -2,9 +2,30 @@
 
 public class Pestle : MonoBehaviour
 {
-    [SerializeField] private Rigidbody2D _rb;
     [SerializeField] private Vector2 _damageRange = new(10f, 25f);
     [SerializeField] private float _velocityForMaxDamage = 10f;
+    [SerializeField] private Rigidbody2D _rb;
+    private IDraggable _draggable;
+
+    [Header("Audio")]
+    [SerializeField] private PlaySoundOnHit _playsSoundOnHit;
+
+    public void Awake() => _draggable = GetComponent<IDraggable>();
+
+    private void OnEnable()
+    {
+        _draggable.OnGrabbed += CanPlaySound;
+        _draggable.OnReleased += CantPlaySound;
+    }
+
+    private void OnDisable()
+    {
+        _draggable.OnGrabbed -= CanPlaySound;
+        _draggable.OnReleased -= CantPlaySound;
+    }
+
+    private void CanPlaySound() => _playsSoundOnHit.SetCanPlay(true);
+    private void CantPlaySound() => _playsSoundOnHit.SetCanPlay(false);
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

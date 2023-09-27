@@ -10,18 +10,25 @@ public class Laddle : MonoBehaviour
     [Header("Sprite")]
     [SerializeField] private SpriteRenderer _waterSprite;
 
+    [Header("Audio")]
+    [SerializeField] private PlaySoundOnHit _playsSoundOnHit;
+
     private void Awake() => _draggable = GetComponent<Draggable>();
 
     private void OnEnable()
     {
         _cauldron.OnCoffeChange += SetWaterColour;
         _draggable.OnReleased += DropCoffee;
+        _draggable.OnGrabbed += CanPlaySound;
+        _draggable.OnReleased += CantPlaySound;
     }
 
     private void OnDisable()
     {
         _cauldron.OnCoffeChange -= SetWaterColour;
         _draggable.OnReleased -= DropCoffee;
+        _draggable.OnGrabbed -= CanPlaySound;
+        _draggable.OnReleased -= CantPlaySound;
     }
 
     private void SetWaterColour(Color colour) => _waterSprite.color = colour;
@@ -36,6 +43,9 @@ public class Laddle : MonoBehaviour
         _draggable.ForceRelease();
         _returnToStartPosAfterRelease.Teleport();
     }
+
+    private void CanPlaySound() => _playsSoundOnHit.SetCanPlay(true);
+    private void CantPlaySound() => _playsSoundOnHit.SetCanPlay(false);
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

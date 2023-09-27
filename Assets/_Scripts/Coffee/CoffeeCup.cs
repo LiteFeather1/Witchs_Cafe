@@ -18,6 +18,9 @@ public class CoffeeCup : ReceiveIngredient<ITopping>
     [Header("Hover")]
     [SerializeField] private string _title = "Coffee Cup";
 
+    [Header("Sounds")]
+    [SerializeField] private AudioClip _audioCoffeeTransferred;
+
     public Coffee DeliverCoffee => _deliverCoffee;
 
     public bool CanReceiveCoffee => _deliverCoffee.CoffeeBean == null;
@@ -47,7 +50,11 @@ public class CoffeeCup : ReceiveIngredient<ITopping>
         }
     }
 
-    public void ReceiveCoffee(Coffee from) => _deliverCoffee = from;
+    public void ReceiveCoffee(Coffee from)
+    {
+        _deliverCoffee = from;
+        GameManager.Instance.AudioManager.PlaySFX(_audioCoffeeTransferred);
+    }
 
     // Also Called by a unity event
     public void TrashCoffee() => _deliverCoffee = new();

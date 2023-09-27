@@ -13,6 +13,9 @@ public class Cauldron : ReceiveIngredient<IMixable>
     [SerializeField] private SpriteRenderer[] _waterSprites;
     [SerializeField] private ParticleSystem _particleSystem;
 
+    [Header("Sounds")]
+    [SerializeField] private AudioClip _audioIngredientDropped;
+
     public System.Action<Color> OnCoffeChange { get; set; }
 
     public Coffee MixingCoffee => _mixingCoffee;
@@ -67,6 +70,7 @@ public class Cauldron : ReceiveIngredient<IMixable>
         var t = _t;
         base.TakeIngredient();
         t.Destroy();
+        GameManager.Instance.AudioManager.PlaySFX(_audioIngredientDropped);
 
         if (_collider.bounds.Contains(GameManager.MousePosition()))
             SetHoverText();

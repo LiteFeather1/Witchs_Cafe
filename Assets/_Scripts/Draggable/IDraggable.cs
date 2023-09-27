@@ -3,7 +3,7 @@
 public interface IDraggable
 {
     public DraggingMethod Method { get; }
-    public System.Action Grabbed { get; set; }
+    public System.Action OnGrabbed { get; set; }
     public System.Action OnReleased { get; set; }
     public System.Action OnHold { get; set; }
     public System.Action OnForceReleased { get; set; }
@@ -20,7 +20,7 @@ public interface IDraggable
         RB.rotation = 0f;
         RB.freezeRotation = true;
         Collider.isTrigger = true;
-        Grabbed?.Invoke();
+        OnGrabbed?.Invoke();
     }
 
     public void StopDragging()

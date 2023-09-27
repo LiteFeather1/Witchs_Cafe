@@ -194,6 +194,7 @@ MonoBehaviour:
   _storePoint: {fileID: 0}
   _kitchenPoint: {fileID: 0}
   _title: Coffee Cup
+  _audioCoffeeTransferred: {fileID: 8300000, guid: 9da5c5325ce3b264ab63102244a30fa0, type: 3}
 --- !u!50 &1233809438304298029
 Rigidbody2D:
   serializedVersion: 4

@@ -7,6 +7,9 @@ public class ClientManager : MonoBehaviour
     [SerializeField] private Client[] _clients;
     private int _currentClientIndex;
 
+    [Header("Audio")]
+    [SerializeField] private AudioClip _audioCustomerArrive;
+
     private readonly static YieldInstruction _delayBeforeShowDialogue = new WaitForSeconds(.5f);
 
     public Action<Client> OnNewClient { get; set; }
@@ -19,17 +22,13 @@ public class ClientManager : MonoBehaviour
     private void OnEnable()
     {
         for (int i = 0; i < _clients.Length; i++)
-        {
             _clients[i].OnCoffeeDelivered += ClientServed;
-        }
     }
 
     private void OnDisable()
     {
         for (int i = 0; i < _clients.Length; i++)
-        {
             _clients[i].OnCoffeeDelivered -= ClientServed;
-        }
     }
 
     public void AppearClient()
@@ -44,6 +43,7 @@ public class ClientManager : MonoBehaviour
 
         var client = _clients[_currentClientIndex];
         client.gameObject.SetActive(true);
+        GameManager.Instance.AudioManager.PlaySFX(_audioCustomerArrive);
         yield return client.PopAnimation();
         yield return _delayBeforeShowDialogue;
         OnNewClient?.Invoke(client);

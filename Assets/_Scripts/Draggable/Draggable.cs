@@ -8,7 +8,7 @@ public class Draggable : MonoBehaviour, IDraggable
     [SerializeField] private Collider2D _collider;
 
     public DraggingMethod Method => _method;
-    public System.Action Grabbed { get; set; }
+    public System.Action OnGrabbed { get; set; }
     public System.Action OnReleased { get; set; }
     public System.Action OnHold { get; set; }
     public System.Action OnForceReleased { get; set; }

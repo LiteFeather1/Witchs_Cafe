@@ -12,7 +12,7 @@ public class DestroyAfterReleaseAndDelay : MonoBehaviour
 
     private void OnEnable()
     {
-        _draggable.Grabbed += OnGrabbed;
+        _draggable.OnGrabbed += OnGrabbed;
         _draggable.OnReleased += OnReleased;
         _draggable.OnHold += OnGrabbed;
         _timerToDelete.Timer.TimeEvent += Destroy;
@@ -20,7 +20,7 @@ public class DestroyAfterReleaseAndDelay : MonoBehaviour
 
     private void OnDisable()
     {
-        _draggable.Grabbed -= OnGrabbed;
+        _draggable.OnGrabbed -= OnGrabbed;
         _draggable.OnReleased -= OnReleased;
         _draggable.OnHold -= OnGrabbed;
         _timerToDelete.Timer.TimeEvent -= Destroy;

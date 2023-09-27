@@ -19,13 +19,13 @@ public class GameManager : MonoBehaviour
     [SerializeField] private ClientManager _clientManager;
     [SerializeField] private UIManager _uiManager;
     [SerializeField] private HoverInfoManager _hoverInfoManager;
+    [SerializeField] private AudioManager _audioManager;
 
     public static ManagerInput InputManager { get; private set; }
 
-    public float Money => _money;
-    
     public MouseManager MouseManager => _mouseManager;
     public HoverInfoManager HoverInfoManager => _hoverInfoManager;
+    public AudioManager AudioManager => _audioManager;
 
     private void Awake()
     {
