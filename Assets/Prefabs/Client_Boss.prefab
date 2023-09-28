@@ -52,7 +52,7 @@ MonoBehaviour:
     milk then use the Laddle to add the coffee to the cup. Finally deliver it to
     me. I want this for yesteray rookie!'
   _coffeeOrder: {fileID: 11400000, guid: 97496dee3728cb648876fb07d44ab75a, type: 2}
-  _patience: 60
+  _patience: 90
   _timeToPop: 0.75
   _popCurve:
     serializedVersion: 2

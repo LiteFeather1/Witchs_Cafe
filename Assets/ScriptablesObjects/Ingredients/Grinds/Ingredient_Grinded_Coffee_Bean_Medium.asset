@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Ingredient_Grinded_Coffee_Bean_Medium
   m_EditorClassIdentifier: 
   _name: Grinded Red Coffee Bean
-  _colour: {r: 0.7843138, g: 0.5529412, b: 0.31764707, a: 1}
+  _colour: {r: 0.49411768, g: 0.18039216, b: 0.18039216, a: 1}
   _money: 5

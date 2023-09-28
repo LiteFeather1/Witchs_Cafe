@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Order_Jason
   m_EditorClassIdentifier: 
   _cofferOrder:
-    _coffeeBean: {fileID: 11400000, guid: 31ac413710c529a498c188d239466836, type: 2}
+    _coffeeBean: {fileID: 11400000, guid: eec2d2a88e993f043bca06a88cfa8756, type: 2}
     _milk: {fileID: 11400000, guid: 71601b177528a134bbe52395bf79a824, type: 2}
     _miscIngredients:
     - {fileID: 11400000, guid: 21b8b788dd760d649aee14098ded08b8, type: 2}

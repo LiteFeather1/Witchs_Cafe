@@ -197,11 +197,15 @@ public class UIManager : MonoBehaviour
 
     public void CoffeeDelivered(CoffeeComparisonResults results, float clientPatience)
     {
+        // Hide Patience
+        _currentClient = null;
+        StartCoroutine(Move(_patienceRoot, _downPosPatience, _upPosPatience, _timeToAppearPatience, _curveAppearPatience));
+
         StartCoroutine(HideDialogueCO());
         _block.SetActive(true);
         t_clientPatience.text = $"Client: {clientPatience:0}%";
         t_orderEquality.text = $"Order: {results.Equality:0}%";
-        t_moneyGained.text = $"+++${results.Money:0.##}";
+        t_moneyGained.text = $"+++${results.Money:0.00}";
 
         // Calculate grade
         float percentile = (results.Equality + clientPatience) * .5f;
@@ -290,12 +294,6 @@ public class UIManager : MonoBehaviour
         StartCoroutine(Move(_patienceRoot, _upPosPatience, _downPosPatience, _timeToAppearPatience, _curveAppearPatience));
     }
 
-    public void ClientServed()
-    {
-        _currentClient = null;
-        StartCoroutine(Move(_patienceRoot, _downPosPatience, _upPosPatience, _timeToAppearPatience, _curveAppearPatience));
-    }
-
     private void SetPatience(float t)
     {
         i_patienceFill.fillAmount = t;
@@ -309,10 +307,10 @@ public class UIManager : MonoBehaviour
         {
             eTime += Time.deltaTime;
             float m = Mathf.Lerp(currentMoney, currentMoney + moneyAdded, eTime / _moneyStepTime);
-            t_totalMoney.text = m.ToString("$00,00");
+            t_totalMoney.text = $"${m:00.00}";
             yield return null;
         }
-        t_totalMoney.text = $"&{currentMoney + moneyAdded:00,00}";
+        t_totalMoney.text = $"${currentMoney + moneyAdded:00.00}";
     }
 
     public void SwapMuteSprite()
