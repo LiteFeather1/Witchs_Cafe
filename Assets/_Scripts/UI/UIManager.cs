@@ -14,7 +14,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private CanvasGroup _gameGroup;
     [SerializeField] private float _fadeTimeGameGroup;
 
-    [Header("Curso")]
+    [Header("Cursor")]
     [SerializeField] private Image i_cursor;
     [SerializeField] private Sprite _openHand;
     [SerializeField] private Sprite _closeHand;
@@ -60,6 +60,9 @@ public class UIManager : MonoBehaviour
     [SerializeField] private AnimationCurve _curveAppearPatience;
     private Client _currentClient;
 
+    [Header("Client Order Helper")]
+    [SerializeField] private TextMeshProUGUI t_orderHelper;
+
     [Header("Money")]
     [SerializeField] private TextMeshProUGUI t_totalMoney;
     [SerializeField] private float _moneyStepTime = 1.5f;
@@ -74,6 +77,7 @@ public class UIManager : MonoBehaviour
 
     [Header("Thanks Overlay")]
     [SerializeField] private GameObject _thanksForPlaying;
+    [SerializeField] private GameObject _bottomBar;
 
     [Header("Block Overlay")]
     [SerializeField] private GameObject _block;
@@ -83,15 +87,12 @@ public class UIManager : MonoBehaviour
         _gameGroup.alpha = 0f;
 
         _downPosPatience = _patienceRoot.localPosition;
-        _patienceRoot.localPosition += new Vector3(0f, _patienceRoot.sizeDelta.y);
+        _patienceRoot.localPosition += new Vector3(0f, _patienceRoot.sizeDelta.y * 1.5f);
         _upPosPatience = _patienceRoot.localPosition;
         Cursor.visible = false;
     }
 
-    private void OnApplicationFocus(bool focus)
-    {
-        Cursor.visible = false;
-    }
+    private void OnApplicationFocus(bool focus) => Cursor.visible = false;
 
     private void OnEnable()
     {
@@ -172,6 +173,20 @@ public class UIManager : MonoBehaviour
         StartCoroutine(PopUpDialogueCO());
     }
 
+    public void SetOrderHelper(Coffee coffeeOrder)
+    {
+        const string BULLET_POINT = "• ";
+        System.Text.StringBuilder sb = new();
+        if (coffeeOrder.CoffeeBean != null)
+            sb.Append(BULLET_POINT).Append("<u>").Append(coffeeOrder.CoffeeBean.Name).Append("</u>").AppendLine();
+        if (coffeeOrder.Milk != null)
+            sb.Append(BULLET_POINT).Append("<u>").Append(coffeeOrder.Milk.Name).Append("</u>").AppendLine();
+        for (int i = 0; i < coffeeOrder.MiscIngredients.Count; i++)
+            sb.Append(BULLET_POINT).Append("<u>").Append(coffeeOrder.MiscIngredients[i].Name).Append("</u>").AppendLine();
+
+        t_orderHelper.text = sb.ToString();
+    }
+
     private IEnumerator HideDialogueCO()
     {
         var from = _clientDialogueRoot.sizeDelta;
@@ -210,6 +225,7 @@ public class UIManager : MonoBehaviour
     {
         transform.gameObject.SetActive(true);
         group.alpha = 0f;
+        var originalScale = transform.localScale;
         Vector2 from = new(5f, 5f);
         transform.localScale = from;
         float eTime = 0f;
@@ -222,7 +238,7 @@ public class UIManager : MonoBehaviour
             yield return new WaitForEndOfFrame();
         }
         group.alpha = 1f;
-        transform.localScale = Vector3.one;
+        transform.localScale = originalScale;
     }
 
     private IEnumerator DeliverFeedBackTween()
@@ -241,8 +257,9 @@ public class UIManager : MonoBehaviour
         b_nextClient.onClick = new();
         b_nextClient.onClick.AddListener(() =>
         {
+            _bottomBar.SetActive(false);
+            _deliverFeedbackRoot.gameObject.SetActive(false);
             _thanksForPlaying.SetActive(true);
-            _gameGroup.gameObject.SetActive(false);
         });
     }
 
@@ -292,10 +309,10 @@ public class UIManager : MonoBehaviour
         {
             eTime += Time.deltaTime;
             float m = Mathf.Lerp(currentMoney, currentMoney + moneyAdded, eTime / _moneyStepTime);
-            t_totalMoney.text = m.ToString("00.00");
+            t_totalMoney.text = m.ToString("$00,00");
             yield return null;
         }
-        t_totalMoney.text = (currentMoney + moneyAdded).ToString("00.00");
+        t_totalMoney.text = $"&{currentMoney + moneyAdded:00,00}";
     }
 
     public void SwapMuteSprite()

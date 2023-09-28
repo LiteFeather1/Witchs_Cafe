@@ -71,6 +71,7 @@ public class GameManager : MonoBehaviour
     {
         _uiManager.PopUpDialogue(client.Dialogue);
         _uiManager.SetCurrentClient(client);
+        _uiManager.SetOrderHelper(client.Coffee);
     }
 
     private void OnClieantServed(CoffeeComparisonResults results, float clientPatience)

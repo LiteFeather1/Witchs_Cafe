@@ -4,7 +4,7 @@ using UnityEngine;
 public class Client : ReceiveIngredient<CoffeeCup>
 {
     [Header("Coffee")]
-    [SerializeField, TextArea] private string _dialogue;
+    [SerializeField, TextArea(3, 6)] private string _dialogue;
     [SerializeField] private CoffeeOrder _coffeeOrder;
 
     [Header("Patience")]

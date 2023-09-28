@@ -19,6 +19,16 @@ public class ClientManager : MonoBehaviour
     public int ClientLength => _clients.Length;
     public int CurrentClientIndex => _currentClientIndex;
 
+    private void Awake()
+    {
+        int n = _clients.Length - 1;
+        while (n > 1)
+        {
+            int k = UnityEngine.Random.Range(1, n--);
+            (_clients[k], _clients[n]) = (_clients[n], _clients[k]);
+        }
+    }
+
     private void OnEnable()
     {
         for (int i = 0; i < _clients.Length; i++)
@@ -31,22 +41,20 @@ public class ClientManager : MonoBehaviour
             _clients[i].OnCoffeeDelivered -= ClientServed;
     }
 
-    public void AppearClient()
-    {
-        StartCoroutine(AppearClientCO());
-    }
+    // Also called by a button 
+    public void AppearClient() => StartCoroutine(AppearClientCO());
 
     public IEnumerator AppearClientCO()
     {
-        if (_currentClientIndex == _clients.Length - 1)
-            OnAllClientsServed?.Invoke();
-
         var client = _clients[_currentClientIndex];
         client.gameObject.SetActive(true);
         GameManager.Instance.AudioManager.PlaySFX(_audioCustomerArrive);
         yield return client.PopAnimation();
         yield return _delayBeforeShowDialogue;
         OnNewClient?.Invoke(client);
+
+        if (_currentClientIndex == _clients.Length - 1)
+            OnAllClientsServed?.Invoke();
     }
 
     public void ClientServed(CoffeeComparisonResults results, float patience)

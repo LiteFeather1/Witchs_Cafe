@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5c1001160aff0a64595267444bc85c2e, type: 3}
-  m_Name: Boss_Order
+  m_Name: Order_Psico_Girl
   m_EditorClassIdentifier: 
   _cofferOrder:
-    _coffeeBean: {fileID: 11400000, guid: eec2d2a88e993f043bca06a88cfa8756, type: 2}
-    _milk: {fileID: 11400000, guid: 71601b177528a134bbe52395bf79a824, type: 2}
-    _miscIngredients: []
+    _coffeeBean: {fileID: 11400000, guid: 31ac413710c529a498c188d239466836, type: 2}
+    _milk: {fileID: 0}
+    _miscIngredients:
+    - {fileID: 11400000, guid: c3dd57dab85ff2c4981292a8052c148d, type: 2}

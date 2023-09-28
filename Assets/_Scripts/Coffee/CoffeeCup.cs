@@ -63,7 +63,6 @@ public class CoffeeCup : ReceiveIngredient<ITopping>
     public void TeleportToStore()
     {
         transform.position = _storePoint.position;
-        transform.localScale = new(.5f, .5f, .5f);
         _coffeeCupDraggable.enabled = true;
         _coffeeCupDraggable.RB.bodyType = RigidbodyType2D.Dynamic;
         _coffeeCupDraggable.Collider.isTrigger = false;
@@ -76,7 +75,6 @@ public class CoffeeCup : ReceiveIngredient<ITopping>
     public void TeleportToKitchen()
     {
         transform.position = _kitchenPoint.position;
-        transform.localScale = Vector3.one;
         _coffeeCupDraggable.enabled = false;
         _coffeeCupDraggable.RB.bodyType = RigidbodyType2D.Static;
         _coffeeCupDraggable.Collider.isTrigger = true;

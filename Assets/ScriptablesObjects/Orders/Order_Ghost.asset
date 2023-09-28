@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c1001160aff0a64595267444bc85c2e, type: 3}
+  m_Name: Order_Ghost
+  m_EditorClassIdentifier: 
+  _cofferOrder:
+    _coffeeBean: {fileID: 11400000, guid: 70073108bc017f54bab8ec0a3be41d44, type: 2}
+    _milk: {fileID: 11400000, guid: 24b70808f5eaf8545b4c01a4d84e5643, type: 2}
+    _miscIngredients:
+    - {fileID: 11400000, guid: ee4fa63dc71aac74aad92c8ee04a20fe, type: 2}
+    - {fileID: 11400000, guid: 8820caf5332fed242a42729be983a7cc, type: 2}
+    - {fileID: 11400000, guid: 03de2a9008ee8da4daf15a7de0483b92, type: 2}
+    - {fileID: 11400000, guid: 9d89982e1a0795e45a7dd8648745a2d9, type: 2}
+    - {fileID: 11400000, guid: 4f0c7eac51f693241a51add273aac813, type: 2}
+    - {fileID: 11400000, guid: 9a4d5a764a88cb74082aef0f3bf1f7f9, type: 2}
