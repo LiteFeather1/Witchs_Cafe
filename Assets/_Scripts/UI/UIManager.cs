@@ -32,6 +32,7 @@ public class UIManager : MonoBehaviour
 
     [Header("Client Feedback")]
     [SerializeField] private Transform _deliverFeedbackRoot;
+    [SerializeField] private TextMeshProUGUI t_deliverTitle;
     [SerializeField] private TextMeshProUGUI t_clientPatience;
     [SerializeField] private TextMeshProUGUI t_orderEquality;
     [SerializeField] private TextMeshProUGUI t_moneyGained;
@@ -359,15 +360,21 @@ public class UIManager : MonoBehaviour
         if (lang == Languages.English)
         {
             t_language.text = "EN";
+
             t_store.text = "Store";
             t_kitchen.text = "Kitchen";
+
+            t_deliverTitle.text = "Coffee Delivered!";
             t_nextClient.text = "Next Client";
         }
         else
         {
             t_language.text = "PT";
+
             t_store.text = "Loja";
             t_kitchen.text = "Cozinha";
+
+            t_deliverTitle.text = "Cafe Entregado!";
             t_nextClient.text = "Proximo Cliente";
         }
 

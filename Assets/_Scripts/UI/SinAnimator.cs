@@ -36,7 +36,7 @@ public class SinAnimator : MonoBehaviour
         _elapsedRotationTime += DeltaTime * _direction;
         float t = _rotationCurve.Evaluate(_elapsedRotationTime / _timeRotation);
         float z = Mathf.LerpAngle(-_angle, _angle, t);
-        transform.rotation = Quaternion.Euler(new(0f, 0f, z));
+        transform.localRotation = Quaternion.Euler(new(0f, 0f, z));
         if (_elapsedRotationTime > _timeRotation || _elapsedRotationTime < 0f)
             _direction *= -1f;
     }

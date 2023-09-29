@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 
-public interface IDraggable
+public interface IDraggable : System.IComparable<IDraggable>
 {
+    public int Order { get; }
     public DraggingMethod Method { get; }
     public System.Action OnGrabbed { get; set; }
     public System.Action OnReleased { get; set; }

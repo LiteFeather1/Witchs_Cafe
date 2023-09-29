@@ -1473,8 +1473,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3165666803492000547, guid: da53fbbbf00816e48857e97c954e9ee7, type: 3}
       propertyPath: _dialogue.pt_string
-      value: "Ah voc\xEA e novo aqui! Acho que voc\xEA nao pedido. Eu quero o cafe
-        forestal de canela por favor! Gimme that witchy's brew!!!"
+      value: "Ah voce e novo aqui! Acho que voc\xEA nao pedido. Eu quero o cafe forestal
+        de canela por favor! Gimme that witchy's brew!!!"
       objectReference: {fileID: 0}
     - target: {fileID: 7817616078722649607, guid: da53fbbbf00816e48857e97c954e9ee7, type: 3}
       propertyPath: m_Name
@@ -1990,7 +1990,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 16, y: -16}
-  m_SizeDelta: {x: 200, y: 90}
+  m_SizeDelta: {x: 214, y: 90}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &318661982
 MonoBehaviour:
@@ -2012,7 +2012,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Coffee Delivered!
+  m_text: Coffee Delivered
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c6979d9b29d49454d865312777b02c45, type: 2}
   m_sharedMaterial: {fileID: 2901803876700776305, guid: c6979d9b29d49454d865312777b02c45, type: 2}
@@ -2641,8 +2641,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3165666803492000547, guid: da53fbbbf00816e48857e97c954e9ee7, type: 3}
       propertyPath: _dialogue.pt_string
-      value: "Parece que sou seu \xFAltimo cliente da noite...\nEu quero um Tudo
-        Cafe."
+      value: 'Parece que sou seu ultimo cliente da noite...
+
+        Eu quero um
+        Cafe Tudo.'
       objectReference: {fileID: 0}
     - target: {fileID: 7817616078722649607, guid: da53fbbbf00816e48857e97c954e9ee7, type: 3}
       propertyPath: m_Name
@@ -4270,7 +4272,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 1
+  m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -7672,12 +7674,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 32
+  m_fontSize: 38
   m_fontSizeBase: 32
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 28
+  m_fontSizeMax: 38
   m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -11729,7 +11731,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -270}
-  m_SizeDelta: {x: 181.63, y: 73.19}
+  m_SizeDelta: {x: 232, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1696261148
 MonoBehaviour:
@@ -12167,10 +12169,10 @@ RectTransform:
   - {fileID: 1745478885}
   m_Father: {fileID: 1238139923}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 400, y: 400}
+  m_SizeDelta: {x: 2320, y: 1480}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1719812960
 MonoBehaviour:
@@ -14010,10 +14012,10 @@ RectTransform:
   - {fileID: 1346806381}
   m_Father: {fileID: 662800842}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 400, y: 400}
+  m_SizeDelta: {x: 2320, y: 1480}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1928747919
 MonoBehaviour:
@@ -14956,6 +14958,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   _deliverFeedbackRoot: {fileID: 648830786}
+  t_deliverTitle: {fileID: 0}
   t_clientPatience: {fileID: 693001962}
   t_orderEquality: {fileID: 1562321481}
   t_moneyGained: {fileID: 1637284032}
