@@ -35,7 +35,7 @@ public class Pestleable : MonoBehaviour, IPestleable
             return;
 
         _canBeHit = false;
-        Instantiate(_objectToGive, transform.position, Quaternion.identity);
+        Instantiate(_objectToGive, transform.position + Vector3.forward, Quaternion.identity);
         Destroy(gameObject);
     }
 }

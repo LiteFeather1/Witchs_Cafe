@@ -14,8 +14,6 @@ public class MouseManager : MonoBehaviour
     [SerializeField] private float _distanceToMaxSpeed;
     private int _draggablePrevLayer;
     private IDraggable _draggable;
-    [SerializeField] private Collider2D[] _colliderResultOfDraggable = new Collider2D[3];
-    private readonly IDraggable[] _resultOfDraggable = new IDraggable[3];
 
     [Header("Audio")]
     [SerializeField] private AudioClip _audioObjectGrabbed;
@@ -71,24 +69,14 @@ public class MouseManager : MonoBehaviour
     private void OnClick(InputAction.CallbackContext ctx)
     {
         Vector2 mousePoint = GameManager.MousePosition();
-        Physics2D.OverlapPointNonAlloc(mousePoint, _colliderResultOfDraggable, _layerMasks);
+        var collider = Physics2D.OverlapPoint(mousePoint, _layerMasks);
+        if (collider == null)
+            return;
 
-        for (int i = 0; i < _colliderResultOfDraggable.Length; i++)
-        {
-            if (_colliderResultOfDraggable[i] == null)
-                continue;
-
-            if (_colliderResultOfDraggable[i].TryGetComponent(out IGiveDraggable giveDraggable))
-            {
-                StartDrag(giveDraggable.GetDraggable(mousePoint));
-                return;
-            }
-            _resultOfDraggable[i] = _colliderResultOfDraggable[i].GetComponent<IDraggable>();
-        }
-
-        Array.Sort(_resultOfDraggable);
-        if (_resultOfDraggable[0] != null)
-            StartDrag(_resultOfDraggable[0]);
+        if (collider.TryGetComponent(out IGiveDraggable giveDraggable))
+            StartDrag(giveDraggable.GetDraggable(mousePoint));
+        else if (collider.TryGetComponent(out IDraggable draggable))
+            StartDrag(draggable);
     }
 
     public void StartDrag(IDraggable draggable)
