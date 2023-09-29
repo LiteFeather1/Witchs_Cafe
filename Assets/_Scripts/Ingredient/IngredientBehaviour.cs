@@ -4,7 +4,7 @@ public abstract class IngredientBehaviour : MonoBehaviour, IIngredient
 {
     [SerializeField] protected IngredientSO _ingredient;
 
-    public string Name => _ingredient.Name;
+    public TranslatedString Name => _ingredient.Name;
 
     public IngredientSO Ingredient => _ingredient;
 

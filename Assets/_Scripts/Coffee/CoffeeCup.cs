@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Xml;
+using UnityEngine;
 
 public class CoffeeCup : ReceiveIngredient<ITopping>
 {
@@ -16,7 +17,7 @@ public class CoffeeCup : ReceiveIngredient<ITopping>
     [SerializeField] private Transform _kitchenPoint;
 
     [Header("Hover")]
-    [SerializeField] private string _title = "Coffee Cup";
+    [SerializeField] private TranslatedString _name;
 
     [Header("Sounds")]
     [SerializeField] private AudioClip _audioCoffeeTransferred;
@@ -32,21 +33,51 @@ public class CoffeeCup : ReceiveIngredient<ITopping>
     private void SetHoverText()
     {
         if (_t != null)
-            GameManager.Instance.HoverInfoManager.SetSimpleText($"Add {_t.Name} to {_title}?");
+        {
+            switch (GameManager.Instance.Language)
+            {
+                case Languages.Portuguese:
+                    GameManager.Instance.HoverInfoManager.SetSimpleText($"Adicionar {_t.Name.PT_String} no {_name.PT_String}?");
+                    break;
+                default:
+                    GameManager.Instance.HoverInfoManager.SetSimpleText($"Add {_t.Name.EN_String} to {_name.EN_String}?");
+                    break;
+            }
+        }
         else
         {
             var mouseDraggable = GameManager.Instance.MouseManager.Draggable;
             if (mouseDraggable != null)
             {
                 if (mouseDraggable.RB.TryGetComponent(out IName nameable))
-                    GameManager.Instance.HoverInfoManager.SetSimpleText($"Can't add {nameable.Name} to {_title}!!!");
+                {
+                    switch (GameManager.Instance.Language)
+                    {
+                        case Languages.Portuguese:
+                            GameManager.Instance.HoverInfoManager.SetSimpleText($"Não posso {nameable.Name.PT_String} no {_name.PT_String}!!!");
+                            break;
+                        default:
+                            GameManager.Instance.HoverInfoManager.SetSimpleText($"Can't add {nameable.Name.EN_String} to {_name.EN_String}!!!");
+                            break;
+                    }
+                }
             }
             else if (_deliverCoffee.CoffeeBean == null
                 && _deliverCoffee.Milk == null
                 && _deliverCoffee.MiscIngredients.Count == 0)
-                GameManager.Instance.HoverInfoManager.SetSimpleText($"{_title} is empty!");
+            {
+                switch (GameManager.Instance.Language)
+                {
+                    case Languages.Portuguese:
+                        GameManager.Instance.HoverInfoManager.SetSimpleText($"{_name.PT_String} vazio!");
+                        break;
+                    default:
+                        GameManager.Instance.HoverInfoManager.SetSimpleText($"{_name.EN_String} is empty!");
+                        break;
+                }
+            }
             else
-                GameManager.Instance.HoverInfoManager.SetCoffeeText(_title, _deliverCoffee);
+                GameManager.Instance.HoverInfoManager.SetCoffeeText(_name.String(GameManager.Instance.Language), _deliverCoffee);
         }
     }
 

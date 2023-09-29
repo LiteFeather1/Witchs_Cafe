@@ -9,7 +9,6 @@ public class PlaySoundOnHit : MonoBehaviour
 
     public void SetCanPlay(bool canPlay) => _canPlay = canPlay;
 
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (!_canPlay)

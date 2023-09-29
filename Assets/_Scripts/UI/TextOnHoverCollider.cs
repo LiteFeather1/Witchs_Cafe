@@ -1,6 +1,6 @@
 ﻿public abstract class TextOnHoverCollider : TextOnHover, IName
 {
-    public string Name => Text;
+    public TranslatedString Name => Text;
 
     protected virtual void OnMouseEnter()
     {

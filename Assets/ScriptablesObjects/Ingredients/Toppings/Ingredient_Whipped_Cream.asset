@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 955be364640d65243a24b1b4f5e6815e, type: 3}
   m_Name: Ingredient_Whipped_Cream
   m_EditorClassIdentifier: 
-  _name: Whipped Cream
+  _nameOld: Whipped Cream
+  _name:
+    en_string: Whipped Cream
+    pt_string: Chantilly
   _colour: {r: 1, g: 1, b: 1, a: 1}
   _money: 0.5

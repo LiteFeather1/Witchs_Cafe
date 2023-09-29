@@ -21,11 +21,16 @@ public class GameManager : MonoBehaviour
     [SerializeField] private HoverInfoManager _hoverInfoManager;
     [SerializeField] private AudioManager _audioManager;
 
+    [Header("Language")]
+    [SerializeField] private Languages _language = Languages.English;
+
     public static ManagerInput InputManager { get; private set; }
 
     public MouseManager MouseManager => _mouseManager;
     public HoverInfoManager HoverInfoManager => _hoverInfoManager;
     public AudioManager AudioManager => _audioManager;
+
+    public Languages Language => _language;
 
     private void Awake()
     {
@@ -69,7 +74,7 @@ public class GameManager : MonoBehaviour
 
     private void AppearDialogue(Client client)
     {
-        _uiManager.PopUpDialogue(client.Dialogue);
+        _uiManager.PopUpDialogue(client.Dialogue.String(_language));
         _uiManager.SetCurrentClient(client);
         _uiManager.SetOrderHelper(client.Coffee);
     }
@@ -98,6 +103,17 @@ public class GameManager : MonoBehaviour
     }
 
     private void PauseUnpause(InputAction.CallbackContext ctx) => PauseUnpause();
+
+    // Called by a button
+    public void SwitchLanguage()
+    {
+        if (_language == Languages.English)
+            _language = Languages.Portuguese;
+        else
+            _language = Languages.English;
+
+        _uiManager.UpdateLanguage(_language);
+    }
 
     public class ManagerInput
     {

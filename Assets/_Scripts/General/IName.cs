@@ -1,4 +1,4 @@
 ﻿public interface IName
 {
-    public string Name { get; }
+    public TranslatedString Name { get; }
 }

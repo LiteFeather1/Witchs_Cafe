@@ -6,7 +6,7 @@ public class Mortar : ReceiveIngredient<IPestleable>
     [SerializeField] private Collider2D _collider;
 
     [Header("Hover")]
-    [SerializeField] private string _title = "Mortar";
+    [SerializeField] private TranslatedString _name;
     private IPestleable _pestleable;
 
     private void OnMouseEnter() => SetHoverText();
@@ -16,17 +16,47 @@ public class Mortar : ReceiveIngredient<IPestleable>
     private void SetHoverText()
     {
         if (_t != null)
-            GameManager.Instance.HoverInfoManager.SetSimpleText($"Drop {_t.Name} to {_title}?");
+        {
+            switch (GameManager.Instance.Language)
+            {
+                case Languages.Portuguese:
+                    GameManager.Instance.HoverInfoManager.SetSimpleText($"Adicionar {_t.Name.EN_String} no {_name.PT_String}?");
+                    break;
+                default:
+                    GameManager.Instance.HoverInfoManager.SetSimpleText($"Drop {_t.Name.EN_String} to {_name.EN_String}?");
+                    break;
+            };
+        }
         else
         {
             var mouseDraggable = GameManager.Instance.MouseManager.Draggable;
             if (mouseDraggable != null)
             {
                 if (mouseDraggable.RB.TryGetComponent(out IName nameable))
-                    GameManager.Instance.HoverInfoManager.SetSimpleText($"Can't add {nameable.Name} to {_title}!!!");
+                {
+                    switch (GameManager.Instance.Language)
+                    {
+                        case Languages.Portuguese:
+                            GameManager.Instance.HoverInfoManager.SetSimpleText($"Não Posso {nameable.Name.PT_String} no {_name.PT_String}!!!");
+                            break;
+                        default:
+                            GameManager.Instance.HoverInfoManager.SetSimpleText($"Can't add {nameable.Name.EN_String} to {_name.EN_String}!!!");
+                            break;
+                    };
+                }
             }
             else if (_pestleable == null)
-                GameManager.Instance.HoverInfoManager.SetSimpleText($"{_title} is empty!");
+            {
+                switch (GameManager.Instance.Language)
+                {
+                    case Languages.Portuguese:
+                        GameManager.Instance.HoverInfoManager.SetSimpleText($"{_name.PT_String} vazio!");
+                        break;
+                    default:
+                        GameManager.Instance.HoverInfoManager.SetSimpleText($"{_name.EN_String} is empty!");
+                        break;
+                };
+            }
         }
     }
 

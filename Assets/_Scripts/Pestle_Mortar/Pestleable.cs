@@ -2,7 +2,7 @@
 
 public class Pestleable : MonoBehaviour, IPestleable
 {
-    [SerializeField] private string _name;
+    [SerializeField] private TranslatedString _name;
     [SerializeField] private GameObject _objectToGive;
     [SerializeField] private float _resistance = 100f;
     [SerializeField] private Rigidbody2D _rb;
@@ -10,7 +10,7 @@ public class Pestleable : MonoBehaviour, IPestleable
     private bool _canBeHit;
     public bool CanBeHit => _canBeHit;
 
-    public string Name => _name;
+    public TranslatedString Name => _name;
 
     public void SetPosition(Vector2 position)
     {

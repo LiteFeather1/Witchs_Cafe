@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 955be364640d65243a24b1b4f5e6815e, type: 3}
   m_Name: Ingredient_Grinded_Coffee_Bean_Medium
   m_EditorClassIdentifier: 
-  _name: Grinded Red Coffee Bean
+  _nameOld: 
+  _name:
+    en_string: Grinded Red Coffee
+    pt_string: "Caf\xE9 Vermelho Mo\xEDdo"
   _colour: {r: 0.49411768, g: 0.18039216, b: 0.18039216, a: 1}
   _money: 5

@@ -255,6 +255,18 @@ PrefabInstance:
       propertyPath: _info
       value: Grab Brown Sugar?
       objectReference: {fileID: 0}
+    - target: {fileID: 1310961768459847481, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
+      propertyPath: _infoOld
+      value: Grab Brown Sugar?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310961768459847481, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
+      propertyPath: _info.en_string
+      value: Grab Brown Sugar?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310961768459847481, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
+      propertyPath: _info.pt_string
+      value: "Pegar Ac\xFA\xE7ar Mascavo?"
+      objectReference: {fileID: 0}
     - target: {fileID: 3034966341916779252, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.67
@@ -356,6 +368,18 @@ PrefabInstance:
       propertyPath: _info
       value: Grab Cocoa?
       objectReference: {fileID: 0}
+    - target: {fileID: 1310961768459847481, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
+      propertyPath: _infoOld
+      value: Grab Cocoa?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310961768459847481, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
+      propertyPath: _info.en_string
+      value: Grab Cocoa?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310961768459847481, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
+      propertyPath: _info.pt_string
+      value: "Pegar Chocolate em P\xF3?"
+      objectReference: {fileID: 0}
     - target: {fileID: 3034966341916779252, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.89
@@ -448,6 +472,18 @@ PrefabInstance:
     - target: {fileID: 1310961768459847481, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
       propertyPath: _info
       value: Grab Milk?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310961768459847481, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
+      propertyPath: _infoOld
+      value: Grab Milk?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310961768459847481, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
+      propertyPath: _info.en_string
+      value: Grab Milk?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310961768459847481, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
+      propertyPath: _info.pt_string
+      value: Pegar Leite?
       objectReference: {fileID: 0}
     - target: {fileID: 3034966341916779252, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1119,7 +1155,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c586c0411e5188548bc82ca678d58c6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _info: Throw Coffee away?
+  _info:
+    en_string: Throw Coffee away?
+    pt_string: "Jogar Caf\xE9 Fora?"
 --- !u!1 &190286883
 GameObject:
   m_ObjectHideFlags: 0
@@ -1423,6 +1461,21 @@ PrefabInstance:
       propertyPath: _coffeeOrder
       value: 
       objectReference: {fileID: 11400000, guid: 0615d915b3b7e6d4997783fd421e02b0, type: 2}
+    - target: {fileID: 3165666803492000547, guid: da53fbbbf00816e48857e97c954e9ee7, type: 3}
+      propertyPath: _dialogueOld
+      value: Oh you new here! I guess you don't know my usual. I want my cinnamon
+        foresty coffee please. Gimme that witchy's brew!!!
+      objectReference: {fileID: 0}
+    - target: {fileID: 3165666803492000547, guid: da53fbbbf00816e48857e97c954e9ee7, type: 3}
+      propertyPath: _dialogue.en_string
+      value: Oh you new here! I guess you don't know my usual. I want my cinnamon
+        foresty coffee please! Gimme that witchy's brew!!!
+      objectReference: {fileID: 0}
+    - target: {fileID: 3165666803492000547, guid: da53fbbbf00816e48857e97c954e9ee7, type: 3}
+      propertyPath: _dialogue.pt_string
+      value: "Ah voc\xEA \xE9 novo aqui! Acho que voc\xEA n\xE3o pedido. Eu quero
+        o caf\xE9 forestal de canela por favor! Gimme that witchy's brew!!!"
+      objectReference: {fileID: 0}
     - target: {fileID: 7817616078722649607, guid: da53fbbbf00816e48857e97c954e9ee7, type: 3}
       propertyPath: m_Name
       value: Client_Ily
@@ -1521,7 +1574,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 700, y: 0}
+  m_AnchoredPosition: {x: 650, y: 0}
   m_SizeDelta: {x: 100, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &235003952
@@ -1601,6 +1654,18 @@ PrefabInstance:
     - target: {fileID: 1310961768459847481, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
       propertyPath: _info
       value: Grab Vanilla?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310961768459847481, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
+      propertyPath: _infoOld
+      value: Grab Vanilla?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310961768459847481, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
+      propertyPath: _info.en_string
+      value: Grab Vanilla?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310961768459847481, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
+      propertyPath: _info.pt_string
+      value: Pegar Vanila?
       objectReference: {fileID: 0}
     - target: {fileID: 3034966341916779252, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2181,7 +2246,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c586c0411e5188548bc82ca678d58c6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _info: Throw Coffee away?
+  _info:
+    en_string: Throw Coffee away?
+    pt_string: "Jogar Caf\xE9 Fora?"
 --- !u!1 &336166182
 GameObject:
   m_ObjectHideFlags: 0
@@ -2558,6 +2625,25 @@ PrefabInstance:
       propertyPath: _coffeeOrder
       value: 
       objectReference: {fileID: 11400000, guid: 2d2d00efa269811479bfdc6a184e9259, type: 2}
+    - target: {fileID: 3165666803492000547, guid: da53fbbbf00816e48857e97c954e9ee7, type: 3}
+      propertyPath: _dialogueOld
+      value: 'I guess I''m you last customer for the night...
+
+        Give me a
+        everything coffee.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3165666803492000547, guid: da53fbbbf00816e48857e97c954e9ee7, type: 3}
+      propertyPath: _dialogue.en_string
+      value: 'I guess I''m you last customer for the night...
+
+        Give me a
+        everything coffee.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3165666803492000547, guid: da53fbbbf00816e48857e97c954e9ee7, type: 3}
+      propertyPath: _dialogue.pt_string
+      value: "Parece que sou seu \xFAltimo cliente da noite...\nEu quero um Tudo
+        Caf\xE9"
+      objectReference: {fileID: 0}
     - target: {fileID: 7817616078722649607, guid: da53fbbbf00816e48857e97c954e9ee7, type: 3}
       propertyPath: m_Name
       value: Client_Jason
@@ -2663,6 +2749,19 @@ PrefabInstance:
       propertyPath: _coffeeOrder
       value: 
       objectReference: {fileID: 11400000, guid: 745a8467013a5b144a39d5c9aa219354, type: 2}
+    - target: {fileID: 3165666803492000547, guid: da53fbbbf00816e48857e97c954e9ee7, type: 3}
+      propertyPath: _dialogueOld
+      value: "Boo! I mean hello!! \nI like sweats, and I like my coffee even sweater!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3165666803492000547, guid: da53fbbbf00816e48857e97c954e9ee7, type: 3}
+      propertyPath: _dialogue.en_string
+      value: "Boo! I mean hello!! \nI like sweats, and I like my coffee even sweater!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3165666803492000547, guid: da53fbbbf00816e48857e97c954e9ee7, type: 3}
+      propertyPath: _dialogue.pt_string
+      value: "Boo! Quero Dizer Ol\xE1!\nEu gosto de doces, e gosto meu caf\xE9 ainda
+        mais doce!"
+      objectReference: {fileID: 0}
     - target: {fileID: 7817616078722649607, guid: da53fbbbf00816e48857e97c954e9ee7, type: 3}
       propertyPath: m_Name
       value: Client_Ghost
@@ -3096,6 +3195,14 @@ PrefabInstance:
     - target: {fileID: 1117242647160171012, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310961768459847481, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
+      propertyPath: _info.en_string
+      value: Grab Soy Milk?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310961768459847481, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
+      propertyPath: _info.pt_string
+      value: Pegar Leite de Soja?
       objectReference: {fileID: 0}
     - target: {fileID: 3034966341916779252, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3817,6 +3924,21 @@ PrefabInstance:
       propertyPath: _coffeeOrder
       value: 
       objectReference: {fileID: 11400000, guid: 5e0731b897073cb42a8d2bd6f1ba9771, type: 2}
+    - target: {fileID: 3165666803492000547, guid: da53fbbbf00816e48857e97c954e9ee7, type: 3}
+      propertyPath: _dialogueOld
+      value: mmMM...MmmMM...Sorry It's difficult to speak with these bandages. I'd
+        like a very colourful coffee.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3165666803492000547, guid: da53fbbbf00816e48857e97c954e9ee7, type: 3}
+      propertyPath: _dialogue.en_string
+      value: mmMM... MmmMM... Sorry It's difficult to speak with these bandages.
+        I'd like a very colourful coffee.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3165666803492000547, guid: da53fbbbf00816e48857e97c954e9ee7, type: 3}
+      propertyPath: _dialogue.pt_string
+      value: "mmmMM... Mmm... Desculpa \xE9 dif\xEDcil falar com essas bandagens.
+        Eu gostaria de um caf\xE9 bem colorido! "
+      objectReference: {fileID: 0}
     - target: {fileID: 7817616078722649607, guid: da53fbbbf00816e48857e97c954e9ee7, type: 3}
       propertyPath: m_Name
       value: Client_Mummy
@@ -3922,6 +4044,18 @@ PrefabInstance:
     - target: {fileID: 1310961768459847481, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
       propertyPath: _info
       value: Grab Dark Coffee Bean?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310961768459847481, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
+      propertyPath: _infoOld
+      value: Grab Dark Coffee Bean?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310961768459847481, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
+      propertyPath: _info.en_string
+      value: Grab Dark Coffee Bean?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310961768459847481, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
+      propertyPath: _info.pt_string
+      value: "Pegar Gr\xE3o de Caf\xE9 Escuro?"
       objectReference: {fileID: 0}
     - target: {fileID: 3034966341916779252, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4595,6 +4729,7 @@ RectTransform:
   - {fileID: 2056276742}
   - {fileID: 235003951}
   - {fileID: 1753542536}
+  - {fileID: 1091632910}
   m_Father: {fileID: 1238139923}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
@@ -5234,6 +5369,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &828532259 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5584053169877604364, guid: b3ac4a6cb8e58f74d881a5a90ab6e950, type: 3}
+  m_PrefabInstance: {fileID: 1785265824}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &834238919
 GameObject:
   m_ObjectHideFlags: 0
@@ -5642,6 +5788,18 @@ PrefabInstance:
       propertyPath: _info
       value: Grab Red Coffee Bean?
       objectReference: {fileID: 0}
+    - target: {fileID: 1310961768459847481, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
+      propertyPath: _infoOld
+      value: Grab Red Coffee Bean?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310961768459847481, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
+      propertyPath: _info.en_string
+      value: Grab Red Coffee Bean?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310961768459847481, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
+      propertyPath: _info.pt_string
+      value: "Pegar Gr\xE3o de Caf\xE9 Vermelho?"
+      objectReference: {fileID: 0}
     - target: {fileID: 3034966341916779252, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.000999
@@ -5874,6 +6032,18 @@ PrefabInstance:
       propertyPath: _coffeeOrder
       value: 
       objectReference: {fileID: 11400000, guid: 39ca1c1221b6f634c8e2ca5fde69adec, type: 2}
+    - target: {fileID: 3165666803492000547, guid: da53fbbbf00816e48857e97c954e9ee7, type: 3}
+      propertyPath: _dialogueOld
+      value: Beautiful night for blood! Red coffee.To go!
+      objectReference: {fileID: 0}
+    - target: {fileID: 3165666803492000547, guid: da53fbbbf00816e48857e97c954e9ee7, type: 3}
+      propertyPath: _dialogue.en_string
+      value: Beautiful night for blood! Red coffee, cutie. To go!
+      objectReference: {fileID: 0}
+    - target: {fileID: 3165666803492000547, guid: da53fbbbf00816e48857e97c954e9ee7, type: 3}
+      propertyPath: _dialogue.pt_string
+      value: "Linda noite para sangue! Caf\xE9 vermelho, gracinha! "
+      objectReference: {fileID: 0}
     - target: {fileID: 7817616078722649607, guid: da53fbbbf00816e48857e97c954e9ee7, type: 3}
       propertyPath: m_Name
       value: Client_Vampire
@@ -6252,6 +6422,18 @@ PrefabInstance:
     - target: {fileID: 1310961768459847481, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
       propertyPath: _info
       value: Grab Sugar?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310961768459847481, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
+      propertyPath: _infoOld
+      value: Grab Sugar?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310961768459847481, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
+      propertyPath: _info.en_string
+      value: Grab Sugar?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310961768459847481, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
+      propertyPath: _info.pt_string
+      value: "Pegar Ac\xFA\xE7ar?"
       objectReference: {fileID: 0}
     - target: {fileID: 3034966341916779252, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6783,6 +6965,18 @@ PrefabInstance:
       propertyPath: _coffeeOrder
       value: 
       objectReference: {fileID: 11400000, guid: de596ad8ba0de8e46b9d3402568a1156, type: 2}
+    - target: {fileID: 3165666803492000547, guid: da53fbbbf00816e48857e97c954e9ee7, type: 3}
+      propertyPath: _dialogueOld
+      value: ...Strong...Coffee...and...Butter...
+      objectReference: {fileID: 0}
+    - target: {fileID: 3165666803492000547, guid: da53fbbbf00816e48857e97c954e9ee7, type: 3}
+      propertyPath: _dialogue.en_string
+      value: ...Strong...Coffee...Butter...
+      objectReference: {fileID: 0}
+    - target: {fileID: 3165666803492000547, guid: da53fbbbf00816e48857e97c954e9ee7, type: 3}
+      propertyPath: _dialogue.pt_string
+      value: "...Caf\xE9...Forte...Manteiga..."
+      objectReference: {fileID: 0}
     - target: {fileID: 7817616078722649607, guid: da53fbbbf00816e48857e97c954e9ee7, type: 3}
       propertyPath: m_Name
       value: Client_Psico_Girl
@@ -6895,6 +7089,18 @@ PrefabInstance:
     - target: {fileID: 1310961768459847481, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
       propertyPath: _info
       value: Grab Whipped Cream?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310961768459847481, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
+      propertyPath: _infoOld
+      value: Grab Whipped Cream?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310961768459847481, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
+      propertyPath: _info.en_string
+      value: Grab Whipped Cream?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310961768459847481, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
+      propertyPath: _info.pt_string
+      value: Pegar Chantilly?
       objectReference: {fileID: 0}
     - target: {fileID: 3034966341916779252, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7092,6 +7298,82 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1077507090}
+  m_CullTransparentMesh: 1
+--- !u!1 &1091632909
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1091632910}
+  - component: {fileID: 1091632912}
+  - component: {fileID: 1091632911}
+  m_Layer: 5
+  m_Name: BG_Swap_Language
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1091632910
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1091632909}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2029927949}
+  m_Father: {fileID: 762205762}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 900, y: 0}
+  m_SizeDelta: {x: 90, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1091632911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1091632909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0.80784315, b: 0.80784315, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: f1e7dae041afd6b4f9ded82b73b23eb0, type: 3}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 2
+--- !u!222 &1091632912
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1091632909}
   m_CullTransparentMesh: 1
 --- !u!1 &1134267337
 GameObject:
@@ -7367,6 +7649,18 @@ PrefabInstance:
     - target: {fileID: 1310961768459847481, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
       propertyPath: _info
       value: Grab Oat Milk?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310961768459847481, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
+      propertyPath: _infoOld
+      value: Grab Oat Milk?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310961768459847481, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
+      propertyPath: _info.en_string
+      value: Grab Oatmeal Milk?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310961768459847481, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
+      propertyPath: _info.pt_string
+      value: Pegar Leite de Aveia?
       objectReference: {fileID: 0}
     - target: {fileID: 3034966341916779252, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7762,6 +8056,18 @@ PrefabInstance:
     - target: {fileID: 1310961768459847481, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
       propertyPath: _info
       value: Grab Chocolate?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310961768459847481, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
+      propertyPath: _infoOld
+      value: Grab Chocolate?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310961768459847481, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
+      propertyPath: _info.en_string
+      value: Grab Chocolate?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310961768459847481, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
+      propertyPath: _info.pt_string
+      value: Pegar Chocolate?
       objectReference: {fileID: 0}
     - target: {fileID: 3034966341916779252, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8484,7 +8790,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c586c0411e5188548bc82ca678d58c6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _info: Deliver Coffee?
+  _info:
+    en_string: Deliver Coffee?
+    pt_string: "Entregar Caf\xE9?"
 --- !u!4 &1293342555 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3034966341916779252, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
@@ -9081,6 +9389,140 @@ MonoBehaviour:
   - {fileID: 449395771}
   - {fileID: 420611817}
   _audioCustomerArrive: {fileID: 8300000, guid: 586bf7a26bc686b43ae3c2c367d3e561, type: 3}
+--- !u!1 &1387641459
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1387641460}
+  - component: {fileID: 1387641462}
+  - component: {fileID: 1387641461}
+  m_Layer: 5
+  m_Name: T_Language
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1387641460
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1387641459}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2029927949}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1387641461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1387641459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: EN
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: c6979d9b29d49454d865312777b02c45, type: 2}
+  m_sharedMaterial: {fileID: 2901803876700776305, guid: c6979d9b29d49454d865312777b02c45, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 48
+  m_fontSizeBase: 48
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 0
+  m_fontSizeMax: 0
+  m_fontStyle: 5
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1387641462
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1387641459}
+  m_CullTransparentMesh: 1
 --- !u!1 &1388674404
 GameObject:
   m_ObjectHideFlags: 0
@@ -10365,6 +10807,18 @@ PrefabInstance:
       propertyPath: _info
       value: Grab Honey?
       objectReference: {fileID: 0}
+    - target: {fileID: 1310961768459847481, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
+      propertyPath: _infoOld
+      value: Grab Honey?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310961768459847481, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
+      propertyPath: _info.en_string
+      value: Grab Honey?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310961768459847481, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
+      propertyPath: _info.pt_string
+      value: Pegar Mel?
+      objectReference: {fileID: 0}
     - target: {fileID: 3034966341916779252, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.66
@@ -10553,6 +11007,18 @@ PrefabInstance:
     - target: {fileID: 1310961768459847481, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
       propertyPath: _info
       value: Grab Sprinkles?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310961768459847481, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
+      propertyPath: _infoOld
+      value: Grab Sprinkles?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310961768459847481, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
+      propertyPath: _info.en_string
+      value: Grab Sprinkles?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310961768459847481, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
+      propertyPath: _info.pt_string
+      value: Pegar Granulados?
       objectReference: {fileID: 0}
     - target: {fileID: 3034966341916779252, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11488,6 +11954,18 @@ PrefabInstance:
       propertyPath: _info
       value: Grab Cinnamon
       objectReference: {fileID: 0}
+    - target: {fileID: 1310961768459847481, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
+      propertyPath: _infoOld
+      value: Grab Cinnamon
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310961768459847481, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
+      propertyPath: _info.en_string
+      value: Grab Cinnamon?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310961768459847481, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
+      propertyPath: _info.pt_string
+      value: Pegar Canela?
+      objectReference: {fileID: 0}
     - target: {fileID: 3034966341916779252, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.18
@@ -12083,7 +12561,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 850, y: 0}
+  m_AnchoredPosition: {x: 775, y: 0}
   m_SizeDelta: {x: 90, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1753542537
@@ -12464,6 +12942,10 @@ PrefabInstance:
     - target: {fileID: 868111835848726712, guid: b3ac4a6cb8e58f74d881a5a90ab6e950, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2657621501151418136, guid: b3ac4a6cb8e58f74d881a5a90ab6e950, type: 3}
+      propertyPath: m_Name
+      value: T_Store
       objectReference: {fileID: 0}
     - target: {fileID: 4541173519297935187, guid: b3ac4a6cb8e58f74d881a5a90ab6e950, type: 3}
       propertyPath: m_Name
@@ -12893,6 +13375,18 @@ PrefabInstance:
       propertyPath: _info
       value: Grab Caramel?
       objectReference: {fileID: 0}
+    - target: {fileID: 1310961768459847481, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
+      propertyPath: _infoOld
+      value: Grab Caramel?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310961768459847481, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
+      propertyPath: _info.en_string
+      value: Grab Caramel?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310961768459847481, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
+      propertyPath: _info.pt_string
+      value: Pegar Caramelo?
+      objectReference: {fileID: 0}
     - target: {fileID: 3034966341916779252, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 12.11
@@ -12998,6 +13492,18 @@ PrefabInstance:
     - target: {fileID: 1310961768459847481, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
       propertyPath: _info
       value: Grab Butter?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310961768459847481, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
+      propertyPath: _infoOld
+      value: Grab Butter?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310961768459847481, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
+      propertyPath: _info.en_string
+      value: Grab Butter?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310961768459847481, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
+      propertyPath: _info.pt_string
+      value: Pegar Manteiga?
       objectReference: {fileID: 0}
     - target: {fileID: 3034966341916779252, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13224,7 +13730,7 @@ GameObject:
   - component: {fileID: 1882757574}
   - component: {fileID: 1882757573}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: T_Order_Helper_Tittle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13348,6 +13854,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1882757571}
   m_CullTransparentMesh: 1
+--- !u!114 &1883602049 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5584053169877604364, guid: b3ac4a6cb8e58f74d881a5a90ab6e950, type: 3}
+  m_PrefabInstance: {fileID: 8592757488845545979}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1890530850
 GameObject:
   m_ObjectHideFlags: 0
@@ -13928,6 +14445,7 @@ MonoBehaviour:
   _uiManager: {fileID: 2044836649}
   _hoverInfoManager: {fileID: 2044836651}
   _audioManager: {fileID: 834778999}
+  _language: 0
 --- !u!4 &2024855856
 Transform:
   m_ObjectHideFlags: 0
@@ -14023,6 +14541,151 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2026972650}
+  m_CullTransparentMesh: 1
+--- !u!1 &2029927948
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2029927949}
+  - component: {fileID: 2029927952}
+  - component: {fileID: 2029927951}
+  - component: {fileID: 2029927950}
+  m_Layer: 5
+  m_Name: B_Pause
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2029927949
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2029927948}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1387641460}
+  m_Father: {fileID: 1091632910}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 56, y: 48}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2029927950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2029927948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 0.8962264, g: 0.8962264, b: 0.8962264, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 2029927951}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 834778999}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlaySFX
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: b91a6c815e0dbb244ab5904ed5362494, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2024855855}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: SwitchLanguage
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2029927951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2029927948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: -12, y: -12, z: -12, w: -12}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &2029927952
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2029927948}
   m_CullTransparentMesh: 1
 --- !u!1 &2038936455
 GameObject:
@@ -14239,6 +14902,8 @@ MonoBehaviour:
   _fadeTimeStartGroup: 1.5
   _gameGroup: {fileID: 1238139924}
   _fadeTimeGameGroup: 0.35
+  t_store: {fileID: 828532259}
+  t_kitchen: {fileID: 1883602049}
   i_cursor: {fileID: 938398664}
   _openHand: {fileID: -882789992, guid: 941ff9dc7ebb77742bd2e16257c82e47, type: 3}
   _closeHand: {fileID: -35981496, guid: 941ff9dc7ebb77742bd2e16257c82e47, type: 3}
@@ -14491,12 +15156,17 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  _orderHelperTitle:
+    en_string: "Order\t"
+    pt_string: Pedido
+  t_titleOrderHelper: {fileID: 1882757573}
   t_orderHelper: {fileID: 1425179968}
   t_totalMoney: {fileID: 1308629638}
   _moneyStepTime: 1
   i_mute: {fileID: 1277604372}
   _mutedSprite: {fileID: 21300000, guid: 73b02f08c9417a74d97e62d9e02e7fc6, type: 3}
   _unMutedSprite: {fileID: 21300000, guid: a5c143ff1f30c32479b7ec4f81fc55c0, type: 3}
+  t_language: {fileID: 1387641461}
   _pauseOverlay: {fileID: 1719812958}
   _thanksForPlaying: {fileID: 1928747917}
   _bottomBar: {fileID: 838310401}
@@ -14572,7 +15242,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 525, y: 0}
+  m_AnchoredPosition: {x: 475, y: 0}
   m_SizeDelta: {x: 156, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2056276743
@@ -15160,6 +15830,14 @@ PrefabInstance:
       propertyPath: _kitchenPoint
       value: 
       objectReference: {fileID: 545102267}
+    - target: {fileID: 1622138025658789239, guid: 94ef40c49522b134290a551aa04aeccb, type: 3}
+      propertyPath: _name.en_string
+      value: Coffee Cup
+      objectReference: {fileID: 0}
+    - target: {fileID: 1622138025658789239, guid: 94ef40c49522b134290a551aa04aeccb, type: 3}
+      propertyPath: _name.pt_string
+      value: "Copo de Caf\xE9"
+      objectReference: {fileID: 0}
     - target: {fileID: 3718332128581869830, guid: 94ef40c49522b134290a551aa04aeccb, type: 3}
       propertyPath: m_Name
       value: Coffee_Cup
@@ -15222,6 +15900,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2038936456}
     m_Modifications:
+    - target: {fileID: 802810172220364, guid: b68a207d2dd0a7143929c26d7292bf06, type: 3}
+      propertyPath: _name.en_string
+      value: Cauldron
+      objectReference: {fileID: 0}
+    - target: {fileID: 802810172220364, guid: b68a207d2dd0a7143929c26d7292bf06, type: 3}
+      propertyPath: _name.pt_string
+      value: "Caldeir\xE3o"
+      objectReference: {fileID: 0}
     - target: {fileID: 3719373572504153965, guid: b68a207d2dd0a7143929c26d7292bf06, type: 3}
       propertyPath: m_Name
       value: Cauldron
@@ -15314,6 +16000,14 @@ PrefabInstance:
     - target: {fileID: 1117242647160171012, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 1.54
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310961768459847481, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
+      propertyPath: _info.en_string
+      value: Grab Light Coffee Bean?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310961768459847481, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
+      propertyPath: _info.pt_string
+      value: "Pegar Gr\xE3o de Caf\xE9 Claro?"
       objectReference: {fileID: 0}
     - target: {fileID: 3034966341916779252, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15530,6 +16224,31 @@ PrefabInstance:
       propertyPath: _patience
       value: 600
       objectReference: {fileID: 0}
+    - target: {fileID: 3165666803492000547, guid: da53fbbbf00816e48857e97c954e9ee7, type: 3}
+      propertyPath: _dialogueOld
+      value: '<size="72"><b>Manager: </size></b>Alright rookie, this is the hardest
+        day of the on year, it''s halloween and everyone wants Coffee!!! Alright
+        first <u>grind</u> some <u>Strong Coffee Beans</u> then added it to the <u>Cauldron</u>.
+        Mix in some <u>Milk</u> then use the <u>Laddle</u> to add the Coffee to the
+        <u>Cup</u>. Finally deliver it to me. I want this for yesteray rookie!'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3165666803492000547, guid: da53fbbbf00816e48857e97c954e9ee7, type: 3}
+      propertyPath: _dialogue.en_string
+      value: '<size="72"><b>Manager: </size></b>Alright rookie, this is the hardest
+        day of the on year, it''s halloween and everyone wants Coffee!!! Alright
+        first <u>grind</u> some <u>Strong Coffee Beans</u> then added it to the <u>Cauldron</u>.
+        Mix in some <u>Milk</u> then use the <u>Laddle</u> to add the Coffee to the
+        <u>Cup</u>. Finally deliver it to me. I want this for yesteray rookie!'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3165666803492000547, guid: da53fbbbf00816e48857e97c954e9ee7, type: 3}
+      propertyPath: _dialogue.pt_string
+      value: "<size=\"72\"><b>Gerente: </size></b>Tudo bem, novato, este \xE9 o dia
+        mais dif\xEDcil do ano, \xE9 Halloween e todo mundo quer caf\xE9!!! Tudo
+        bem, primeiro <u>moa</u> alguns <u>gr\xE3os de caf\xE9 fortes</u> e depois
+        adicione-os ao <u>caldeir\xE3o</u>. Misture um pouco de <u>leite</u> e use
+        a <u>concha</u> para adicionar o caf\xE9 ao<u>copo</u>. Finalmente entregue
+        para mim. Eu quero isso para ontem!"
+      objectReference: {fileID: 0}
     - target: {fileID: 7817616078722649607, guid: da53fbbbf00816e48857e97c954e9ee7, type: 3}
       propertyPath: m_Name
       value: Client_Boss
@@ -15598,6 +16317,14 @@ PrefabInstance:
     - target: {fileID: 1552846066911644593, guid: 8f0c5fbad0b2b764aba80710171d60da, type: 3}
       propertyPath: m_Name
       value: Mortar
+      objectReference: {fileID: 0}
+    - target: {fileID: 2202762583336666830, guid: 8f0c5fbad0b2b764aba80710171d60da, type: 3}
+      propertyPath: _name.en_string
+      value: Mortar
+      objectReference: {fileID: 0}
+    - target: {fileID: 2202762583336666830, guid: 8f0c5fbad0b2b764aba80710171d60da, type: 3}
+      propertyPath: _name.pt_string
+      value: Moedor
       objectReference: {fileID: 0}
     - target: {fileID: 2286112966423772480, guid: 8f0c5fbad0b2b764aba80710171d60da, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15775,6 +16502,10 @@ PrefabInstance:
     - target: {fileID: 868111835848726712, guid: b3ac4a6cb8e58f74d881a5a90ab6e950, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2657621501151418136, guid: b3ac4a6cb8e58f74d881a5a90ab6e950, type: 3}
+      propertyPath: m_Name
+      value: T_Kitchen
       objectReference: {fileID: 0}
     - target: {fileID: 4541173519297935187, guid: b3ac4a6cb8e58f74d881a5a90ab6e950, type: 3}
       propertyPath: m_Name

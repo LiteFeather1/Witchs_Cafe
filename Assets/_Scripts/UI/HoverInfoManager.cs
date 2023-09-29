@@ -12,6 +12,9 @@ public class HoverInfoManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI t_body;
     public bool _active;
 
+    private Languages Lang => GameManager.Instance.Language;
+
+
     private void Update()
     {
         if (!_active)
@@ -49,17 +52,19 @@ public class HoverInfoManager : MonoBehaviour
 
     public void SetSimpleText(string body) => SetText(string.Empty, body);
 
+    public void SetSimpleText(TranslatedString body) => SetText(string.Empty, body.String(Lang));
+
     public void SetCoffeeText(string tittle, Coffee coffee)
     {
         System.Text.StringBuilder sb = new();
         if (coffee.CoffeeBean != null)
-            sb.Append(BULLET_POINT).Append(coffee.CoffeeBean.Name).AppendLine();
+            sb.Append(BULLET_POINT).Append(coffee.CoffeeBean.Name.String(Lang)).AppendLine();
         if (coffee.Milk != null)
-            sb.Append(BULLET_POINT).Append(coffee.Milk.Name).AppendLine();
+            sb.Append(BULLET_POINT).Append(coffee.Milk.Name.String(Lang)).AppendLine();
         for (int i = 0; i < coffee.MiscIngredients.Count; i++)
-            sb.Append(BULLET_POINT).Append(coffee.MiscIngredients[i].Name).AppendLine();
+            sb.Append(BULLET_POINT).Append(coffee.MiscIngredients[i].Name.String(Lang)).AppendLine();
 
-        SetText($"{tittle} Ingredients:", sb.ToString());
+        SetText($"{tittle}:", sb.ToString());
     }
 
     public void HideHover()

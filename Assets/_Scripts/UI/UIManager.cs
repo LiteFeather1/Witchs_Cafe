@@ -14,6 +14,10 @@ public class UIManager : MonoBehaviour
     [SerializeField] private CanvasGroup _gameGroup;
     [SerializeField] private float _fadeTimeGameGroup;
 
+    [Header("Bottom Bar")]
+    [SerializeField] private TextMeshProUGUI t_store;
+    [SerializeField] private TextMeshProUGUI t_kitchen;
+
     [Header("Cursor")]
     [SerializeField] private Image i_cursor;
     [SerializeField] private Sprite _openHand;
@@ -61,6 +65,8 @@ public class UIManager : MonoBehaviour
     private Client _currentClient;
 
     [Header("Client Order Helper")]
+    [SerializeField] private TranslatedString _orderHelperTitle;
+    [SerializeField] private TextMeshProUGUI t_titleOrderHelper;
     [SerializeField] private TextMeshProUGUI t_orderHelper;
 
     [Header("Money")]
@@ -72,6 +78,9 @@ public class UIManager : MonoBehaviour
     [SerializeField] private Sprite _mutedSprite;
     [SerializeField] private Sprite _unMutedSprite;
 
+    [Header("Language")]
+    [SerializeField] private TextMeshProUGUI t_language;
+
     [Header("Pause Overlay")]
     [SerializeField] private GameObject _pauseOverlay;
 
@@ -81,6 +90,8 @@ public class UIManager : MonoBehaviour
 
     [Header("Block Overlay")]
     [SerializeField] private GameObject _block;
+
+    private Languages Lang => GameManager.Instance.Language;
 
     private void Awake()
     {
@@ -166,10 +177,15 @@ public class UIManager : MonoBehaviour
         yield return DialogueTween(new(64f, _clientDialogueRoot.sizeDelta.y), _clientDialogueRoot.sizeDelta, _dialoguePopCurve);
     }
 
-    public void PopUpDialogue(string clientDialogue)
+    private void SetDialogue(string clientDialogue)
     {
         t_clientDialogue.text = clientDialogue;
         LayoutRebuilder.ForceRebuildLayoutImmediate(_clientDialogueRoot);
+    }
+
+    public void PopUpDialogue(string clientDialogue)
+    {
+        SetDialogue(clientDialogue);
         StartCoroutine(PopUpDialogueCO());
     }
 
@@ -178,11 +194,11 @@ public class UIManager : MonoBehaviour
         const string BULLET_POINT = "• ";
         System.Text.StringBuilder sb = new();
         if (coffeeOrder.CoffeeBean != null)
-            sb.Append(BULLET_POINT).Append("<u>").Append(coffeeOrder.CoffeeBean.Name).Append("</u>").AppendLine();
+            sb.Append(BULLET_POINT).Append("<u>").Append(coffeeOrder.CoffeeBean.Name.String(Lang)).Append("</u>").AppendLine();
         if (coffeeOrder.Milk != null)
-            sb.Append(BULLET_POINT).Append("<u>").Append(coffeeOrder.Milk.Name).Append("</u>").AppendLine();
+            sb.Append(BULLET_POINT).Append("<u>").Append(coffeeOrder.Milk.Name.String(Lang)).Append("</u>").AppendLine();
         for (int i = 0; i < coffeeOrder.MiscIngredients.Count; i++)
-            sb.Append(BULLET_POINT).Append("<u>").Append(coffeeOrder.MiscIngredients[i].Name).Append("</u>").AppendLine();
+            sb.Append(BULLET_POINT).Append("<u>").Append(coffeeOrder.MiscIngredients[i].Name.String(Lang)).Append("</u>").AppendLine();
 
         t_orderHelper.text = sb.ToString();
     }
@@ -203,8 +219,19 @@ public class UIManager : MonoBehaviour
 
         StartCoroutine(HideDialogueCO());
         _block.SetActive(true);
-        t_clientPatience.text = $"Client: {clientPatience:0}%";
-        t_orderEquality.text = $"Order: {results.Equality:0}%";
+        string client, order;
+        if (Lang == Languages.Portuguese)
+        {
+            client = "Client";
+            order = "Order";
+        }
+        else
+        {
+            client = "Cliente";
+            order = "Pedido";
+        }
+        t_clientPatience.text = $"{client}: {clientPatience:0}%";
+        t_orderEquality.text = $"{order}: {results.Equality:0}%";
         t_moneyGained.text = $"+++${results.Money:0.00}";
 
         // Calculate grade
@@ -321,6 +348,31 @@ public class UIManager : MonoBehaviour
     private void SwapMuteSprite(InputAction.CallbackContext ctx) => SwapMuteSprite();
 
     public void PauseOverlay(bool state) => _pauseOverlay.SetActive(state);
+
+
+    public void UpdateLanguage(Languages lang)
+    {
+        if (lang == Languages.English)
+        {
+            t_language.text = "EN";
+            t_store.text = "Store";
+            t_kitchen.text = "Kitchen";
+        }
+        else
+        {
+            t_language.text = "PT";
+            t_store.text = "Loja";
+            t_kitchen.text = "Cozinha";
+        }
+
+        t_titleOrderHelper.text = _orderHelperTitle.String(lang);
+
+        if (_currentClient == null)
+            return;
+
+        SetOrderHelper(_currentClient.Coffee);
+        SetDialogue(_currentClient.Dialogue.String(lang));
+    }
 
     [System.Serializable]
     private struct DataGrade

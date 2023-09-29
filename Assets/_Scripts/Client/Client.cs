@@ -4,7 +4,7 @@ using UnityEngine;
 public class Client : ReceiveIngredient<CoffeeCup>
 {
     [Header("Coffee")]
-    [SerializeField, TextArea(3, 6)] private string _dialogue;
+    [SerializeField] private TranslatedString _dialogue;
     [SerializeField] private CoffeeOrder _coffeeOrder;
 
     [Header("Patience")]
@@ -17,7 +17,7 @@ public class Client : ReceiveIngredient<CoffeeCup>
 
     public System.Action<CoffeeComparisonResults, float> OnCoffeeDelivered { get; set; }
 
-    public string Dialogue => _dialogue;
+    public TranslatedString Dialogue => _dialogue;
     public Coffee Coffee => _coffeeOrder.CofferOrder;
 
     public float PatienceT => _patience / _maxPatience;
@@ -25,7 +25,17 @@ public class Client : ReceiveIngredient<CoffeeCup>
     private void OnMouseEnter()
     {
         if (_t != null)
-            GameManager.Instance.HoverInfoManager.SetSimpleText("Deliver Coffee?");
+        {
+            switch (GameManager.Instance.Language)
+            {
+                case Languages.Portuguese:
+                    GameManager.Instance.HoverInfoManager.SetSimpleText("Entregar Café?");
+                    break;
+                default:
+                    GameManager.Instance.HoverInfoManager.SetSimpleText("Deliver Coffee?");
+                    break;
+            }
+        }
     }
 
     private void OnMouseExit() => GameManager.Instance.HoverInfoManager.HideHover();

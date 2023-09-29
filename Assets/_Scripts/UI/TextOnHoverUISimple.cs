@@ -2,7 +2,7 @@
 
 public class TextOnHoverUISimple : TextOnHoverUI
 {
-    [SerializeField] private string _info;
+    [SerializeField] private TranslatedString _info;
 
-    protected override string Text => _info;
+    protected override TranslatedString Text => _info;
 }

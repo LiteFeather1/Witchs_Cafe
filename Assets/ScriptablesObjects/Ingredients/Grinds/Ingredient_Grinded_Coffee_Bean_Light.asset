@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 955be364640d65243a24b1b4f5e6815e, type: 3}
   m_Name: Ingredient_Grinded_Coffee_Bean_Light
   m_EditorClassIdentifier: 
-  _name: Grinded Light Coffee Bean
+  _nameOld: 
+  _name:
+    en_string: Grinded Light Coffee
+    pt_string: "Caf\xE9 Claro Mo\xEDdo"
   _colour: {r: 0.5921569, g: 0.40000004, b: 0.30980393, a: 1}
   _money: 5

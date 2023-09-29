@@ -13,6 +13,10 @@ PrefabInstance:
       value: Dark Coffee Bean
       objectReference: {fileID: 0}
     - target: {fileID: -763523791896613193, guid: c0354e3fdc758614989a0b3c776042e5, type: 3}
+      propertyPath: _oldName
+      value: Dark Coffee Bean
+      objectReference: {fileID: 0}
+    - target: {fileID: -763523791896613193, guid: c0354e3fdc758614989a0b3c776042e5, type: 3}
       propertyPath: _collider
       value: 
       objectReference: {fileID: 3818844711533100090}
@@ -20,6 +24,14 @@ PrefabInstance:
       propertyPath: _objectToGive
       value: 
       objectReference: {fileID: 3769186500167455410, guid: 7ccd9fc1c6037fa44ac8d0470e8bb459, type: 3}
+    - target: {fileID: -763523791896613193, guid: c0354e3fdc758614989a0b3c776042e5, type: 3}
+      propertyPath: _name.en_string
+      value: Dark Coffee Bean
+      objectReference: {fileID: 0}
+    - target: {fileID: -763523791896613193, guid: c0354e3fdc758614989a0b3c776042e5, type: 3}
+      propertyPath: _name.pt_string
+      value: "Gr\xE3o de Caf\xE9 Escuro"
+      objectReference: {fileID: 0}
     - target: {fileID: 1801516860219449002, guid: c0354e3fdc758614989a0b3c776042e5, type: 3}
       propertyPath: _timer._time
       value: 2
