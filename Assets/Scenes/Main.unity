@@ -265,7 +265,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1310961768459847481, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
       propertyPath: _info.pt_string
-      value: "Pegar Ac\xFA\xE7ar Mascavo?"
+      value: "Pegar Acu\xE7ar Mascavo?"
       objectReference: {fileID: 0}
     - target: {fileID: 3034966341916779252, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -378,7 +378,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1310961768459847481, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
       propertyPath: _info.pt_string
-      value: "Pegar Chocolate em P\xF3?"
+      value: Pegar Chocolate em Po?
       objectReference: {fileID: 0}
     - target: {fileID: 3034966341916779252, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1473,8 +1473,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3165666803492000547, guid: da53fbbbf00816e48857e97c954e9ee7, type: 3}
       propertyPath: _dialogue.pt_string
-      value: "Ah voc\xEA \xE9 novo aqui! Acho que voc\xEA n\xE3o pedido. Eu quero
-        o caf\xE9 forestal de canela por favor! Gimme that witchy's brew!!!"
+      value: "Ah voc\xEA e novo aqui! Acho que voc\xEA nao pedido. Eu quero o cafe
+        forestal de canela por favor! Gimme that witchy's brew!!!"
       objectReference: {fileID: 0}
     - target: {fileID: 7817616078722649607, guid: da53fbbbf00816e48857e97c954e9ee7, type: 3}
       propertyPath: m_Name
@@ -2642,7 +2642,7 @@ PrefabInstance:
     - target: {fileID: 3165666803492000547, guid: da53fbbbf00816e48857e97c954e9ee7, type: 3}
       propertyPath: _dialogue.pt_string
       value: "Parece que sou seu \xFAltimo cliente da noite...\nEu quero um Tudo
-        Caf\xE9"
+        Cafe."
       objectReference: {fileID: 0}
     - target: {fileID: 7817616078722649607, guid: da53fbbbf00816e48857e97c954e9ee7, type: 3}
       propertyPath: m_Name
@@ -2759,8 +2759,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3165666803492000547, guid: da53fbbbf00816e48857e97c954e9ee7, type: 3}
       propertyPath: _dialogue.pt_string
-      value: "Boo! Quero Dizer Ol\xE1!\nEu gosto de doces, e gosto meu caf\xE9 ainda
-        mais doce!"
+      value: 'Boo! Quero Dizer Ola!
+
+        Eu gosto de doces, e gosto meu cafe
+        ainda mais doce!'
       objectReference: {fileID: 0}
     - target: {fileID: 7817616078722649607, guid: da53fbbbf00816e48857e97c954e9ee7, type: 3}
       propertyPath: m_Name
@@ -3936,8 +3938,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3165666803492000547, guid: da53fbbbf00816e48857e97c954e9ee7, type: 3}
       propertyPath: _dialogue.pt_string
-      value: "mmmMM... Mmm... Desculpa \xE9 dif\xEDcil falar com essas bandagens.
-        Eu gostaria de um caf\xE9 bem colorido! "
+      value: 'mmmMM... Mmm... Desculpa e dificil falar com essas bandagens. Eu gostaria
+        de um cafe bem colorido! '
       objectReference: {fileID: 0}
     - target: {fileID: 7817616078722649607, guid: da53fbbbf00816e48857e97c954e9ee7, type: 3}
       propertyPath: m_Name
@@ -4055,7 +4057,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1310961768459847481, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
       propertyPath: _info.pt_string
-      value: "Pegar Gr\xE3o de Caf\xE9 Escuro?"
+      value: "Pegar Gr\xE3o de Cafe Escuro?"
       objectReference: {fileID: 0}
     - target: {fileID: 3034966341916779252, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4789,7 +4791,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -128}
+  m_AnchoredPosition: {x: 0, y: -328}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &787085234
@@ -4905,7 +4907,7 @@ MonoBehaviour:
   _gradient:
     serializedVersion: 2
     key0: {r: 1, g: 0.6781915, b: 0.4292453, a: 0.827451}
-    key1: {r: 0.9433962, g: 0.5298187, b: 0.20914915, a: 0.8337947}
+    key1: {r: 1, g: 1, b: 1, a: 0.8337947}
     key2: {r: 1, g: 0.6784314, b: 0.42745098, a: 1}
     key3: {r: 0, g: 0, b: 0, a: 1}
     key4: {r: 0, g: 0, b: 0, a: 0.83137256}
@@ -5798,7 +5800,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1310961768459847481, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
       propertyPath: _info.pt_string
-      value: "Pegar Gr\xE3o de Caf\xE9 Vermelho?"
+      value: "Pegar Gr\xE3o de Cafe Vermelho?"
       objectReference: {fileID: 0}
     - target: {fileID: 3034966341916779252, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6042,7 +6044,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3165666803492000547, guid: da53fbbbf00816e48857e97c954e9ee7, type: 3}
       propertyPath: _dialogue.pt_string
-      value: "Linda noite para sangue! Caf\xE9 vermelho, gracinha! "
+      value: 'Linda noite para sangue! Cafe vermelho, gracinha! '
       objectReference: {fileID: 0}
     - target: {fileID: 7817616078722649607, guid: da53fbbbf00816e48857e97c954e9ee7, type: 3}
       propertyPath: m_Name
@@ -6117,140 +6119,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5433fb8efeddd94597f10b1be91adc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &911079872
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 911079873}
-  - component: {fileID: 911079875}
-  - component: {fileID: 911079874}
-  m_Layer: 5
-  m_Name: TXT_Game_Tittle
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &911079873
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 911079872}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1651719476}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 256}
-  m_SizeDelta: {x: 200, y: 50}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &911079874
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 911079872}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_text: Withc's Cafe
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c6979d9b29d49454d865312777b02c45, type: 2}
-  m_sharedMaterial: {fileID: 2901803876700776305, guid: c6979d9b29d49454d865312777b02c45, type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
-  m_fontColor32:
-    serializedVersion: 2
-    rgba: 4278944247
-  m_fontColor: {r: 0.96862745, g: 0.5051938, b: 0.043137256, a: 1}
-  m_enableVertexGradient: 0
-  m_colorMode: 3
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontSize: 144
-  m_fontSizeBase: 144
-  m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 0
-  m_fontSizeMax: 0
-  m_fontStyle: 1
-  m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
-  m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 0
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
-  m_linkedTextComponent: {fileID: 0}
-  parentLinkedComponent: {fileID: 0}
-  m_enableKerning: 0
-  m_enableExtraPadding: 0
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 1
-  m_isCullingEnabled: 0
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_IsTextObjectScaleStatic: 0
-  m_VertexBufferAutoSizeReduction: 0
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_baseMaterial: {fileID: 0}
-  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!222 &911079875
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 911079872}
-  m_CullTransparentMesh: 1
 --- !u!4 &914819032 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3034966341916779252, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
@@ -6433,7 +6301,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1310961768459847481, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
       propertyPath: _info.pt_string
-      value: "Pegar Ac\xFA\xE7ar?"
+      value: "Pegar Acu\xE7ar?"
       objectReference: {fileID: 0}
     - target: {fileID: 3034966341916779252, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6975,7 +6843,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3165666803492000547, guid: da53fbbbf00816e48857e97c954e9ee7, type: 3}
       propertyPath: _dialogue.pt_string
-      value: "...Caf\xE9...Forte...Manteiga..."
+      value: ...Cafe...Forte...Manteiga...
       objectReference: {fileID: 0}
     - target: {fileID: 7817616078722649607, guid: da53fbbbf00816e48857e97c954e9ee7, type: 3}
       propertyPath: m_Name
@@ -10495,6 +10363,81 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1533205375
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1533205376}
+  - component: {fileID: 1533205378}
+  - component: {fileID: 1533205377}
+  m_Layer: 5
+  m_Name: Tittle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1533205376
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1533205375}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1651719476}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 150, y: 50}
+  m_SizeDelta: {x: 1920, y: 1080}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1533205377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1533205375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 324f3e98b6343964ea3649e9fe18e670, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1533205378
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1533205375}
+  m_CullTransparentMesh: 1
 --- !u!1 &1562321479
 GameObject:
   m_ObjectHideFlags: 0
@@ -11236,7 +11179,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 911079873}
+  - {fileID: 1533205376}
   - {fileID: 787085233}
   m_Father: {fileID: 662800842}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -15836,7 +15779,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1622138025658789239, guid: 94ef40c49522b134290a551aa04aeccb, type: 3}
       propertyPath: _name.pt_string
-      value: "Copo de Caf\xE9"
+      value: Copo de Cafe
       objectReference: {fileID: 0}
     - target: {fileID: 3718332128581869830, guid: 94ef40c49522b134290a551aa04aeccb, type: 3}
       propertyPath: m_Name
@@ -15900,14 +15843,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2038936456}
     m_Modifications:
-    - target: {fileID: 802810172220364, guid: b68a207d2dd0a7143929c26d7292bf06, type: 3}
-      propertyPath: _name.en_string
-      value: Cauldron
-      objectReference: {fileID: 0}
-    - target: {fileID: 802810172220364, guid: b68a207d2dd0a7143929c26d7292bf06, type: 3}
-      propertyPath: _name.pt_string
-      value: "Caldeir\xE3o"
-      objectReference: {fileID: 0}
     - target: {fileID: 3719373572504153965, guid: b68a207d2dd0a7143929c26d7292bf06, type: 3}
       propertyPath: m_Name
       value: Cauldron
@@ -16007,7 +15942,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1310961768459847481, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
       propertyPath: _info.pt_string
-      value: "Pegar Gr\xE3o de Caf\xE9 Claro?"
+      value: "Pegar Gr\xE3o de Cafe Claro?"
       objectReference: {fileID: 0}
     - target: {fileID: 3034966341916779252, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16242,12 +16177,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3165666803492000547, guid: da53fbbbf00816e48857e97c954e9ee7, type: 3}
       propertyPath: _dialogue.pt_string
-      value: "<size=\"72\"><b>Gerente: </size></b>Tudo bem, novato, este \xE9 o dia
-        mais dif\xEDcil do ano, \xE9 Halloween e todo mundo quer caf\xE9!!! Tudo
-        bem, primeiro <u>moa</u> alguns <u>gr\xE3os de caf\xE9 fortes</u> e depois
-        adicione-os ao <u>caldeir\xE3o</u>. Misture um pouco de <u>leite</u> e use
-        a <u>concha</u> para adicionar o caf\xE9 ao<u>copo</u>. Finalmente entregue
-        para mim. Eu quero isso para ontem!"
+      value: "<size=\"72\"><b>Gerente: </size></b>Tudo bem, novato, este e o dia
+        mais dificil do ano, e Halloween e todo mundo quer cafe!!! Tudo bem, primeiro
+        <u>moa</u> alguns <u>gr\xE3os de cafe fortes</u> e depois adicione-os ao
+        <u>caldeirao</u>. Misture um pouco de <u>leite</u> e use a <u>concha</u>
+        para adicionar o cafe ao<u>copo</u>. Finalmente entregue para mim. Eu quero
+        isso para ontem!"
       objectReference: {fileID: 0}
     - target: {fileID: 7817616078722649607, guid: da53fbbbf00816e48857e97c954e9ee7, type: 3}
       propertyPath: m_Name
@@ -16317,14 +16252,6 @@ PrefabInstance:
     - target: {fileID: 1552846066911644593, guid: 8f0c5fbad0b2b764aba80710171d60da, type: 3}
       propertyPath: m_Name
       value: Mortar
-      objectReference: {fileID: 0}
-    - target: {fileID: 2202762583336666830, guid: 8f0c5fbad0b2b764aba80710171d60da, type: 3}
-      propertyPath: _name.en_string
-      value: Mortar
-      objectReference: {fileID: 0}
-    - target: {fileID: 2202762583336666830, guid: 8f0c5fbad0b2b764aba80710171d60da, type: 3}
-      propertyPath: _name.pt_string
-      value: Moedor
       objectReference: {fileID: 0}
     - target: {fileID: 2286112966423772480, guid: 8f0c5fbad0b2b764aba80710171d60da, type: 3}
       propertyPath: m_LocalPosition.x

@@ -216,7 +216,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2c7ff617bb21b9438acdf502829b817, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _title: Cauldron
+  _name:
+    en_string: Cauldron
+    pt_string: Caldeirao
   _mixingCoffee:
     _coffeeBean: {fileID: 0}
     _milk: {fileID: 0}

@@ -222,13 +222,13 @@ public class UIManager : MonoBehaviour
         string client, order;
         if (Lang == Languages.Portuguese)
         {
-            client = "Client";
-            order = "Order";
+            client = "Cliente";
+            order = "Pedido";
         }
         else
         {
-            client = "Cliente";
-            order = "Pedido";
+            client = "Client";
+            order = "Order";
         }
         t_clientPatience.text = $"{client}: {clientPatience:0}%";
         t_orderEquality.text = $"{order}: {results.Equality:0}%";
@@ -284,7 +284,11 @@ public class UIManager : MonoBehaviour
 
     public void OnAllClientsServed()
     {
-        t_nextClient.text = "Close Store";
+        if (Lang ==Languages.English)
+            t_nextClient.text = "Close Store";
+        else
+            t_nextClient.text = "Fechar Loja";
+
         b_nextClient.onClick = new();
         b_nextClient.onClick.AddListener(() =>
         {
@@ -357,12 +361,14 @@ public class UIManager : MonoBehaviour
             t_language.text = "EN";
             t_store.text = "Store";
             t_kitchen.text = "Kitchen";
+            t_nextClient.text = "Next Client";
         }
         else
         {
             t_language.text = "PT";
             t_store.text = "Loja";
             t_kitchen.text = "Cozinha";
+            t_nextClient.text = "Proximo Cliente";
         }
 
         t_titleOrderHelper.text = _orderHelperTitle.String(lang);

@@ -30,7 +30,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -763523791896613193, guid: c0354e3fdc758614989a0b3c776042e5, type: 3}
       propertyPath: _name.pt_string
-      value: "Gr\xE3o de Caf\xE9 Escuro"
+      value: "Gr\xE3o de Cafe Escuro"
       objectReference: {fileID: 0}
     - target: {fileID: 1801516860219449002, guid: c0354e3fdc758614989a0b3c776042e5, type: 3}
       propertyPath: _timer._time

@@ -52,7 +52,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _pointToHold: {fileID: 2972981021285638451}
   _collider: {fileID: 4744296577766685163}
-  _title: Mortar
+  _name:
+    en_string: Mortar
+    pt_string: Moedor
 --- !u!61 &4744296577766685163
 BoxCollider2D:
   m_ObjectHideFlags: 0

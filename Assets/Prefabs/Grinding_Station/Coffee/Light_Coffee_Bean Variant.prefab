@@ -125,10 +125,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40b850be3b070d04d8e2ff881843adbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _oldName: Light Coffee Bean
   _name:
     en_string: Light Coffee Bean
-    pt_string: "Gr\xE3o de Caf\xE9 Claro"
+    pt_string: "Gr\xE3o de Cafe Claro"
   _objectToGive: {fileID: 3594779588320357457, guid: 709d2dc15c5159f489f217544d831204, type: 3}
   _resistance: 100
   _rb: {fileID: 3625750917892541802}

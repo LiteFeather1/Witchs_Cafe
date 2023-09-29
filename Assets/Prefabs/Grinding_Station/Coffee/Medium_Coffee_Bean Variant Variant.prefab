@@ -26,7 +26,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -763523791896613193, guid: c0354e3fdc758614989a0b3c776042e5, type: 3}
       propertyPath: _name.pt_string
-      value: "Gr\xE3o de Caf\xE9 Vermelho"
+      value: "Gr\xE3o de Cafe Vermelho"
       objectReference: {fileID: 0}
     - target: {fileID: 786847980957896692, guid: c0354e3fdc758614989a0b3c776042e5, type: 3}
       propertyPath: _info
