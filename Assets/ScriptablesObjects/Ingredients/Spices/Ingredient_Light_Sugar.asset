@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name:
     en_string: Sugar
-    pt_string: "Acu\xE7ar"
+    pt_string: "Ac\xFA\xE7ar"
   _colour: {r: 1, g: 1, b: 1, a: 1}
   _money: 0.25

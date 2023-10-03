@@ -67,6 +67,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "HIde_UI",
+                    "type": "Button",
+                    "id": "e71206c0-a0cd-4bfe-b839-9d0915d6e0e9",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -74,6 +83,17 @@
                     "name": "",
                     "id": "bc842716-552a-4656-ab17-51edf7416776",
                     "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "LeftClick",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "03ebd323-2c30-4ac2-afc7-5582e10cb5b8",
+                    "path": "<Touchscreen>/Press",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -199,6 +219,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "MiddleClick",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "02dda0bf-4703-4435-b0db-7f5ae6f2b0da",
+                    "path": "<Keyboard>/h",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "HIde_UI",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

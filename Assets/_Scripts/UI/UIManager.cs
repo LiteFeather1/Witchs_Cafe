@@ -87,6 +87,7 @@ public class UIManager : MonoBehaviour
 
     [Header("Thanks Overlay")]
     [SerializeField] private GameObject _thanksForPlaying;
+    [SerializeField] private TextMeshProUGUI t_thankForPlaying;
     [SerializeField] private GameObject _bottomBar;
 
     [Header("Block Overlay")]
@@ -113,6 +114,8 @@ public class UIManager : MonoBehaviour
 
         playerInputs.LeftClick.performed += SetCloseHand;
         playerInputs.LeftClick.canceled += SetOpenHand;
+
+        playerInputs.HIde_UI.performed += HideUi;
     }
 
     private void OnDisable()
@@ -122,6 +125,8 @@ public class UIManager : MonoBehaviour
 
         playerInputs.LeftClick.performed -= SetCloseHand;
         playerInputs.LeftClick.canceled -= SetOpenHand;
+
+        playerInputs.HIde_UI.performed -= HideUi;
     }
 
     private void Update()
@@ -190,16 +195,43 @@ public class UIManager : MonoBehaviour
         StartCoroutine(PopUpDialogueCO());
     }
 
-    public void SetOrderHelper(Coffee coffeeOrder)
+    // Called by a button
+    public void OpenOrder()
     {
         const string BULLET_POINT = "• ";
+        const string COLOUR = "<color=#394D18>";
+        Coffee coffeeCup = GameManager.Instance.CoffeeCup.DeliverCoffee;
+        Coffee cauldronCoffee = GameManager.Instance.Cauldron.MixingCoffee;
+        Coffee coffeeOrder = _currentClient.Coffee;
+
         System.Text.StringBuilder sb = new();
         if (coffeeOrder.CoffeeBean != null)
-            sb.Append(BULLET_POINT).Append("<u>").Append(coffeeOrder.CoffeeBean.Name.String(Lang)).Append("</u>").AppendLine();
+        {
+            bool containCoffee = coffeeCup.CoffeeBean == coffeeOrder.CoffeeBean
+                || cauldronCoffee.CoffeeBean ==  coffeeOrder.CoffeeBean;
+            string colour = containCoffee ? COLOUR : ""; 
+            sb.Append(BULLET_POINT).Append(colour).Append("<u>").Append(coffeeOrder.CoffeeBean.Name.String(Lang))
+                .Append("</u></color>").AppendLine();
+        }
+
         if (coffeeOrder.Milk != null)
-            sb.Append(BULLET_POINT).Append("<u>").Append(coffeeOrder.Milk.Name.String(Lang)).Append("</u>").AppendLine();
+        {
+            bool containMilk = coffeeCup.Milk == coffeeOrder.Milk
+                || cauldronCoffee.Milk == coffeeOrder.Milk;
+            string colour = containMilk ? COLOUR : "";
+            sb.Append(BULLET_POINT).Append(colour).Append("<u>").Append(coffeeOrder.Milk.Name.String(Lang))
+                .Append("</u></color>").AppendLine();
+        }
+
         for (int i = 0; i < coffeeOrder.MiscIngredients.Count; i++)
-            sb.Append(BULLET_POINT).Append("<u>").Append(coffeeOrder.MiscIngredients[i].Name.String(Lang)).Append("</u>").AppendLine();
+        {
+            bool containIngredient = coffeeCup.Contains(coffeeOrder.MiscIngredients[i])
+                || cauldronCoffee.Contains(coffeeOrder.MiscIngredients[i]);
+            string colour = containIngredient ? COLOUR : "";
+
+            sb.Append(BULLET_POINT).Append(colour).Append("<u>").Append(coffeeOrder.MiscIngredients[i].Name.String(Lang))
+                .Append("</u></color>").AppendLine();
+        }
 
         t_orderHelper.text = sb.ToString();
     }
@@ -354,7 +386,6 @@ public class UIManager : MonoBehaviour
 
     public void PauseOverlay(bool state) => _pauseOverlay.SetActive(state);
 
-
     public void UpdateLanguage(Languages lang)
     {
         if (lang == Languages.English)
@@ -366,6 +397,8 @@ public class UIManager : MonoBehaviour
 
             t_deliverTitle.text = "Coffee Delivered!";
             t_nextClient.text = "Next Client";
+
+            t_thankForPlaying.text = "You survided the halloween Night!\r\nThanks for Playing!!!";
         }
         else
         {
@@ -374,8 +407,9 @@ public class UIManager : MonoBehaviour
             t_store.text = "Loja";
             t_kitchen.text = "Cozinha";
 
-            t_deliverTitle.text = "Cafe Entregado!";
-            t_nextClient.text = "Proximo Cliente";
+            t_deliverTitle.text = "Café Entregado!";
+            t_nextClient.text = "Próximo Cliente";
+            t_thankForPlaying.text = "Voce sobreviveu a noite!\r\nObrigado por Jogar!!!";
         }
 
         t_titleOrderHelper.text = _orderHelperTitle.String(lang);
@@ -383,8 +417,12 @@ public class UIManager : MonoBehaviour
         if (_currentClient == null)
             return;
 
-        SetOrderHelper(_currentClient.Coffee);
         SetDialogue(_currentClient.Dialogue.String(lang));
+    }
+
+    private void HideUi(InputAction.CallbackContext ctx)
+    {
+        _gameGroup.alpha = _gameGroup.alpha == 1f ? 0f : 1f;
     }
 
     [System.Serializable]

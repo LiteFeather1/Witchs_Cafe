@@ -15,6 +15,8 @@ public class Coffee
     public IngredientSO Milk => _milk;
     public List<IngredientSO> MiscIngredients => _miscIngredients;
 
+    public bool Contains(IngredientSO ingredientSO) => _miscIngredients.Contains(ingredientSO);
+
     public void SetCoffee(IngredientSO coffeeBean)
     {
         _coffeeBean = coffeeBean;

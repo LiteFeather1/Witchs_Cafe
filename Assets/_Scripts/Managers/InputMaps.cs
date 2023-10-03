@@ -89,6 +89,15 @@ public partial class @InputMaps: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""HIde_UI"",
+                    ""type"": ""Button"",
+                    ""id"": ""e71206c0-a0cd-4bfe-b839-9d0915d6e0e9"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -96,6 +105,17 @@ public partial class @InputMaps: IInputActionCollection2, IDisposable
                     ""name"": """",
                     ""id"": ""bc842716-552a-4656-ab17-51edf7416776"",
                     ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""LeftClick"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""03ebd323-2c30-4ac2-afc7-5582e10cb5b8"",
+                    ""path"": ""<Touchscreen>/Press"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -223,6 +243,17 @@ public partial class @InputMaps: IInputActionCollection2, IDisposable
                     ""action"": ""MiddleClick"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""02dda0bf-4703-4435-b0db-7f5ae6f2b0da"",
+                    ""path"": ""<Keyboard>/h"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""HIde_UI"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -238,6 +269,7 @@ public partial class @InputMaps: IInputActionCollection2, IDisposable
         m_Player_DecreaseVolume = m_Player.FindAction("DecreaseVolume", throwIfNotFound: true);
         m_Player_MuteUnmute = m_Player.FindAction("MuteUnmute", throwIfNotFound: true);
         m_Player_PauseUnPause = m_Player.FindAction("PauseUnPause", throwIfNotFound: true);
+        m_Player_HIde_UI = m_Player.FindAction("HIde_UI", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -306,6 +338,7 @@ public partial class @InputMaps: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_DecreaseVolume;
     private readonly InputAction m_Player_MuteUnmute;
     private readonly InputAction m_Player_PauseUnPause;
+    private readonly InputAction m_Player_HIde_UI;
     public struct PlayerActions
     {
         private @InputMaps m_Wrapper;
@@ -317,6 +350,7 @@ public partial class @InputMaps: IInputActionCollection2, IDisposable
         public InputAction @DecreaseVolume => m_Wrapper.m_Player_DecreaseVolume;
         public InputAction @MuteUnmute => m_Wrapper.m_Player_MuteUnmute;
         public InputAction @PauseUnPause => m_Wrapper.m_Player_PauseUnPause;
+        public InputAction @HIde_UI => m_Wrapper.m_Player_HIde_UI;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -347,6 +381,9 @@ public partial class @InputMaps: IInputActionCollection2, IDisposable
             @PauseUnPause.started += instance.OnPauseUnPause;
             @PauseUnPause.performed += instance.OnPauseUnPause;
             @PauseUnPause.canceled += instance.OnPauseUnPause;
+            @HIde_UI.started += instance.OnHIde_UI;
+            @HIde_UI.performed += instance.OnHIde_UI;
+            @HIde_UI.canceled += instance.OnHIde_UI;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -372,6 +409,9 @@ public partial class @InputMaps: IInputActionCollection2, IDisposable
             @PauseUnPause.started -= instance.OnPauseUnPause;
             @PauseUnPause.performed -= instance.OnPauseUnPause;
             @PauseUnPause.canceled -= instance.OnPauseUnPause;
+            @HIde_UI.started -= instance.OnHIde_UI;
+            @HIde_UI.performed -= instance.OnHIde_UI;
+            @HIde_UI.canceled -= instance.OnHIde_UI;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -398,5 +438,6 @@ public partial class @InputMaps: IInputActionCollection2, IDisposable
         void OnDecreaseVolume(InputAction.CallbackContext context);
         void OnMuteUnmute(InputAction.CallbackContext context);
         void OnPauseUnPause(InputAction.CallbackContext context);
+        void OnHIde_UI(InputAction.CallbackContext context);
     }
 }

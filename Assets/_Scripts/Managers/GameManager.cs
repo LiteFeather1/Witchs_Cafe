@@ -21,6 +21,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] private HoverInfoManager _hoverInfoManager;
     [SerializeField] private AudioManager _audioManager;
 
+    [Header("Important")]
+    [SerializeField] private Cauldron _cauldron;
+    [SerializeField] private CoffeeCup _coffeeCup;
+
     [Header("Language")]
     [SerializeField] private Languages _language = Languages.English;
 
@@ -29,6 +33,9 @@ public class GameManager : MonoBehaviour
     public MouseManager MouseManager => _mouseManager;
     public HoverInfoManager HoverInfoManager => _hoverInfoManager;
     public AudioManager AudioManager => _audioManager;
+
+    public Cauldron Cauldron => _cauldron;
+    public CoffeeCup CoffeeCup => _coffeeCup;
 
     public Languages Language => _language;
 
@@ -45,9 +52,6 @@ public class GameManager : MonoBehaviour
         _clientManager.OnClientServed += OnClieantServed;
         _clientManager.OnAllClientsServed += _uiManager.OnAllClientsServed;
 
-        InputManager.PlayerInputs.LeftClick.performed += StartGame;
-        InputManager.PlayerInputs.RightClick.performed += StartGame;
-
         InputManager.PlayerInputs.PauseUnPause.performed += PauseUnpause;
     }
 
@@ -62,13 +66,12 @@ public class GameManager : MonoBehaviour
 
     public IEnumerator StartGameCO()
     {
-        InputManager.PlayerInputs.LeftClick.performed -= StartGame;
-        InputManager.PlayerInputs.RightClick.performed -= StartGame;
         yield return _uiManager.IntroFade();
         _clientManager.AppearClient();
     }
 
-    private void StartGame(InputAction.CallbackContext ctx) => StartCoroutine(StartGameCO());
+    // Called by a button
+    public void StarGame() => StartCoroutine(StartGameCO());
 
     public static Vector2 MousePosition() => Camera.ScreenToWorldPoint(Input.mousePosition);
 
@@ -76,7 +79,6 @@ public class GameManager : MonoBehaviour
     {
         _uiManager.PopUpDialogue(client.Dialogue.String(_language));
         _uiManager.SetCurrentClient(client);
-        _uiManager.SetOrderHelper(client.Coffee);
     }
 
     private void OnClieantServed(CoffeeComparisonResults results, float clientPatience)

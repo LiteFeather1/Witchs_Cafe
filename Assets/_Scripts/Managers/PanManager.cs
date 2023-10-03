@@ -7,7 +7,6 @@ public class PanManager : MonoBehaviour
     [Header("Area Pannings")]
     [SerializeField] private float _panSpeed = 10f;
     private Vector2 _storePos;
-    private Vector3 _currentVelocity;
     private bool _onStore = true;
 
     [Header("Kitchen")]
@@ -15,8 +14,6 @@ public class PanManager : MonoBehaviour
     [SerializeField] private Transform _maxXPoint;
     [SerializeField, Range(0f, 1f)] private float _percentToPanOnEdges = .975f;
     [SerializeField] private float _speed = 2f;
-
-    [Header("Kitchen")]
     // Screen pos
     [SerializeField] private float _distanceToMinSpeed = .5f;
     [SerializeField] private float _distanceToMaxSpeed = 2f;
@@ -105,7 +102,7 @@ public class PanManager : MonoBehaviour
         Vector3 posToGO = new(positionToGO.x, positionToGO.y, cam.position.z);
         while (Mathf.Abs(cam.position.x - posToGO.x) > 0.01f)
         {
-            cam.position = Vector3.SmoothDamp(cam.position, posToGO, ref _currentVelocity, _panSpeed * Time.deltaTime);
+            cam.position = Vector3.MoveTowards(cam.position, posToGO, _panSpeed * Time.smoothDeltaTime);
             yield return null;
         }
         cam.position = posToGO;

@@ -218,7 +218,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name:
     en_string: Cauldron
-    pt_string: Caldeirao
+    pt_string: "Caldeir\xE3o"
   _mixingCoffee:
     _coffeeBean: {fileID: 0}
     _milk: {fileID: 0}

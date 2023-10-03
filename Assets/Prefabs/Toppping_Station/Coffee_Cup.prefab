@@ -165,6 +165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe84a8afc1c981948b65528894f4c759, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _order: 0
   _method: 0
   _rb: {fileID: 1233809438304298029}
   _collider: {fileID: 3479802259059911855}
@@ -193,7 +194,9 @@ MonoBehaviour:
   _unoutlineMat: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   _storePoint: {fileID: 0}
   _kitchenPoint: {fileID: 0}
-  _title: Coffee Cup
+  _name:
+    en_string: Coffee Cup
+    pt_string: "Copo de Caf\xE9"
   _audioCoffeeTransferred: {fileID: 8300000, guid: 9da5c5325ce3b264ab63102244a30fa0, type: 3}
 --- !u!50 &1233809438304298029
 Rigidbody2D:

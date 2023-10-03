@@ -22,21 +22,21 @@ public class SinAnimator : MonoBehaviour
 
     private void Awake()
     {
-        _startPos = transform.position;
+        _startPos = transform.localPosition;
         _elapsedRotationTime = _timeRotation * .5f;
     }
 
     private void Update()
     {
-        // Sin Movment
+        // Sin Movement
         var sin = Mathf.Sin(TimeTime * _speed) * _amplitude;
-        transform.position = _startPos + sin;
+        transform.localPosition = _startPos + sin;
 
         // Rotation
         _elapsedRotationTime += DeltaTime * _direction;
         float t = _rotationCurve.Evaluate(_elapsedRotationTime / _timeRotation);
         float z = Mathf.LerpAngle(-_angle, _angle, t);
-        transform.localRotation = Quaternion.Euler(new(0f, 0f, z));
+        transform.rotation = Quaternion.Euler(new(0f, 0f, z));
         if (_elapsedRotationTime > _timeRotation || _elapsedRotationTime < 0f)
             _direction *= -1f;
     }

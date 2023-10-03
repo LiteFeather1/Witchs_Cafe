@@ -58,7 +58,7 @@ public class Cauldron : ReceiveIngredient<IMixable>
                     switch (GameManager.Instance.Language)
                     {
                         case Languages.Portuguese:
-                            GameManager.Instance.HoverInfoManager.SetSimpleText($"Nao posso {nameable.Name.PT_String} no {_name.PT_String}!!!");
+                            GameManager.Instance.HoverInfoManager.SetSimpleText($"Não posso {nameable.Name.PT_String} no {_name.PT_String}!!!");
                             break;
                         default:
                             GameManager.Instance.HoverInfoManager.SetSimpleText($"Can't add {nameable.Name.EN_String} to {_name.EN_String}!!!");

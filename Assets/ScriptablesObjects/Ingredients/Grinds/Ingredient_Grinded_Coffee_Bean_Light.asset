@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name:
     en_string: Grinded Light Coffee
-    pt_string: Cafe Claro Moido
+    pt_string: "Caf\xE9 Claro Moido"
   _colour: {r: 0.5921569, g: 0.40000004, b: 0.30980393, a: 1}
   _money: 5

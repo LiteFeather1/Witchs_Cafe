@@ -265,7 +265,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1310961768459847481, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
       propertyPath: _info.pt_string
-      value: "Pegar Acu\xE7ar Mascavo?"
+      value: "Pegar Ac\xFA\xE7ar Mascavo?"
       objectReference: {fileID: 0}
     - target: {fileID: 3034966341916779252, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -378,7 +378,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1310961768459847481, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
       propertyPath: _info.pt_string
-      value: Pegar Chocolate em Po?
+      value: "Pegar Chocolate em P\xF3?"
       objectReference: {fileID: 0}
     - target: {fileID: 3034966341916779252, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -610,8 +610,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 143.11, y: -37.885002}
-  m_SizeDelta: {x: 214.22, y: 51.77}
+  m_AnchoredPosition: {x: 145.66, y: -44.655}
+  m_SizeDelta: {x: 219.32, y: 65.31}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &101814014
 MonoBehaviour:
@@ -636,7 +636,7 @@ MonoBehaviour:
   m_text: 'Ingredients:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c6979d9b29d49454d865312777b02c45, type: 2}
-  m_sharedMaterial: {fileID: 2901803876700776305, guid: c6979d9b29d49454d865312777b02c45, type: 2}
+  m_sharedMaterial: {fileID: -5540266405086231552, guid: 3a4436504f5c63f49a08d687c8690a2b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -699,7 +699,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &101814015
@@ -1473,8 +1473,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3165666803492000547, guid: da53fbbbf00816e48857e97c954e9ee7, type: 3}
       propertyPath: _dialogue.pt_string
-      value: "Ah voce e novo aqui! Acho que voc\xEA nao pedido. Eu quero o cafe forestal
-        de canela por favor! Gimme that witchy's brew!!!"
+      value: "Ah voce \xE9 novo aqui! Acho que voc\xEA n\xE3o sabe o pedido. Eu quero
+        o caf\xE9 forestal de canela por favor!"
       objectReference: {fileID: 0}
     - target: {fileID: 7817616078722649607, guid: da53fbbbf00816e48857e97c954e9ee7, type: 3}
       propertyPath: m_Name
@@ -1591,7 +1591,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 0.80784315, b: 0.80784315, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1967,7 +1967,7 @@ GameObject:
   - component: {fileID: 318661983}
   - component: {fileID: 318661982}
   m_Layer: 5
-  m_Name: Txt_Delivered
+  m_Name: Txt_Delivered_Tittle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2015,7 +2015,7 @@ MonoBehaviour:
   m_text: Coffee Delivered
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c6979d9b29d49454d865312777b02c45, type: 2}
-  m_sharedMaterial: {fileID: 2901803876700776305, guid: c6979d9b29d49454d865312777b02c45, type: 2}
+  m_sharedMaterial: {fileID: -3601772993119369161, guid: c6979d9b29d49454d865312777b02c45, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2078,7 +2078,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &318661983
@@ -2317,8 +2317,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 161.005, y: -130.325}
-  m_SizeDelta: {x: 250.01, y: 133.11}
+  m_AnchoredPosition: {x: 160.815, y: -161.285}
+  m_SizeDelta: {x: 249.63, y: 167.95}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &342437563
 MonoBehaviour:
@@ -2357,7 +2357,7 @@ MonoBehaviour:
   m_text: "@ Something 1 \n@ Another thing\n@ Thing\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c6979d9b29d49454d865312777b02c45, type: 2}
-  m_sharedMaterial: {fileID: 2901803876700776305, guid: c6979d9b29d49454d865312777b02c45, type: 2}
+  m_sharedMaterial: {fileID: -5540266405086231552, guid: 3a4436504f5c63f49a08d687c8690a2b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2641,10 +2641,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3165666803492000547, guid: da53fbbbf00816e48857e97c954e9ee7, type: 3}
       propertyPath: _dialogue.pt_string
-      value: 'Parece que sou seu ultimo cliente da noite...
-
-        Eu quero um
-        Cafe Tudo.'
+      value: "Parece que sou seu \xFAltimo cliente da noite...\nEu quero um Caf\xE9
+        Tudo."
       objectReference: {fileID: 0}
     - target: {fileID: 7817616078722649607, guid: da53fbbbf00816e48857e97c954e9ee7, type: 3}
       propertyPath: m_Name
@@ -2761,10 +2759,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3165666803492000547, guid: da53fbbbf00816e48857e97c954e9ee7, type: 3}
       propertyPath: _dialogue.pt_string
-      value: 'Boo! Quero Dizer Ola!
-
-        Eu gosto de doces, e gosto meu cafe
-        ainda mais doce!'
+      value: "Boo! Quero Dizer Ol\xE1!\nEu gosto de doces, e gosto do meu caf\xE9
+        ainda mais doce!"
       objectReference: {fileID: 0}
     - target: {fileID: 7817616078722649607, guid: da53fbbbf00816e48857e97c954e9ee7, type: 3}
       propertyPath: m_Name
@@ -3251,7 +3247,7 @@ PrefabInstance:
     - target: {fileID: 5490824615072381636, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
       propertyPath: _draggableToSpawn
       value: 
-      objectReference: {fileID: 5984886096799277349, guid: 682c027ffabf4ae498132fa90e3c472d, type: 3}
+      objectReference: {fileID: 5361798536370656096, guid: 34c24df77cd390047955dad8b86e3f7e, type: 3}
     - target: {fileID: 8781396735590644405, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
       propertyPath: m_Name
       value: Give_Milk_Soy
@@ -3348,7 +3344,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -3940,8 +3936,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3165666803492000547, guid: da53fbbbf00816e48857e97c954e9ee7, type: 3}
       propertyPath: _dialogue.pt_string
-      value: 'mmmMM... Mmm... Desculpa e dificil falar com essas bandagens. Eu gostaria
-        de um cafe bem colorido! '
+      value: "mmmMM... Mmm... Desculpa \xE9 dif\xEDcil falar com essas bandagens.
+        Eu gostaria de um caf\xE9 bem colorido! "
       objectReference: {fileID: 0}
     - target: {fileID: 7817616078722649607, guid: da53fbbbf00816e48857e97c954e9ee7, type: 3}
       propertyPath: m_Name
@@ -4059,7 +4055,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1310961768459847481, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
       propertyPath: _info.pt_string
-      value: "Pegar Gr\xE3o de Cafe Escuro?"
+      value: "Pegar Gr\xE3o de Caf\xE9 Escuro?"
       objectReference: {fileID: 0}
     - target: {fileID: 3034966341916779252, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4251,7 +4247,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
+  m_BlockingObjects: 1
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -4272,7 +4268,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1280, y: 720}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0.509
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -4288,7 +4284,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 519420031}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -4315,7 +4311,6 @@ RectTransform:
   m_Children:
   - {fileID: 1651719476}
   - {fileID: 1238139923}
-  - {fileID: 1928747918}
   - {fileID: 938398663}
   m_Father: {fileID: 2044836650}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4384,7 +4379,7 @@ MonoBehaviour:
   m_text: "Client: 100% \n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c6979d9b29d49454d865312777b02c45, type: 2}
-  m_sharedMaterial: {fileID: 2901803876700776305, guid: c6979d9b29d49454d865312777b02c45, type: 2}
+  m_sharedMaterial: {fileID: -3601772993119369161, guid: c6979d9b29d49454d865312777b02c45, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4738,7 +4733,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 8}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 80}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &765149746 stripped
@@ -4784,7 +4779,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 787085232}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4793,8 +4788,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -328}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 0, y: -300}
+  m_SizeDelta: {x: 353, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &787085234
 MonoBehaviour:
@@ -4819,7 +4814,7 @@ MonoBehaviour:
   m_text: Click to Start
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c6979d9b29d49454d865312777b02c45, type: 2}
-  m_sharedMaterial: {fileID: 2901803876700776305, guid: c6979d9b29d49454d865312777b02c45, type: 2}
+  m_sharedMaterial: {fileID: -3601772993119369161, guid: c6979d9b29d49454d865312777b02c45, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5762,7 +5757,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1310961768459847481, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
       propertyPath: _info.pt_string
-      value: "Pegar Gr\xE3o de Cafe Vermelho?"
+      value: "Pegar Gr\xE3o de Caf\xE9 Vermelho?"
       objectReference: {fileID: 0}
     - target: {fileID: 3034966341916779252, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5863,7 +5858,7 @@ MonoBehaviour:
   m_text: 7:00PM
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c6979d9b29d49454d865312777b02c45, type: 2}
-  m_sharedMaterial: {fileID: 2901803876700776305, guid: c6979d9b29d49454d865312777b02c45, type: 2}
+  m_sharedMaterial: {fileID: -3601772993119369161, guid: c6979d9b29d49454d865312777b02c45, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6006,7 +6001,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3165666803492000547, guid: da53fbbbf00816e48857e97c954e9ee7, type: 3}
       propertyPath: _dialogue.pt_string
-      value: 'Linda noite para sangue! Cafe vermelho, gracinha! '
+      value: "Linda noite para sangue! Caf\xE9 vermelho, gracinha! "
       objectReference: {fileID: 0}
     - target: {fileID: 7817616078722649607, guid: da53fbbbf00816e48857e97c954e9ee7, type: 3}
       propertyPath: m_Name
@@ -6125,7 +6120,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -134.60498, y: -103.84}
-  m_SizeDelta: {x: 322.01, y: 220.88}
+  m_SizeDelta: {x: 321.63, y: 269.26}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &919519587
 MonoBehaviour:
@@ -6263,7 +6258,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1310961768459847481, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
       propertyPath: _info.pt_string
-      value: "Pegar Acu\xE7ar?"
+      value: "Pegar Ac\xFA\xE7ar?"
       objectReference: {fileID: 0}
     - target: {fileID: 3034966341916779252, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6450,16 +6445,16 @@ RectTransform:
   m_GameObject: {fileID: 938398662}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.75, y: 0.75, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.5, y: 0.499995, z: 0.66666}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 662800842}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 960, y: -540}
+  m_AnchoredPosition: {x: 623.4937, y: -344.25015}
   m_SizeDelta: {x: 66.02515, y: 63}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0, y: 1}
 --- !u!114 &938398664
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6560,7 +6555,7 @@ MonoBehaviour:
 '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c6979d9b29d49454d865312777b02c45, type: 2}
-  m_sharedMaterial: {fileID: 2901803876700776305, guid: c6979d9b29d49454d865312777b02c45, type: 2}
+  m_sharedMaterial: {fileID: -3601772993119369161, guid: c6979d9b29d49454d865312777b02c45, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6805,7 +6800,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3165666803492000547, guid: da53fbbbf00816e48857e97c954e9ee7, type: 3}
       propertyPath: _dialogue.pt_string
-      value: ...Cafe...Forte...Manteiga...
+      value: "...Caf\xE9...Forte...Manteiga..."
       objectReference: {fileID: 0}
     - target: {fileID: 7817616078722649607, guid: da53fbbbf00816e48857e97c954e9ee7, type: 3}
       propertyPath: m_Name
@@ -7181,7 +7176,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 0.80784315, b: 0.80784315, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -7610,7 +7605,7 @@ MonoBehaviour:
   m_text: Next Client
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c6979d9b29d49454d865312777b02c45, type: 2}
-  m_sharedMaterial: {fileID: 2901803876700776305, guid: c6979d9b29d49454d865312777b02c45, type: 2}
+  m_sharedMaterial: {fileID: -3601772993119369161, guid: c6979d9b29d49454d865312777b02c45, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -7638,7 +7633,7 @@ MonoBehaviour:
   m_fontSizeBase: 32
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 28
+  m_fontSizeMin: 20
   m_fontSizeMax: 38
   m_fontStyle: 1
   m_HorizontalAlignment: 2
@@ -7673,7 +7668,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1172234290
@@ -7988,6 +7983,7 @@ RectTransform:
   - {fileID: 1719812959}
   - {fileID: 919519586}
   - {fileID: 125944079}
+  - {fileID: 1928747918}
   m_Father: {fileID: 662800842}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -8104,6 +8100,18 @@ MonoBehaviour:
       - m_Target: {fileID: 2024855855}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: PauseUnpause
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 2044836649}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: OpenOrder
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8744,7 +8752,7 @@ MonoBehaviour:
   m_text: $00,00
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c6979d9b29d49454d865312777b02c45, type: 2}
-  m_sharedMaterial: {fileID: 2901803876700776305, guid: c6979d9b29d49454d865312777b02c45, type: 2}
+  m_sharedMaterial: {fileID: -3601772993119369161, guid: c6979d9b29d49454d865312777b02c45, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -8999,7 +9007,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 0.8066038, b: 0.8066038, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -9080,12 +9088,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'You survided the halloween Night!
+  m_text: 'You survived the halloween Night!
 
     Thanks for Playing!!!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c6979d9b29d49454d865312777b02c45, type: 2}
-  m_sharedMaterial: {fileID: 2901803876700776305, guid: c6979d9b29d49454d865312777b02c45, type: 2}
+  m_sharedMaterial: {fileID: 0}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -9148,7 +9156,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1346806383
@@ -9279,7 +9287,7 @@ MonoBehaviour:
   m_text: EN
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c6979d9b29d49454d865312777b02c45, type: 2}
-  m_sharedMaterial: {fileID: 2901803876700776305, guid: c6979d9b29d49454d865312777b02c45, type: 2}
+  m_sharedMaterial: {fileID: -3601772993119369161, guid: c6979d9b29d49454d865312777b02c45, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -9413,7 +9421,7 @@ MonoBehaviour:
   m_text: A
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c6979d9b29d49454d865312777b02c45, type: 2}
-  m_sharedMaterial: {fileID: 2901803876700776305, guid: c6979d9b29d49454d865312777b02c45, type: 2}
+  m_sharedMaterial: {fileID: -3601772993119369161, guid: c6979d9b29d49454d865312777b02c45, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -9476,7 +9484,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1388674407
@@ -9833,7 +9841,7 @@ MonoBehaviour:
     1 \n@ Another thing\n@ Another thing\n@ Thing"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c6979d9b29d49454d865312777b02c45, type: 2}
-  m_sharedMaterial: {fileID: 2901803876700776305, guid: c6979d9b29d49454d865312777b02c45, type: 2}
+  m_sharedMaterial: {fileID: -3601772993119369161, guid: c6979d9b29d49454d865312777b02c45, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -9946,7 +9954,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 533.5, y: 564.6}
+  m_AnchoredPosition: {x: 533.5, y: 548.6}
   m_SizeDelta: {x: 1328, y: 413.36}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1501004390
@@ -10336,6 +10344,7 @@ GameObject:
   - component: {fileID: 1533205376}
   - component: {fileID: 1533205378}
   - component: {fileID: 1533205377}
+  - component: {fileID: 1533205379}
   m_Layer: 5
   m_Name: Tittle
   m_TagString: Untagged
@@ -10352,14 +10361,14 @@ RectTransform:
   m_GameObject: {fileID: 1533205375}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.6666667, y: 0.66666, z: 0.66666}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1651719476}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 150, y: 50}
+  m_AnchoredPosition: {x: 115, y: 25}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1533205377
@@ -10400,6 +10409,62 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1533205375}
   m_CullTransparentMesh: 1
+--- !u!114 &1533205379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1533205375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 0
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1533205377}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2024855855}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: StarGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1562321479
 GameObject:
   m_ObjectHideFlags: 0
@@ -10460,7 +10525,7 @@ MonoBehaviour:
   m_text: "Order: 100% \n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c6979d9b29d49454d865312777b02c45, type: 2}
-  m_sharedMaterial: {fileID: 2901803876700776305, guid: c6979d9b29d49454d865312777b02c45, type: 2}
+  m_sharedMaterial: {fileID: -3601772993119369161, guid: c6979d9b29d49454d865312777b02c45, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -10523,7 +10588,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1562321482
@@ -10867,10 +10932,6 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   _distanceToMaxSpeed: 2
-  _colliderResultOfDraggable:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   _audioObjectGrabbed: {fileID: 8300000, guid: 92d6145f7672cf640b0d8d2c1cb3ed3a, type: 3}
   _audioObjectReleased: {fileID: 8300000, guid: 1b4ff650574a423458071ec95e8e00af, type: 3}
 --- !u!1001 &1630086057
@@ -11016,7 +11077,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 48, y: -346}
+  m_AnchoredPosition: {x: 48, y: -358}
   m_SizeDelta: {x: 256, y: 50}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1637284032
@@ -11042,7 +11103,7 @@ MonoBehaviour:
   m_text: +++ 12.08$
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c6979d9b29d49454d865312777b02c45, type: 2}
-  m_sharedMaterial: {fileID: 2901803876700776305, guid: c6979d9b29d49454d865312777b02c45, type: 2}
+  m_sharedMaterial: {fileID: -3601772993119369161, guid: c6979d9b29d49454d865312777b02c45, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -11105,7 +11166,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1637284033
@@ -11142,17 +11203,17 @@ RectTransform:
   m_GameObject: {fileID: 1651719475}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.6666666, y: 0.6666666, z: 0.6666666}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
-  - {fileID: 1533205376}
   - {fileID: 787085233}
+  - {fileID: 1533205376}
   m_Father: {fileID: 662800842}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 1280, y: 720}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &1651719477
 CanvasGroup:
@@ -11990,14 +12051,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '<size="72"><b>Manager: </size></b>Alright rookie, this is the hardest
-    day of the on year, it''s halloween and everyone wants Coffee!!! Alright first
+  m_text: "<size=\"72\"><b>Manager: </size></b>Alright rookie, this is the hardest
+    day of the on year, it's halloween and everyone wants Coffee!!! Alright first
     <u>grind</u> some <u>Strong Coffee Beans</u> then added it to the <u>Cauldron</u>.
     Mix in some <u>Milk</u> then use the <u>Laddle</u> to add the Coffee to the <u>Cup</u>.
-    Finally deliver it to me. I want this for yesteray rookie!'
+    Finally deliver it to me. I want this for yesteray rookie! \xE9"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c6979d9b29d49454d865312777b02c45, type: 2}
-  m_sharedMaterial: {fileID: 2901803876700776305, guid: c6979d9b29d49454d865312777b02c45, type: 2}
+  m_sharedMaterial: {fileID: -3601772993119369161, guid: c6979d9b29d49454d865312777b02c45, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -12487,7 +12548,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 0.80784315, b: 0.80784315, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -12714,7 +12775,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 868111835848726712, guid: b3ac4a6cb8e58f74d881a5a90ab6e950, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 868111835848726712, guid: b3ac4a6cb8e58f74d881a5a90ab6e950, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -12726,7 +12787,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 868111835848726712, guid: b3ac4a6cb8e58f74d881a5a90ab6e950, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
-      value: 1
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 868111835848726712, guid: b3ac4a6cb8e58f74d881a5a90ab6e950, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
@@ -12734,7 +12795,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 868111835848726712, guid: b3ac4a6cb8e58f74d881a5a90ab6e950, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_Mode
-      value: 6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 868111835848726712, guid: b3ac4a6cb8e58f74d881a5a90ab6e950, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -12747,15 +12808,15 @@ PrefabInstance:
     - target: {fileID: 868111835848726712, guid: b3ac4a6cb8e58f74d881a5a90ab6e950, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 765149746}
+      objectReference: {fileID: 1785265826}
     - target: {fileID: 868111835848726712, guid: b3ac4a6cb8e58f74d881a5a90ab6e950, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
-      objectReference: {fileID: 1785265826}
+      objectReference: {fileID: 602737524}
     - target: {fileID: 868111835848726712, guid: b3ac4a6cb8e58f74d881a5a90ab6e950, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_Target
       value: 
-      objectReference: {fileID: 602737524}
+      objectReference: {fileID: 765149746}
     - target: {fileID: 868111835848726712, guid: b3ac4a6cb8e58f74d881a5a90ab6e950, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -12786,7 +12847,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 868111835848726712, guid: b3ac4a6cb8e58f74d881a5a90ab6e950, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: TeleportToKitchen
+      value: set_interactable
       objectReference: {fileID: 0}
     - target: {fileID: 868111835848726712, guid: b3ac4a6cb8e58f74d881a5a90ab6e950, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
@@ -12794,7 +12855,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 868111835848726712, guid: b3ac4a6cb8e58f74d881a5a90ab6e950, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_MethodName
-      value: set_interactable
+      value: TeleportToKitchen
       objectReference: {fileID: 0}
     - target: {fileID: 868111835848726712, guid: b3ac4a6cb8e58f74d881a5a90ab6e950, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -12806,7 +12867,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 868111835848726712, guid: b3ac4a6cb8e58f74d881a5a90ab6e950, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
-      value: CoffeeCup, Assembly-CSharp
+      value: UnityEngine.UI.Selectable, UnityEngine.UI
       objectReference: {fileID: 0}
     - target: {fileID: 868111835848726712, guid: b3ac4a6cb8e58f74d881a5a90ab6e950, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
@@ -12814,7 +12875,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 868111835848726712, guid: b3ac4a6cb8e58f74d881a5a90ab6e950, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_TargetAssemblyTypeName
-      value: UnityEngine.UI.Selectable, UnityEngine.UI
+      value: CoffeeCup, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 868111835848726712, guid: b3ac4a6cb8e58f74d881a5a90ab6e950, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
@@ -12825,8 +12886,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 868111835848726712, guid: b3ac4a6cb8e58f74d881a5a90ab6e950, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_BoolArgument
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_BoolArgument
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 868111835848726712, guid: b3ac4a6cb8e58f74d881a5a90ab6e950, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_BoolArgument
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 868111835848726712, guid: b3ac4a6cb8e58f74d881a5a90ab6e950, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
@@ -12879,6 +12944,18 @@ PrefabInstance:
     - target: {fileID: 5584053169877604364, guid: b3ac4a6cb8e58f74d881a5a90ab6e950, type: 3}
       propertyPath: m_text
       value: Store
+      objectReference: {fileID: 0}
+    - target: {fileID: 5584053169877604364, guid: b3ac4a6cb8e58f74d881a5a90ab6e950, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: c6979d9b29d49454d865312777b02c45, type: 2}
+    - target: {fileID: 5584053169877604364, guid: b3ac4a6cb8e58f74d881a5a90ab6e950, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -3601772993119369161, guid: c6979d9b29d49454d865312777b02c45, type: 2}
+    - target: {fileID: 5584053169877604364, guid: b3ac4a6cb8e58f74d881a5a90ab6e950, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8810948273136654543, guid: b3ac4a6cb8e58f74d881a5a90ab6e950, type: 3}
       propertyPath: m_Pivot.x
@@ -13678,7 +13755,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 32, y: -56}
-  m_SizeDelta: {x: 396.23, y: 50}
+  m_SizeDelta: {x: 502.52, y: 50}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1882757573
 MonoBehaviour:
@@ -13705,7 +13782,7 @@ MonoBehaviour:
 '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c6979d9b29d49454d865312777b02c45, type: 2}
-  m_sharedMaterial: {fileID: 2901803876700776305, guid: c6979d9b29d49454d865312777b02c45, type: 2}
+  m_sharedMaterial: {fileID: -3601772993119369161, guid: c6979d9b29d49454d865312777b02c45, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -13729,8 +13806,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
-  m_fontSizeBase: 72
+  m_fontSize: 64
+  m_fontSizeBase: 64
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 0
@@ -13768,7 +13845,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1882757574
@@ -13990,12 +14067,12 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1346806381}
-  m_Father: {fileID: 662800842}
+  m_Father: {fileID: 1238139923}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 2320, y: 1480}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1928747919
 MonoBehaviour:
@@ -14370,6 +14447,8 @@ MonoBehaviour:
   _uiManager: {fileID: 2044836649}
   _hoverInfoManager: {fileID: 2044836651}
   _audioManager: {fileID: 834778999}
+  _cauldron: {fileID: 1994879862}
+  _coffeeCup: {fileID: 765149746}
   _language: 0
 --- !u!4 &2024855856
 Transform:
@@ -14719,7 +14798,7 @@ MonoBehaviour:
 '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c6979d9b29d49454d865312777b02c45, type: 2}
-  m_sharedMaterial: {fileID: 2901803876700776305, guid: c6979d9b29d49454d865312777b02c45, type: 2}
+  m_sharedMaterial: {fileID: -3601772993119369161, guid: c6979d9b29d49454d865312777b02c45, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -14938,7 +15017,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   _deliverFeedbackRoot: {fileID: 648830786}
-  t_deliverTitle: {fileID: 0}
+  t_deliverTitle: {fileID: 318661982}
   t_clientPatience: {fileID: 693001962}
   t_orderEquality: {fileID: 1562321481}
   t_moneyGained: {fileID: 1637284032}
@@ -15095,6 +15174,7 @@ MonoBehaviour:
   t_language: {fileID: 1387641461}
   _pauseOverlay: {fileID: 1719812958}
   _thanksForPlaying: {fileID: 1928747917}
+  t_thankForPlaying: {fileID: 1346806382}
   _bottomBar: {fileID: 838310401}
   _block: {fileID: 1301867451}
 --- !u!4 &2044836650
@@ -15185,7 +15265,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 0.80784315, b: 0.80784315, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -15271,7 +15351,7 @@ MonoBehaviour:
 '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c6979d9b29d49454d865312777b02c45, type: 2}
-  m_sharedMaterial: {fileID: 2901803876700776305, guid: c6979d9b29d49454d865312777b02c45, type: 2}
+  m_sharedMaterial: {fileID: -3601772993119369161, guid: c6979d9b29d49454d865312777b02c45, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -15732,7 +15812,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0487e8b6b68c2841a5445066c75c1d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _panSpeed: 96
+  _panSpeed: 20
   _minXPoint: {fileID: 1516020849}
   _maxXPoint: {fileID: 1388976770}
   _percentToPanOnEdges: 0.975
@@ -15756,14 +15836,6 @@ PrefabInstance:
       propertyPath: _kitchenPoint
       value: 
       objectReference: {fileID: 545102267}
-    - target: {fileID: 1622138025658789239, guid: 94ef40c49522b134290a551aa04aeccb, type: 3}
-      propertyPath: _name.en_string
-      value: Coffee Cup
-      objectReference: {fileID: 0}
-    - target: {fileID: 1622138025658789239, guid: 94ef40c49522b134290a551aa04aeccb, type: 3}
-      propertyPath: _name.pt_string
-      value: Copo de Cafe
-      objectReference: {fileID: 0}
     - target: {fileID: 3718332128581869830, guid: 94ef40c49522b134290a551aa04aeccb, type: 3}
       propertyPath: m_Name
       value: Coffee_Cup
@@ -15925,7 +15997,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1310961768459847481, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
       propertyPath: _info.pt_string
-      value: "Pegar Gr\xE3o de Cafe Claro?"
+      value: "Pegar Gr\xE3o de Caf\xE9 Claro?"
       objectReference: {fileID: 0}
     - target: {fileID: 3034966341916779252, guid: 6db16acf49b2ae2458cebd17314734c4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16153,19 +16225,19 @@ PrefabInstance:
     - target: {fileID: 3165666803492000547, guid: da53fbbbf00816e48857e97c954e9ee7, type: 3}
       propertyPath: _dialogue.en_string
       value: '<size="72"><b>Manager: </size></b>Alright rookie, this is the hardest
-        day of the on year, it''s halloween and everyone wants Coffee!!! Alright
-        first <u>grind</u> some <u>Strong Coffee Beans</u> then added it to the <u>Cauldron</u>.
+        day of the year, it''s halloween and everyone wants Coffee!!! Alright first
+        <u>grind</u> some <u>Strong Coffee Beans</u> then add it to the <u>Cauldron</u>.
         Mix in some <u>Milk</u> then use the <u>Laddle</u> to add the Coffee to the
-        <u>Cup</u>. Finally deliver it to me. I want this for yesteray rookie!'
+        <u>Cup</u>. Finally deliver it to me. I want this for yesterday rookie!'
       objectReference: {fileID: 0}
     - target: {fileID: 3165666803492000547, guid: da53fbbbf00816e48857e97c954e9ee7, type: 3}
       propertyPath: _dialogue.pt_string
-      value: "<size=\"72\"><b>Gerente: </size></b>Tudo bem, novato, este e o dia
-        mais dificil do ano, e Halloween e todo mundo quer cafe!!! Tudo bem, primeiro
-        <u>moa</u> alguns <u>gr\xE3os de cafe fortes</u> e depois adicione-os ao
-        <u>caldeirao</u>. Misture um pouco de <u>leite</u> e use a <u>concha</u>
-        para adicionar o cafe ao<u>copo</u>. Finalmente entregue para mim. Eu quero
-        isso para ontem!"
+      value: "<size=\"72\"><b>Gerente: </size></b>Tudo bem, novato, este \xE9 o dia
+        mais dif\xEDcil do ano, \xE9 Halloween e todo mundo quer caf\xE9!!! Tudo
+        bem, primeiro <u>moa</u> alguns <u>gr\xE3os de caf\xE9 fortes</u> e depois
+        adicione-os ao <u>caldeir\xE3o</u>. Misture um pouco de <u>leite</u> e use
+        a <u>concha</u> para adicionar o caf\xE9 ao <u>copo</u>. Finalmente entregue
+        para mim. Eu quero isso para ontem!"
       objectReference: {fileID: 0}
     - target: {fileID: 7817616078722649607, guid: da53fbbbf00816e48857e97c954e9ee7, type: 3}
       propertyPath: m_Name
@@ -16299,7 +16371,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 868111835848726712, guid: b3ac4a6cb8e58f74d881a5a90ab6e950, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 868111835848726712, guid: b3ac4a6cb8e58f74d881a5a90ab6e950, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -16318,6 +16390,10 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 868111835848726712, guid: b3ac4a6cb8e58f74d881a5a90ab6e950, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 868111835848726712, guid: b3ac4a6cb8e58f74d881a5a90ab6e950, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2145836230}
@@ -16334,6 +16410,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1785265826}
     - target: {fileID: 868111835848726712, guid: b3ac4a6cb8e58f74d881a5a90ab6e950, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_Target
+      value: 
+      objectReference: {fileID: 765149746}
+    - target: {fileID: 868111835848726712, guid: b3ac4a6cb8e58f74d881a5a90ab6e950, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
@@ -16347,6 +16427,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 868111835848726712, guid: b3ac4a6cb8e58f74d881a5a90ab6e950, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 868111835848726712, guid: b3ac4a6cb8e58f74d881a5a90ab6e950, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 868111835848726712, guid: b3ac4a6cb8e58f74d881a5a90ab6e950, type: 3}
@@ -16366,6 +16450,10 @@ PrefabInstance:
       value: set_interactable
       objectReference: {fileID: 0}
     - target: {fileID: 868111835848726712, guid: b3ac4a6cb8e58f74d881a5a90ab6e950, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_MethodName
+      value: TeleportToKitchen
+      objectReference: {fileID: 0}
+    - target: {fileID: 868111835848726712, guid: b3ac4a6cb8e58f74d881a5a90ab6e950, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: PanManager, Assembly-CSharp
       objectReference: {fileID: 0}
@@ -16382,6 +16470,10 @@ PrefabInstance:
       value: UnityEngine.UI.Selectable, UnityEngine.UI
       objectReference: {fileID: 0}
     - target: {fileID: 868111835848726712, guid: b3ac4a6cb8e58f74d881a5a90ab6e950, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_TargetAssemblyTypeName
+      value: CoffeeCup, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 868111835848726712, guid: b3ac4a6cb8e58f74d881a5a90ab6e950, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
       value: 1
       objectReference: {fileID: 0}
@@ -16391,6 +16483,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 868111835848726712, guid: b3ac4a6cb8e58f74d881a5a90ab6e950, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 868111835848726712, guid: b3ac4a6cb8e58f74d881a5a90ab6e950, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_BoolArgument
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 868111835848726712, guid: b3ac4a6cb8e58f74d881a5a90ab6e950, type: 3}
@@ -16413,6 +16509,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 868111835848726712, guid: b3ac4a6cb8e58f74d881a5a90ab6e950, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2657621501151418136, guid: b3ac4a6cb8e58f74d881a5a90ab6e950, type: 3}
       propertyPath: m_Name
       value: T_Kitchen
@@ -16432,6 +16532,18 @@ PrefabInstance:
     - target: {fileID: 5584053169877604364, guid: b3ac4a6cb8e58f74d881a5a90ab6e950, type: 3}
       propertyPath: m_text
       value: Kitchen
+      objectReference: {fileID: 0}
+    - target: {fileID: 5584053169877604364, guid: b3ac4a6cb8e58f74d881a5a90ab6e950, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: c6979d9b29d49454d865312777b02c45, type: 2}
+    - target: {fileID: 5584053169877604364, guid: b3ac4a6cb8e58f74d881a5a90ab6e950, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -3601772993119369161, guid: c6979d9b29d49454d865312777b02c45, type: 2}
+    - target: {fileID: 5584053169877604364, guid: b3ac4a6cb8e58f74d881a5a90ab6e950, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8810948273136654543, guid: b3ac4a6cb8e58f74d881a5a90ab6e950, type: 3}
       propertyPath: m_Pivot.x

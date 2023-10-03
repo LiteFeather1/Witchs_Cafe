@@ -16,7 +16,7 @@ public class AudioManager : MonoBehaviour
     private void OnEnable()
     {
         GameManager.InputManager.PlayerInputs.IncreaseVolume.performed += IncreaseListenerVol;
-        GameManager.InputManager.PlayerInputs.IncreaseVolume.performed += IncreaseListenerVol;
+        GameManager.InputManager.PlayerInputs.DecreaseVolume.performed += DecreaseListenerVol;
         GameManager.InputManager.PlayerInputs.MuteUnmute.performed += MuteUnmute;
     }
 
@@ -29,18 +29,20 @@ public class AudioManager : MonoBehaviour
 
     private void IncreaseListenerVol(InputAction.CallbackContext ctx)
     {
-        if (AudioListener.volume == 1f)
-            return;
+        _prevAudioVolume += .1f;
+        if (AudioListener.volume >= .95f)
+            _prevAudioVolume = 1f;
 
-        _prevAudioVolume = AudioListener.volume += 0.1f;
+         AudioListener.volume = _prevAudioVolume;
     }
 
     private void DecreaseListenerVol(InputAction.CallbackContext ctx)
     {
-        if (AudioListener.volume == 0f)
-            return;
+        _prevAudioVolume -= .1f;
+        if (AudioListener.volume <= 0.05f)
+            _prevAudioVolume = 0f;
 
-        _prevAudioVolume = AudioListener.volume -= 0.1f;
+        AudioListener.volume = _prevAudioVolume;
     }
 
     private void MuteUnmute(InputAction.CallbackContext ctx) => MuteUnmute();

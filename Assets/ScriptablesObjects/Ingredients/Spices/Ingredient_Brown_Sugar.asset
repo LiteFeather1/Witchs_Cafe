@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name:
     en_string: Brown Sugar
-    pt_string: "Acu\xE7ar Mascavo"
+    pt_string: "Ac\xFA\xE7ar Mascavo"
   _colour: {r: 1, g: 1, b: 1, a: 1}
   _money: 0.4
